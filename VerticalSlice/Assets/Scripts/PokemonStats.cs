@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PokemonStats : MonoBehaviour
 {
-    public float Health;
+    public static float Health;
     public float Speed;
     public float Damage;
 
