@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PokemonDamage : MonoBehaviour
 {
+
+    [SerializeField] private int damage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +17,13 @@ public class PokemonDamage : MonoBehaviour
     void Update()
     {
         
+    }
+
+
+    public void UseMove()
+    {
+        PokemonStats stat = FindAnyObjectByType<PokemonStats>();
+
+        GetComponent<PokemonStats>().TakeDamage(5);
     }
 }

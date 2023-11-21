@@ -5,18 +5,29 @@ using UnityEngine;
 
 public class PokemonStats : MonoBehaviour
 {
+    public static event Action<int> onDied;
+
+
     public static float Health;
-    public float Speed;
-    public float Damage;
+    [SerializeField]public float MaxHealth;
+    [SerializeField]public float Speed;
+    [SerializeField] public float Attack;
 
     void Start()
     {
+        Health = MaxHealth;
         Debug.Log(Health);
     }
 
 
-    void Update()
+    public void TakeDamage(int damageAmount)
     {
-        
+        MaxHealth -= damageAmount;
+        // other stuff you want to happen when enemy takes damage
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+            onDied?.Invoke(100);
+        }
     }
 }
