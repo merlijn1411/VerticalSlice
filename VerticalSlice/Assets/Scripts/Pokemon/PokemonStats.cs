@@ -7,11 +7,10 @@ public class PokemonStats : MonoBehaviour
 {
     public static event Action<int> onDied;
 
-
     public static float Health;
+
     [SerializeField]public float MaxHealth;
     [SerializeField]public float Speed;
-    [SerializeField] public float Attack;
 
     void Start()
     {

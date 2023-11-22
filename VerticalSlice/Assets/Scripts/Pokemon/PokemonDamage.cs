@@ -24,6 +24,6 @@ public class PokemonDamage : MonoBehaviour
     {
         PokemonStats stat = FindAnyObjectByType<PokemonStats>();
 
-        GetComponent<PokemonStats>().TakeDamage(5);
+        GetComponent<PokemonStats>().TakeDamage(damage);
     }
 }
