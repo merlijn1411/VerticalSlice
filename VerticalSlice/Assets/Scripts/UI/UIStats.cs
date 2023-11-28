@@ -1,22 +1,27 @@
-using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class UIStats : MonoBehaviour
 {
-    public Image healthBar;
-    PokemonStats pokemonStats;
+    public TextMeshProUGUI NameText; 
+    private int Health;
 
-    public int TotalHealth = 100;
-
-    public void Start()
+    void Start()
     {
         
+        PokemonStats health = GetComponent<PokemonStats>();
+        if (health != null)
+        {
+            Health = health.MaxHealth;
+        }
     }
-    public void Update()
+    void Update()
     {
-        
+        NameText.text = PokemonStats.Name.ToString();
+    
     }
 
 }

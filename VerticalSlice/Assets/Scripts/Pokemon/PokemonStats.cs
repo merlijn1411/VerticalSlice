@@ -7,23 +7,32 @@ public class PokemonStats : MonoBehaviour
 {
     public static event Action<int> onDied;
 
-    public static float Health;
+    public static string Name;
+    public string PokeName;
 
-    [SerializeField]public float MaxHealth;
-    [SerializeField]public float Speed;
+    public static int CurrentHealth;
+    public int MaxHealth;
+    public Healthbar healthbar;
 
-    void Start()
+    public int Defends;
+    public int Attack; 
+    public int Speed;
+
+    public void Start()
     {
-        Health = MaxHealth;
-        Debug.Log(Health);
+        CurrentHealth = MaxHealth;
+        healthbar.SetMaxHealth(MaxHealth);
+
+        Name = PokeName;
     }
 
 
     public void TakeDamage(int damageAmount)
     {
         MaxHealth -= damageAmount;
+        healthbar.SetHealth(MaxHealth);
         // other stuff you want to happen when enemy takes damage
-        if (Health <= 0)
+        if (CurrentHealth <= 0)
         {
             Destroy(gameObject);
             onDied?.Invoke(100);

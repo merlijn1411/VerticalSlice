@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        if(PokemonStats.Health <= 0)
+        if(PokemonStats.CurrentHealth <= 0)
         {
             Debug.Log("you lose");
         }
