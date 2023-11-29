@@ -20,7 +20,7 @@ public class UIStats : MonoBehaviour
     }
     void Update()
     {
-        NameText.text = PokemonStats.Name.ToString();
+
     
     }
 
