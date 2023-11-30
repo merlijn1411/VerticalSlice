@@ -1,29 +1,21 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PokemonStats : MonoBehaviour
+public class EnemyStats : MonoBehaviour
 {
-    public static event Action<int> onDied;
-
     public static string Name;
     public string PokeName;
 
     private int CurrentHealth;
     public int MaxHealth;
     public Healthbar healthbar;
-
-    public int Defends;
-    public int AttackDamage; 
-    public int Speed;
-
-    public void Start()
+    void Start()
     {
+        Name = PokeName;
+
         CurrentHealth = MaxHealth;
         healthbar.SetMaxHealth(MaxHealth);
-
-        Name = PokeName;
     }
 
 
@@ -35,7 +27,6 @@ public class PokemonStats : MonoBehaviour
         if (CurrentHealth <= 0)
         {
             Destroy(gameObject);
-            onDied?.Invoke(100);
         }
     }
 }

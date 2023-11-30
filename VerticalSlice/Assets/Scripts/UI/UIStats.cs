@@ -6,22 +6,21 @@ using TMPro;
 
 public class UIStats : MonoBehaviour
 {
-    public TextMeshProUGUI NameText; 
+    public TextMeshProUGUI PlayerNameText, EnemyNameText ; 
     private int Health;
 
     void Start()
     {
         
-        PokemonStats health = GetComponent<PokemonStats>();
-        if (health != null)
-        {
-            Health = health.MaxHealth;
-        }
     }
     void Update()
     {
-        NameText.text = PokemonStats.Name.ToString();
-    
+
+        if(PlayerNameText != null || EnemyNameText != null)
+        {
+            PlayerNameText.text = PokemonStats.Name.ToString();
+            EnemyNameText.text = EnemyStats.Name.ToString();
+        }
     }
 
 }
