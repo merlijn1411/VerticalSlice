@@ -1653,7 +1653,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PokeName: Pokemon2
-  CurrentHealth: 0
   MaxHealth: 100
   healthbar: {fileID: 2066387721}
 --- !u!1 &705507993
@@ -3519,7 +3518,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PokeName: Pokemon1
-  CurrentHealth: 0
   MaxHealth: 100
   healthbar: {fileID: 841265576}
   Defends: 0

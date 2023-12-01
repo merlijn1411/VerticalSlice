@@ -1,13 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyStats : MonoBehaviour
 {
+    public static event Action Ondied;
+
     public static string Name;
     public string PokeName;
 
-    private int CurrentHealth;
+    public static int CurrentHealth;
     public int MaxHealth;
     public Healthbar healthbar;
     void Start()
@@ -27,6 +31,7 @@ public class EnemyStats : MonoBehaviour
         if (CurrentHealth <= 0)
         {
             Destroy(gameObject);
+            Ondied?.Invoke();
         }
     }
 }

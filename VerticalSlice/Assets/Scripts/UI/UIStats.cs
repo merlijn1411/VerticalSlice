@@ -7,7 +7,6 @@ using TMPro;
 public class UIStats : MonoBehaviour
 {
     public TextMeshProUGUI PlayerNameText, EnemyNameText ; 
-    private int Health;
 
     void Start()
     {
