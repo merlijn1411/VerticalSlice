@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-	[SerializeField] private PokemonStats Player = null;
+	[SerializeField] private PlayerStats Player = null;
 	[SerializeField] private EnemyStats Enemy = null;
 
 	public void Update()

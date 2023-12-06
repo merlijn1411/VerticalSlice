@@ -11,7 +11,7 @@ public class UIStats : MonoBehaviour
 	}
 	void Update()
 	{
-		PlayerNameText.text = PokemonStats.Name.ToString();
+		PlayerNameText.text = PlayerStats.Name.ToString();
 		EnemyNameText.text = EnemyStats.Name.ToString();
 
 	}

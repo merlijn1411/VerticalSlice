@@ -11,6 +11,7 @@ public class EnemyStats : MonoBehaviour
 
 	public int AttackDamage;
 
+	public TurnBaseManager.ElementType typeElement;
 
 	void Start()
 	{
