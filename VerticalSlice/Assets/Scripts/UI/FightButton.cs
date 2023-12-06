@@ -9,7 +9,6 @@ public class FightButton : MonoBehaviour
 		ButtonAttack.SetActive(false);
 	}
 
-	// Update is called once per frame
 	public void Battle()
 	{
 		ButtonStart.SetActive(false);
