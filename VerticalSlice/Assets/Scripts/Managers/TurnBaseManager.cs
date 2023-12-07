@@ -18,6 +18,9 @@ public class TurnBaseManager : MonoBehaviour
 	[SerializeField] private float GhostPower;
 	[SerializeField] private float GrassPower;
 
+	[SerializeField] private Healthbar Playerhealthbar;
+	[SerializeField] private Healthbar Enemyhealthbar;
+
 	private bool isplayerTurn = true;
 
 	private void Update()
@@ -32,12 +35,14 @@ public class TurnBaseManager : MonoBehaviour
 		if (target == Enemy)
 		{
 			Enemy.CurrentHealth -= CalculateDamage(Player.AttackDamage, Player.typeElement);
+			Enemyhealthbar.time = 0f;
 
 			Debug.Log("over gebleven health van Enemy = " + Enemy.CurrentHealth);
 		}
 		else
 		{
 			Player.CurrentHealth -= CalculateDamage(Enemy.AttackDamage, Enemy.typeElement);
+			Playerhealthbar.time = 0f;
 
 			Debug.Log("over gebleven health van Player = " + Player.CurrentHealth);
 		}

@@ -26,7 +26,7 @@ public class PlayerStats : MonoBehaviour
 	}
 	private void Update()
 	{
-		healthbar.SetHealth(CurrentHealth);
+		healthbar.GetComponent<Healthbar>().CurrentHealth(CurrentHealth, healthbar.slider.value);
 
 		if (CurrentHealth <= 0)
 		{
