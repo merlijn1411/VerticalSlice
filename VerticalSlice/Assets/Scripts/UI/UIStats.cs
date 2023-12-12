@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class UIStats : MonoBehaviour
 {
-	public TextMeshProUGUI PlayerNameText, EnemyNameText;
+	public TextMeshProUGUI PlayerNameText, EnemyNameText = null;
 
 	void Start()
 	{
@@ -11,12 +11,9 @@ public class UIStats : MonoBehaviour
 	}
 	void Update()
 	{
+		PlayerNameText.text = PlayerStats.Name.ToString();
+		EnemyNameText.text = EnemyStats.Name.ToString();
 
-		if (PlayerNameText != null || EnemyNameText != null)
-		{
-			PlayerNameText.text = PokemonStats.Name.ToString();
-			EnemyNameText.text = EnemyStats.Name.ToString();
-		}
 	}
 
 }
