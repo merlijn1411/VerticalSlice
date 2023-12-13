@@ -1448,7 +1448,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1778997842}
         m_TargetAssemblyTypeName: TextPanelAnimation, Assembly-CSharp
         m_MethodName: PanelAnimate
         m_Mode: 1
