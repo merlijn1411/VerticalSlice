@@ -1,22 +1,29 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+	[SerializeField] private PlayerStats Player = null;
+	[SerializeField] private EnemyStats Enemy = null;
 
-    void Start()
-    {
-     
-    }
+	public void Update()
+	{
+		if (Player.CurrentHealth <= 0)
+		{
+			PlayerDied();
+		}
 
-    public void Update()
-    {
-       
-    }
-    public void EnemyDied()
-    {
-        Debug.Log("You Win!");
-    }
+		if (Enemy.CurrentHealth <= 0)
+		{
+			EnemyDied();
+		}
+	}
+	private void PlayerDied()
+	{
+		Debug.Log("You Lose!");
+	}
+
+	public void EnemyDied()
+	{
+		Debug.Log("You Win!");
+	}
 }

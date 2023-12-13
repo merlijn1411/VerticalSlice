@@ -1,25 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 
 public class UIStats : MonoBehaviour
 {
-    public TextMeshProUGUI PlayerNameText, EnemyNameText ; 
+	public TextMeshProUGUI PlayerNameText, EnemyNameText = null;
 
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
+	void Start()
+	{
 
-        if(PlayerNameText != null || EnemyNameText != null)
-        {
-            PlayerNameText.text = PokemonStats.Name.ToString();
-            EnemyNameText.text = EnemyStats.Name.ToString();
-        }
-    }
+	}
+	void Update()
+	{
+		PlayerNameText.text = PlayerStats.Name.ToString();
+		EnemyNameText.text = EnemyStats.Name.ToString();
+
+	}
 
 }
