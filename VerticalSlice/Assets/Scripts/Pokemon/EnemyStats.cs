@@ -5,9 +5,12 @@ public class EnemyStats : MonoBehaviour
 	public static string Name;
 	public string PokeName;
 
-	public int CurrentHealth;
+	[HideInInspector] public int CurrentHealth;
 	public int MaxHealth;
 	public Healthbar healthbar;
+
+	private MeshRenderer meshRenderer;
+	Color originColor;
 
 	public int AttackDamage;
 
@@ -19,16 +22,35 @@ public class EnemyStats : MonoBehaviour
 
 		CurrentHealth = MaxHealth;
 		healthbar.SetMaxHealth(MaxHealth);
+
+		meshRenderer = GetComponent<MeshRenderer>();
+		originColor = meshRenderer.material.color;
 	}
 
 	private void Update()
 	{
 		healthbar.GetComponent<Healthbar>().CurrentHealth(CurrentHealth, healthbar.slider.value);
-
 		if (CurrentHealth <= 0)
 		{
-			Debug.Log("Enemy verslagen");
+			Invoke("Defeated", 3);
 		}
+	}
+
+	public void HitStart()
+	{
+		Debug.Log("ik ben bij de functie :)");
+		meshRenderer.material.color = Color.red;
+		Invoke("HitStop", 1);
+	}
+	public void HitStop()
+	{
+		Debug.Log("poef");
+		meshRenderer.material.color = originColor;
+	}
+
+	private void Defeated()
+	{
+		gameObject.SetActive(false);
 	}
 
 }
