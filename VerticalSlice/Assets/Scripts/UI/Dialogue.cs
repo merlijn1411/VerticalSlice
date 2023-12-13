@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
-using System;
-using UnityEditor;
+using UnityEngine;
 
 public class Dialogue : MonoBehaviour
 {
@@ -12,6 +9,8 @@ public class Dialogue : MonoBehaviour
     private float textspeed;
 
     private int index;
+
+    public bool active = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +22,9 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (textComponent.text== lines[index])
+            if (textComponent.text == lines[index])
             {
                 NextLine();
             }
@@ -39,13 +38,13 @@ public class Dialogue : MonoBehaviour
 
     void StartDialogue()
     {
-        index= 0;
+        index = 0;
         StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
     {
-        foreach(char C in lines[index].ToCharArray())
+        foreach (char C in lines[index].ToCharArray())
         {
             textComponent.text += C;
             yield return new WaitForSeconds(textspeed);
@@ -54,7 +53,7 @@ public class Dialogue : MonoBehaviour
 
     void NextLine()
     {
-        if (index < lines.Length -1)
+        if (index < lines.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;

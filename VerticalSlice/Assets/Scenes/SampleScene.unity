@@ -606,8 +606,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ecd4df30a9304149ab7b05d67b98049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textComponent: {fileID: 0}
-  lines: []
+  textComponent: {fileID: 142544543}
+  lines:
+  - ATTACK!!!!
+  active: 0
 --- !u!1 &158062823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3edba12940db9ba44acf0d427901892c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NameText: {fileID: 2100283445}
+  NameText: {fileID: 0}
 --- !u!1 &404992454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,7 +1448,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1449897992}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextPanelAnimation, Assembly-CSharp
         m_MethodName: PanelAnimate
         m_Mode: 1
@@ -3761,7 +3763,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1449897991}
-  - component: {fileID: 1449897992}
   m_Layer: 5
   m_Name: Buttens(Attacks)
   m_TagString: Untagged
@@ -3794,19 +3795,6 @@ RectTransform:
   m_AnchoredPosition: {x: -138, y: 65}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1449897992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1449897990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfd54dc4824881b4e9f506bd661ec32a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Panel: {fileID: 0}
 --- !u!1 &1545868696
 GameObject:
   m_ObjectHideFlags: 0
@@ -4942,6 +4930,7 @@ GameObject:
   - component: {fileID: 1778997840}
   - component: {fileID: 1778997839}
   - component: {fileID: 1778997841}
+  - component: {fileID: 1778997842}
   m_Layer: 5
   m_Name: panel
   m_TagString: Untagged
@@ -4966,7 +4955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 113.55957, y: -411.49316}
+  m_AnchoredPosition: {x: -1595, y: -411.49316}
   m_SizeDelta: {x: 1966.3003, y: 300.624}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1778997839
@@ -5029,6 +5018,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1778997842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778997837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd54dc4824881b4e9f506bd661ec32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 142544545}
+  Play: {fileID: 1778997841}
 --- !u!1 &1791685196
 GameObject:
   m_ObjectHideFlags: 0
@@ -5461,7 +5464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2024868003
 RectTransform:
   m_ObjectHideFlags: 0
