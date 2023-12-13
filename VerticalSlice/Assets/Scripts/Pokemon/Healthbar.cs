@@ -7,6 +7,9 @@ public class Healthbar : MonoBehaviour
 	public Gradient gradient;
 	public Image Fill;
 
+	private float lerpSpeed = 0.5f;
+	public float time;
+
 	public void SetMaxHealth(int health)
 	{
 		slider.maxValue = health;
@@ -14,10 +17,15 @@ public class Healthbar : MonoBehaviour
 
 		Fill.color = gradient.Evaluate(1f);
 	}
-	public void SetHealth(int health)
+
+	// targethealth is de currenthealth en de starthealth is de value van de slider 
+	public void CurrentHealth(float targetHealth, float startHealth)
 	{
-		slider.value = health;
+		time += Time.deltaTime * lerpSpeed;
 
 		Fill.color = gradient.Evaluate(slider.normalizedValue);
+
+		slider.value = Mathf.Lerp(startHealth, targetHealth, time);
+
 	}
 }
