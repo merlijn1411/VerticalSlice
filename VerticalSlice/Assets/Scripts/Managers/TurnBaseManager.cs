@@ -42,7 +42,6 @@ public class TurnBaseManager : MonoBehaviour
 		{
 			Enemy.CurrentHealth -= CalculateDamage(Player.AttackDamage, Player.typeElement);
 			Enemyhealthbar.time = 0f;
-			HitStart();
 		}
 		else
 		{
@@ -100,16 +99,6 @@ public class TurnBaseManager : MonoBehaviour
 
 		}
 		return Mathf.RoundToInt(PokemonDamage);
-	}
-
-	public void HitStart()
-	{
-		Debug.Log("ik ben bij de functie :)");
-		Invoke("HitStop", 1);
-	}
-	public void HitStop()
-	{
-		Debug.Log("poef");
 	}
 
 	private IEnumerator EnemyTurn()
