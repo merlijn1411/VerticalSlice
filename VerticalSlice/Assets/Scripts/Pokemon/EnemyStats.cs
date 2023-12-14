@@ -9,9 +9,6 @@ public class EnemyStats : MonoBehaviour
 	public int MaxHealth;
 	public Healthbar healthbar;
 
-	private MeshRenderer meshRenderer;
-	Color originColor;
-
 	public int AttackDamage;
 
 	public TurnBaseManager.ElementType typeElement;
@@ -22,9 +19,6 @@ public class EnemyStats : MonoBehaviour
 
 		CurrentHealth = MaxHealth;
 		healthbar.SetMaxHealth(MaxHealth);
-
-		meshRenderer = GetComponent<MeshRenderer>();
-		originColor = meshRenderer.material.color;
 	}
 
 	private void Update()
@@ -34,18 +28,6 @@ public class EnemyStats : MonoBehaviour
 		{
 			Invoke("Defeated", 3);
 		}
-	}
-
-	public void HitStart()
-	{
-		Debug.Log("ik ben bij de functie :)");
-		meshRenderer.material.color = Color.red;
-		Invoke("HitStop", 1);
-	}
-	public void HitStop()
-	{
-		Debug.Log("poef");
-		meshRenderer.material.color = originColor;
 	}
 
 	private void Defeated()
