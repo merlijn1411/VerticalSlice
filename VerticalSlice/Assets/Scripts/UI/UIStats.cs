@@ -3,17 +3,15 @@ using UnityEngine;
 
 public class UIStats : MonoBehaviour
 {
-	public TextMeshProUGUI PlayerNameText, EnemyNameText = null;
+	[SerializeField] private TextMeshProUGUI PlayerNameText, EnemyNameText = null;
+	[SerializeField] private TextMeshProUGUI PlayerHealthText = null;
 
-	void Start()
-	{
-
-	}
-	void Update()
+	public void Update()
 	{
 		PlayerNameText.text = PlayerStats.Name.ToString();
 		EnemyNameText.text = EnemyStats.Name.ToString();
 
+		PlayerHealthText.text = PlayerStats.STCurrentH.ToString() + "/" + PlayerStats.STMaxH.ToString();
 	}
 
 }

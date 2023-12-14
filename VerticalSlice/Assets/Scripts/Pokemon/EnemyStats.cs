@@ -5,7 +5,7 @@ public class EnemyStats : MonoBehaviour
 	public static string Name;
 	public string PokeName;
 
-	public int CurrentHealth;
+	[HideInInspector] public int CurrentHealth;
 	public int MaxHealth;
 	public Healthbar healthbar;
 
@@ -24,11 +24,15 @@ public class EnemyStats : MonoBehaviour
 	private void Update()
 	{
 		healthbar.GetComponent<Healthbar>().CurrentHealth(CurrentHealth, healthbar.slider.value);
-
 		if (CurrentHealth <= 0)
 		{
-			Debug.Log("Enemy verslagen");
+			Invoke("Defeated", 3);
 		}
+	}
+
+	private void Defeated()
+	{
+		gameObject.SetActive(false);
 	}
 
 }

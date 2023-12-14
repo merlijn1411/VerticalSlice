@@ -6,8 +6,9 @@ public class TurnBaseManager : MonoBehaviour
 {
 	public enum ElementType { Physic, Ghost, Grass }
 
-	[SerializeField] private PlayerStats Player = null;
-	[SerializeField] private EnemyStats Enemy = null;
+	PlayerStats Player;
+	EnemyStats Enemy;
+
 	[SerializeField] private Button AttackBtn = null;
 
 	//[SerializeField] private GameObject UICanvas = null;
@@ -23,6 +24,11 @@ public class TurnBaseManager : MonoBehaviour
 
 	private bool isplayerTurn = true;
 
+	void Start()
+	{
+		Player = GameObject.Find("Reu_Final").GetComponent<PlayerStats>();
+		Enemy = GameObject.Find("Phantump").GetComponent<EnemyStats>();
+	}
 	private void Update()
 	{
 		if (Player.CurrentHealth <= 0 || Enemy.CurrentHealth <= 0)
@@ -36,15 +42,13 @@ public class TurnBaseManager : MonoBehaviour
 		{
 			Enemy.CurrentHealth -= CalculateDamage(Player.AttackDamage, Player.typeElement);
 			Enemyhealthbar.time = 0f;
-
-			Debug.Log("over gebleven health van Enemy = " + Enemy.CurrentHealth);
+			HitStart();
 		}
 		else
 		{
 			Player.CurrentHealth -= CalculateDamage(Enemy.AttackDamage, Enemy.typeElement);
 			Playerhealthbar.time = 0f;
 
-			Debug.Log("over gebleven health van Player = " + Player.CurrentHealth);
 		}
 
 		ChangeTurn();
@@ -96,6 +100,16 @@ public class TurnBaseManager : MonoBehaviour
 
 		}
 		return Mathf.RoundToInt(PokemonDamage);
+	}
+
+	public void HitStart()
+	{
+		Debug.Log("ik ben bij de functie :)");
+		Invoke("HitStop", 1);
+	}
+	public void HitStop()
+	{
+		Debug.Log("poef");
 	}
 
 	private IEnumerator EnemyTurn()

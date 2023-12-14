@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-	[SerializeField] private PlayerStats Player = null;
-	[SerializeField] private EnemyStats Enemy = null;
+	PlayerStats Player;
+	EnemyStats Enemy;
 
+	void Start()
+	{
+		Player = GameObject.Find("Reu_Final").GetComponent<PlayerStats>();
+		Enemy = GameObject.Find("Phantump").GetComponent<EnemyStats>();
+	}
 	public void Update()
 	{
 		if (Player.CurrentHealth <= 0)
