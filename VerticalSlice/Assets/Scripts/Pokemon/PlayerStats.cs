@@ -7,9 +7,12 @@ public class PlayerStats : MonoBehaviour
 	public static string Name;
 	public string PokeName;
 
-	public int CurrentHealth;
+	[HideInInspector] public int CurrentHealth;
 	public int MaxHealth;
 	public Healthbar healthbar;
+
+	public static int STCurrentH;
+	public static int STMaxH;
 
 	public int Defends;
 	public int AttackDamage;
@@ -19,18 +22,25 @@ public class PlayerStats : MonoBehaviour
 
 	public void Start()
 	{
+		Name = PokeName;
+
 		CurrentHealth = MaxHealth;
+		STMaxH = MaxHealth;
 		healthbar.SetMaxHealth(MaxHealth);
 
-		Name = PokeName;
 	}
 	private void Update()
 	{
+		STCurrentH = CurrentHealth;
 		healthbar.GetComponent<Healthbar>().CurrentHealth(CurrentHealth, healthbar.slider.value);
 
 		if (CurrentHealth <= 0)
 		{
-			Debug.Log("Enemy verslagen");
+			Invoke("Defeated", 3);
 		}
+	}
+	private void Defeated()
+	{
+		gameObject.SetActive(false);
 	}
 }
