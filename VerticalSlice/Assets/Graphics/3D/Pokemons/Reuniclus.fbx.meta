@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1f5759e5a6ecc3d42a4e729d508eb8a7
+guid: 891b3c1d2450c1f4988b83cda869deed
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -12,28 +12,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Eyes
-    second: {fileID: 2100000, guid: 31e8821ab0bf7d240b887aff883e860e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Face
-    second: {fileID: 2100000, guid: 31e8821ab0bf7d240b887aff883e860e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Mouth
     second: {fileID: 2100000, guid: 31e8821ab0bf7d240b887aff883e860e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Slime
     second: {fileID: 2100000, guid: f556dc210a32a0e48968205e39e8e07b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Tongue
-    second: {fileID: 2100000, guid: 31e8821ab0bf7d240b887aff883e860e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
