@@ -8,7 +8,6 @@ public class FightButton : MonoBehaviour
 
 	public Button FightB;
 
-	//public Animator ButtonAnimator;
 	public void Start()
 	{
 		CanvasAttack.SetActive(false);
@@ -22,17 +21,29 @@ public class FightButton : MonoBehaviour
 		CanvasAttack.SetActive(true);
 	}
 
+	public void Pokemon()
+	{
+		CanvasStart.SetActive(false);
+		Debug.Log("Pokemoncanvas is er nog niet");
+	}
+	public void Bag()
+	{
+		CanvasStart.SetActive(false);
+		Debug.Log("Bagcanvas is er nog niet");
+	}
+
 	public void ScaleButton()
 	{
-		FightB.transform.localScale = new Vector3(1.75f, 2.35f, 1f);
+		FightB.transform.localScale = new Vector3(1.75f, 2.35f, 0f);
 
 		Invoke("ScaleToNormal", 0.1f);
 	}
 
 	public void ScaleToNormal()
 	{
-		FightB.transform.localScale = new Vector3(2f, 2.9f, 0.1f);
+		FightB.transform.localScale = new Vector3(2f, 2.9f, 0f);
 
-		Invoke("Battle", 0.2f);
+		Invoke("Battle", 0.1f);
+
 	}
 }
