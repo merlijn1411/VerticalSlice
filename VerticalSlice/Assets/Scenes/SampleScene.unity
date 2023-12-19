@@ -468,7 +468,6 @@ GameObject:
   - component: {fileID: 142544542}
   - component: {fileID: 142544544}
   - component: {fileID: 142544543}
-  - component: {fileID: 142544545}
   m_Layer: 5
   m_Name: Move 1 (TMP)
   m_TagString: Untagged
@@ -492,7 +491,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -456.6555, y: -12}
+  m_AnchoredPosition: {x: -456.65555, y: -12.000061}
   m_SizeDelta: {x: 832.689, y: 201.2952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &142544543
@@ -594,22 +593,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142544541}
   m_CullTransparentMesh: 1
---- !u!114 &142544545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 142544541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ecd4df30a9304149ab7b05d67b98049, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 142544543}
-  lines:
-  - ATTACK!!!!
-  active: 0
 --- !u!1 &158062823
 GameObject:
   m_ObjectHideFlags: 0
@@ -4931,6 +4914,8 @@ GameObject:
   - component: {fileID: 1778997839}
   - component: {fileID: 1778997841}
   - component: {fileID: 1778997842}
+  - component: {fileID: 1778997843}
+  - component: {fileID: 1778997844}
   m_Layer: 5
   m_Name: panel
   m_TagString: Untagged
@@ -5030,8 +5015,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd54dc4824881b4e9f506bd661ec32a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 142544545}
+  dialogue: {fileID: 1778997843}
   Play: {fileID: 1778997841}
+--- !u!114 &1778997843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778997837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ecd4df30a9304149ab7b05d67b98049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 142544543}
+  lines:
+  - ATTACK!!!!
+  Playing: {fileID: 142544541}
+--- !u!114 &1778997844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778997837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803848564988b3b448af3c2090aad225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1791685196
 GameObject:
   m_ObjectHideFlags: 0

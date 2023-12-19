@@ -7,16 +7,17 @@ public class TextPanelAnimation : MonoBehaviour
 
     void Start()
     {
-
+        Play = GetComponent<Animator>();
+        Dialogue.OnFinishedDialogue += PanelDissapear;
     }
     public void PanelAnimate()
     {
         Play.SetTrigger("Appear");
-        /*
-        if (dialogue.active == true)
-        {
-            Play.SetTrigger("Disapear");
-        }
-        */
+    }
+
+    public void PanelDissapear()
+    {
+        Play.SetTrigger("Disapear");
+
     }
 }

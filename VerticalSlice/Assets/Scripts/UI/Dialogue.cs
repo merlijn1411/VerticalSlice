@@ -1,26 +1,39 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 
 public class Dialogue : MonoBehaviour
 {
+    static public event Action OnFinishedDialogue;
+
+
     public TextMeshProUGUI textComponent;
     public string[] lines;
     private float textspeed;
 
     private int index;
+    public GameObject Playing;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        Playing.SetActive(true);
         textspeed = 2 * Time.deltaTime;
         textComponent.text = string.Empty;
         StartDialogue();
+
+        EndPanelAnimation.OnPanelAnimationEndEvent += PlayText;
     }
 
     // Update is called once per frame
     void Update()
+    {
+        PlayText();
+    }
+
+    public void PlayText()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -61,7 +74,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            OnFinishedDialogue?.Invoke();
         }
     }
 }
