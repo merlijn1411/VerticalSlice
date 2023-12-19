@@ -21,17 +21,6 @@ public class FightButton : MonoBehaviour
 		CanvasAttack.SetActive(true);
 	}
 
-	public void Pokemon()
-	{
-		CanvasStart.SetActive(false);
-		Debug.Log("Pokemoncanvas is er nog niet");
-	}
-	public void Bag()
-	{
-		CanvasStart.SetActive(false);
-		Debug.Log("Bagcanvas is er nog niet");
-	}
-
 	public void ScaleButton()
 	{
 		FightB.transform.localScale = new Vector3(1.75f, 2.35f, 0f);

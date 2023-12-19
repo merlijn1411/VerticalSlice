@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-	PlayerStats Player;
-	EnemyStats Enemy;
+	private PlayerStats Player = null;
+	private EnemyStats Enemy = null;
 
 	void Start()
 	{
-		Player = GameObject.Find("Reu_Final").GetComponent<PlayerStats>();
+		Player = GameObject.Find("Reuniclus").GetComponent<PlayerStats>();
 		Enemy = GameObject.Find("Phantump").GetComponent<EnemyStats>();
 	}
 	public void Update()

@@ -24,10 +24,14 @@ public class TurnBaseManager : MonoBehaviour
 
 	private bool isplayerTurn = true;
 
+	Animator Phan_anim;
+
 	void Start()
 	{
-		Player = GameObject.Find("Reu_Final").GetComponent<PlayerStats>();
+		Player = GameObject.Find("Reuniclus").GetComponent<PlayerStats>();
 		Enemy = GameObject.Find("Phantump").GetComponent<EnemyStats>();
+
+		Phan_anim = GameObject.Find("Phantump").GetComponent<Animator>();
 	}
 	private void Update()
 	{
@@ -109,5 +113,6 @@ public class TurnBaseManager : MonoBehaviour
 		random = Random.Range(1, 3);
 		Debug.Log("deze Randomizer is voor later " + random);
 		Attack1(Player);
+		//Phan_anim.Play("Attack");
 	}
 }
