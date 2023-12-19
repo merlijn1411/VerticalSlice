@@ -25,6 +25,7 @@ public class TurnBaseManager : MonoBehaviour
 	private bool isplayerTurn = true;
 
 	Animator Phan_anim;
+	Animator Reu_anim;
 
 	void Start()
 	{
@@ -32,6 +33,8 @@ public class TurnBaseManager : MonoBehaviour
 		Enemy = GameObject.Find("Phantump").GetComponent<EnemyStats>();
 
 		Phan_anim = GameObject.Find("Phantump").GetComponent<Animator>();
+		Reu_anim = GameObject.Find("Reuniclus").GetComponent<Animator>();
+
 	}
 	private void Update()
 	{
@@ -44,22 +47,38 @@ public class TurnBaseManager : MonoBehaviour
 	{
 		if (target == Enemy)
 		{
+			Phan_anim.SetBool("Hurt", true);
 			Enemy.CurrentHealth -= CalculateDamage(Player.AttackDamage, Player.typeElement);
 			Enemyhealthbar.time = 0f;
+			Invoke("PlayerIdleAnim", 0.1f);
+			Invoke("EnemyIdleAnim", 0.8f);
 		}
-		else
+		else if (target == Player)
 		{
+			Reu_anim.SetBool("Hurt", true);
 			Player.CurrentHealth -= CalculateDamage(Enemy.AttackDamage, Enemy.typeElement);
 			Playerhealthbar.time = 0f;
-
+			Invoke("PlayerIdleAnim", 0.8f);
+			Invoke("EnemyIdleAnim", 0.1f);
 		}
-
 		ChangeTurn();
 	}
 
 	public void BtnAttack1()
 	{
+		Reu_anim.SetBool("Attack", true);
 		Attack1(Enemy);
+	}
+
+	void PlayerIdleAnim()
+	{
+		Reu_anim.SetBool("Attack", false);
+		Reu_anim.SetBool("Hurt", false);
+	}
+	void EnemyIdleAnim()
+	{
+		Phan_anim.SetBool("Attack", false);
+		Phan_anim.SetBool("Hurt", false);
 	}
 
 	private void ChangeTurn()
@@ -113,6 +132,6 @@ public class TurnBaseManager : MonoBehaviour
 		random = Random.Range(1, 3);
 		Debug.Log("deze Randomizer is voor later " + random);
 		Attack1(Player);
-		//Phan_anim.Play("Attack");
+		Phan_anim.SetBool("Attack", true);
 	}
 }
