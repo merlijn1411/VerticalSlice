@@ -9,11 +9,11 @@ public class TurnBaseManager : MonoBehaviour
 	PlayerStats Player;
 	EnemyStats Enemy;
 
-	[SerializeField] private Button AttackBtn = null;
+	[SerializeField] private Button AttackBtn1, AttackBtn2, AttackBtn3, AttackBtn4 = null;
 
 	//[SerializeField] private GameObject UICanvas = null;
-	//[SerializeField] private GameObject ButtonCanvas = null;
-	//[SerializeField] private GameObject AttackButtons = null;
+	//[SerializeField] private GameObject CanvasStart = null;
+	//[SerializeField] private GameObject CanvasAttack = null;
 
 	[SerializeField] private float PhysicPower;
 	[SerializeField] private float GhostPower;
@@ -34,7 +34,6 @@ public class TurnBaseManager : MonoBehaviour
 
 		Phan_anim = GameObject.Find("Phantump").GetComponent<Animator>();
 		Reu_anim = GameObject.Find("Reuniclus").GetComponent<Animator>();
-
 	}
 	private void Update()
 	{
@@ -58,8 +57,8 @@ public class TurnBaseManager : MonoBehaviour
 			Reu_anim.SetBool("Hurt", true);
 			Player.CurrentHealth -= CalculateDamage(Enemy.AttackDamage, Enemy.typeElement);
 			Playerhealthbar.time = 0f;
-			Invoke("PlayerIdleAnim", 0.8f);
 			Invoke("EnemyIdleAnim", 0.1f);
+			Invoke("PlayerIdleAnim", 0.8f);
 		}
 		ChangeTurn();
 	}
@@ -88,20 +87,26 @@ public class TurnBaseManager : MonoBehaviour
 		if (!isplayerTurn)
 		{
 			//UICanvas.SetActive(false);
-			AttackBtn.interactable = false;
+			AttackBtn1.interactable = false;
+			AttackBtn2.interactable = false;
+			AttackBtn3.interactable = false;
+			AttackBtn4.interactable = false;
 
 			StartCoroutine(EnemyTurn());
 		}
 		else
 		{
-			//ResetCanvas();
-			AttackBtn.interactable = true;
+			//Invoke("ResetCanvas", 1);
+			AttackBtn1.interactable = true;
+			AttackBtn2.interactable = true;
+			AttackBtn3.interactable = true;
+			AttackBtn4.interactable = true;
 		}
 	}
 	/*/public void ResetCanvas()
 	{
-		ButtonCanvas.SetActive(true);
-		AttackButtons.SetActive(false);
+		CanvasStart.SetActive(true);
+		CanvasAttack.SetActive(false);
 		UICanvas.SetActive(true);
 	}/*/
 
