@@ -47,10 +47,11 @@ public class TurnBaseManager : MonoBehaviour
 	{
 		if (target == Enemy)
 		{
-			Reu_anim.SetBool("Attack", true);
+			Phan_anim.SetBool("Hurt", true);
 			Enemy.CurrentHealth -= CalculateDamage(Player.AttackDamage, Player.typeElement);
 			Enemyhealthbar.time = 0f;
 			Invoke("PlayerIdleAnim", 0.1f);
+			Invoke("EnemyIdleAnim", 0.8f);
 		}
 		else if (target == Player)
 		{
@@ -58,12 +59,14 @@ public class TurnBaseManager : MonoBehaviour
 			Player.CurrentHealth -= CalculateDamage(Enemy.AttackDamage, Enemy.typeElement);
 			Playerhealthbar.time = 0f;
 			Invoke("PlayerIdleAnim", 0.8f);
+			Invoke("EnemyIdleAnim", 0.1f);
 		}
 		ChangeTurn();
 	}
 
 	public void BtnAttack1()
 	{
+		Reu_anim.SetBool("Attack", true);
 		Attack1(Enemy);
 	}
 
@@ -74,7 +77,8 @@ public class TurnBaseManager : MonoBehaviour
 	}
 	void EnemyIdleAnim()
 	{
-		//Phan_anim.SetBool("Attack", false);
+		Phan_anim.SetBool("Attack", false);
+		Phan_anim.SetBool("Hurt", false);
 	}
 
 	private void ChangeTurn()
@@ -128,6 +132,6 @@ public class TurnBaseManager : MonoBehaviour
 		random = Random.Range(1, 3);
 		Debug.Log("deze Randomizer is voor later " + random);
 		Attack1(Player);
-		//Phan_anim.Play("Attack");
+		Phan_anim.SetBool("Attack", true);
 	}
 }
