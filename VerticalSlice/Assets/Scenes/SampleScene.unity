@@ -390,6 +390,7 @@ GameObject:
   - component: {fileID: 111421589}
   - component: {fileID: 111421588}
   - component: {fileID: 111421591}
+  - component: {fileID: 111421592}
   m_Layer: 5
   m_Name: Button Atack (3)
   m_TagString: Untagged
@@ -513,6 +514,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverIMG: {fileID: 2334977294671272073}
+--- !u!114 &111421592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111421586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48eefd20c32764c45b96f60644f995d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 111421588}
 --- !u!1001 &112572057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1272,6 +1286,7 @@ GameObject:
   - component: {fileID: 284489304}
   - component: {fileID: 284489303}
   - component: {fileID: 284489307}
+  - component: {fileID: 284489308}
   m_Layer: 5
   m_Name: Button (Bag)
   m_TagString: Untagged
@@ -1288,7 +1303,7 @@ RectTransform:
   m_GameObject: {fileID: 284489301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1, y: 2.9, z: 2.9223218}
+  m_LocalScale: {x: 2.1, y: 2.9, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1027969927}
@@ -1395,6 +1410,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverIMG: {fileID: 104065091209621187}
+--- !u!114 &284489308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284489301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48eefd20c32764c45b96f60644f995d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 284489303}
 --- !u!1 &352912348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,6 +1706,7 @@ GameObject:
   - component: {fileID: 404992457}
   - component: {fileID: 404992456}
   - component: {fileID: 404992460}
+  - component: {fileID: 404992461}
   m_Layer: 5
   m_Name: Button (pokemon)
   m_TagString: Untagged
@@ -1694,7 +1723,7 @@ RectTransform:
   m_GameObject: {fileID: 404992454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1, y: 2.9, z: 2.9223218}
+  m_LocalScale: {x: 2.1, y: 2.9, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1798679300}
@@ -1801,6 +1830,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverIMG: {fileID: 104065091736266903}
+--- !u!114 &404992461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404992454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48eefd20c32764c45b96f60644f995d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 404992456}
 --- !u!1 &449904772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,6 +1856,7 @@ GameObject:
   - component: {fileID: 449904775}
   - component: {fileID: 449904774}
   - component: {fileID: 449904777}
+  - component: {fileID: 449904778}
   m_Layer: 5
   m_Name: Button Atack (4)
   m_TagString: Untagged
@@ -1962,6 +2005,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverIMG: {fileID: 1404044490556036012}
+--- !u!114 &449904778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449904772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48eefd20c32764c45b96f60644f995d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 449904774}
 --- !u!1 &477758876
 GameObject:
   m_ObjectHideFlags: 0
@@ -4025,6 +4081,7 @@ GameObject:
   - component: {fileID: 1050329540}
   - component: {fileID: 1050329539}
   - component: {fileID: 1050329543}
+  - component: {fileID: 1050329544}
   m_Layer: 5
   m_Name: Button (Fight)
   m_TagString: Untagged
@@ -4041,7 +4098,7 @@ RectTransform:
   m_GameObject: {fileID: 1050329537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1, y: 2.9, z: 1.861519}
+  m_LocalScale: {x: 2.1, y: 2.9, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 158062824}
@@ -4148,6 +4205,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverIMG: {fileID: 3311669054761616838}
+--- !u!95 &1050329544
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050329537}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36c17c5f366dd04ea386975982eb5bd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1064425251
 GameObject:
   m_ObjectHideFlags: 0
@@ -5328,6 +5407,7 @@ GameObject:
   - component: {fileID: 1566157821}
   - component: {fileID: 1566157820}
   - component: {fileID: 1566157823}
+  - component: {fileID: 1566157824}
   m_Layer: 5
   m_Name: Button Atack (2)
   m_TagString: Untagged
@@ -5451,6 +5531,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverIMG: {fileID: 5866063101878543610}
+--- !u!114 &1566157824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566157818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48eefd20c32764c45b96f60644f995d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1566157820}
 --- !u!1 &1621523031
 GameObject:
   m_ObjectHideFlags: 0
@@ -5960,6 +6053,7 @@ GameObject:
   - component: {fileID: 1748200132}
   - component: {fileID: 1748200131}
   - component: {fileID: 1748200135}
+  - component: {fileID: 1748200136}
   m_Layer: 5
   m_Name: Button (Run)
   m_TagString: Untagged
@@ -5976,7 +6070,7 @@ RectTransform:
   m_GameObject: {fileID: 1748200129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1, y: 2.9, z: 2.9223218}
+  m_LocalScale: {x: 2.1, y: 2.9, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1666387246}
@@ -6031,19 +6125,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1748200132}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2024868004}
-        m_TargetAssemblyTypeName: UiQuit, Assembly-CSharp
-        m_MethodName: Quit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1748200132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6095,6 +6177,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverIMG: {fileID: 104065092613666985}
+--- !u!114 &1748200136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748200129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48eefd20c32764c45b96f60644f995d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1748200131}
 --- !u!1 &1750344935
 GameObject:
   m_ObjectHideFlags: 0
@@ -7113,6 +7208,7 @@ GameObject:
   - component: {fileID: 2078492216}
   - component: {fileID: 2078492218}
   - component: {fileID: 2078492219}
+  - component: {fileID: 2078492220}
   m_Layer: 5
   m_Name: Button Atack (1)
   m_TagString: Untagged
@@ -7236,6 +7332,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverIMG: {fileID: 7623070015069858157}
+--- !u!114 &2078492220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078492214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48eefd20c32764c45b96f60644f995d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 2078492216}
 --- !u!1 &104065091209621187
 GameObject:
   m_ObjectHideFlags: 0
