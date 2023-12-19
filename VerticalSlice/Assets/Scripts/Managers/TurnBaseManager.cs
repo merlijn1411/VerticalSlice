@@ -9,11 +9,11 @@ public class TurnBaseManager : MonoBehaviour
 	PlayerStats Player;
 	EnemyStats Enemy;
 
-	[SerializeField] private Button AttackBtn = null;
+	[SerializeField] private Button AttackBtn1, AttackBtn2, AttackBtn3, AttackBtn4 = null;
 
 	//[SerializeField] private GameObject UICanvas = null;
-	//[SerializeField] private GameObject ButtonCanvas = null;
-	//[SerializeField] private GameObject AttackButtons = null;
+	//[SerializeField] private GameObject CanvasStart = null;
+	//[SerializeField] private GameObject CanvasAttack = null;
 
 	[SerializeField] private float PhysicPower;
 	[SerializeField] private float GhostPower;
@@ -24,10 +24,16 @@ public class TurnBaseManager : MonoBehaviour
 
 	private bool isplayerTurn = true;
 
+	Animator Phan_anim;
+	Animator Reu_anim;
+
 	void Start()
 	{
-		Player = GameObject.Find("Reu_Final").GetComponent<PlayerStats>();
+		Player = GameObject.Find("Reuniclus").GetComponent<PlayerStats>();
 		Enemy = GameObject.Find("Phantump").GetComponent<EnemyStats>();
+
+		Phan_anim = GameObject.Find("Phantump").GetComponent<Animator>();
+		Reu_anim = GameObject.Find("Reuniclus").GetComponent<Animator>();
 	}
 	private void Update()
 	{
@@ -40,23 +46,38 @@ public class TurnBaseManager : MonoBehaviour
 	{
 		if (target == Enemy)
 		{
+			Phan_anim.SetBool("Hurt", true);
 			Enemy.CurrentHealth -= CalculateDamage(Player.AttackDamage, Player.typeElement);
 			Enemyhealthbar.time = 0f;
-			HitStart();
+			Invoke("PlayerIdleAnim", 0.1f);
+			Invoke("EnemyIdleAnim", 0.8f);
 		}
-		else
+		else if (target == Player)
 		{
+			Reu_anim.SetBool("Hurt", true);
 			Player.CurrentHealth -= CalculateDamage(Enemy.AttackDamage, Enemy.typeElement);
 			Playerhealthbar.time = 0f;
-
+			Invoke("EnemyIdleAnim", 0.1f);
+			Invoke("PlayerIdleAnim", 0.8f);
 		}
-
 		ChangeTurn();
 	}
 
 	public void BtnAttack1()
 	{
+		Reu_anim.SetBool("Attack", true);
 		Attack1(Enemy);
+	}
+
+	void PlayerIdleAnim()
+	{
+		Reu_anim.SetBool("Attack", false);
+		Reu_anim.SetBool("Hurt", false);
+	}
+	void EnemyIdleAnim()
+	{
+		Phan_anim.SetBool("Attack", false);
+		Phan_anim.SetBool("Hurt", false);
 	}
 
 	private void ChangeTurn()
@@ -66,20 +87,26 @@ public class TurnBaseManager : MonoBehaviour
 		if (!isplayerTurn)
 		{
 			//UICanvas.SetActive(false);
-			AttackBtn.interactable = false;
+			AttackBtn1.interactable = false;
+			AttackBtn2.interactable = false;
+			AttackBtn3.interactable = false;
+			AttackBtn4.interactable = false;
 
 			StartCoroutine(EnemyTurn());
 		}
 		else
 		{
-			//ResetCanvas();
-			AttackBtn.interactable = true;
+			//Invoke("ResetCanvas", 1);
+			AttackBtn1.interactable = true;
+			AttackBtn2.interactable = true;
+			AttackBtn3.interactable = true;
+			AttackBtn4.interactable = true;
 		}
 	}
 	/*/public void ResetCanvas()
 	{
-		ButtonCanvas.SetActive(true);
-		AttackButtons.SetActive(false);
+		CanvasStart.SetActive(true);
+		CanvasAttack.SetActive(false);
 		UICanvas.SetActive(true);
 	}/*/
 
@@ -102,16 +129,6 @@ public class TurnBaseManager : MonoBehaviour
 		return Mathf.RoundToInt(PokemonDamage);
 	}
 
-	public void HitStart()
-	{
-		Debug.Log("ik ben bij de functie :)");
-		Invoke("HitStop", 1);
-	}
-	public void HitStop()
-	{
-		Debug.Log("poef");
-	}
-
 	private IEnumerator EnemyTurn()
 	{
 		yield return new WaitForSeconds(3);
@@ -120,5 +137,6 @@ public class TurnBaseManager : MonoBehaviour
 		random = Random.Range(1, 3);
 		Debug.Log("deze Randomizer is voor later " + random);
 		Attack1(Player);
+		Phan_anim.SetBool("Attack", true);
 	}
 }
