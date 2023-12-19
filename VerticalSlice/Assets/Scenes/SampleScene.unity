@@ -205,6 +205,28 @@ MonoBehaviour:
   healthbar: {fileID: 2066387721}
   AttackDamage: 15
   typeElement: 0
+--- !u!95 &24945282
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24945279}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 59f9ff9a4e11ead46a3211e789179009, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &51659952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,6 +1418,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd00faa491006c2409f4942d268e80d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 24945281}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd00faa491006c2409f4942d268e80d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 24945282}
   m_SourcePrefab: {fileID: 100100000, guid: fd00faa491006c2409f4942d268e80d5, type: 3}
 --- !u!1 &352912348
 GameObject:
@@ -4917,6 +4942,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 891b3c1d2450c1f4988b83cda869deed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1856190984}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 891b3c1d2450c1f4988b83cda869deed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1856190985}
   m_SourcePrefab: {fileID: 100100000, guid: 891b3c1d2450c1f4988b83cda869deed, type: 3}
 --- !u!1 &1292430925
 GameObject:
@@ -6976,6 +7004,28 @@ MonoBehaviour:
   AttackDamage: 20
   Speed: 50
   typeElement: 0
+--- !u!95 &1856190985
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856190980}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f950c705dc3f514c8ad940a99f5a488, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1889042383
 GameObject:
   m_ObjectHideFlags: 0
