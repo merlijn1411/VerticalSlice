@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: 6b6912381ffa8984a82a085e511d65b0
+guid: 891b3c1d2450c1f4988b83cda869deed
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: 04bcd7cdff368bf4a89f011dff1ebfb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face
+    second: {fileID: 2100000, guid: 31e8821ab0bf7d240b887aff883e860e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Slime
+    second: {fileID: 2100000, guid: f556dc210a32a0e48968205e39e8e07b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
