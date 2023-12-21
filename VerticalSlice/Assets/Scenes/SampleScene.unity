@@ -348,6 +348,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3edba12940db9ba44acf0d427901892c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerNameText: {fileID: 1109986509}
+  EnemyNameText: {fileID: 711096393}
+  PlayerHealthText: {fileID: 932602405}
 --- !u!1001 &100007342
 PrefabInstance:
   m_ObjectHideFlags: 0
