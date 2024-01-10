@@ -27,6 +27,10 @@ public class TurnBaseManager : MonoBehaviour
 	Animator Phan_anim;
 	Animator Reu_anim;
 
+	CameraAnimationController CamAttackTrigger;
+
+	float timer;
+
 	void Start()
 	{
 		Player = GameObject.Find("Reuniclus").GetComponent<PlayerStats>();
@@ -34,6 +38,8 @@ public class TurnBaseManager : MonoBehaviour
 
 		Phan_anim = GameObject.Find("Phantump").GetComponent<Animator>();
 		Reu_anim = GameObject.Find("Reuniclus").GetComponent<Animator>();
+
+		CamAttackTrigger = GameObject.Find("camera animation pivot").GetComponent<CameraAnimationController>();
 	}
 	private void Update()
 	{
@@ -46,11 +52,8 @@ public class TurnBaseManager : MonoBehaviour
 	{
 		if (target == Enemy)
 		{
-			Phan_anim.SetBool("Hurt", true);
-			Enemy.CurrentHealth -= CalculateDamage(Player.AttackDamage, Player.typeElement);
-			Enemyhealthbar.time = 0f;
-			Invoke("PlayerIdleAnim", 0.1f);
-			Invoke("EnemyIdleAnim", 0.8f);
+			Reu_anim.SetBool("Attack", true);
+			StartCoroutine(HurtDelay());
 		}
 		else if (target == Player)
 		{
@@ -65,8 +68,8 @@ public class TurnBaseManager : MonoBehaviour
 
 	public void BtnAttack1()
 	{
-		Reu_anim.SetBool("Attack", true);
-		Attack1(Enemy);
+		ButtonInteractOff();
+		StartCoroutine(CamTriggerPlayer());
 	}
 
 	void PlayerIdleAnim()
@@ -87,11 +90,6 @@ public class TurnBaseManager : MonoBehaviour
 		if (!isplayerTurn)
 		{
 			//UICanvas.SetActive(false);
-			AttackBtn1.interactable = false;
-			AttackBtn2.interactable = false;
-			AttackBtn3.interactable = false;
-			AttackBtn4.interactable = false;
-
 			StartCoroutine(EnemyTurn());
 		}
 		else
@@ -103,6 +101,14 @@ public class TurnBaseManager : MonoBehaviour
 			AttackBtn4.interactable = true;
 		}
 	}
+	public void ButtonInteractOff()
+	{
+		AttackBtn1.interactable = false;
+		AttackBtn2.interactable = false;
+		AttackBtn3.interactable = false;
+		AttackBtn4.interactable = false;
+	}
+
 	/*/public void ResetCanvas()
 	{
 		CanvasStart.SetActive(true);
@@ -129,14 +135,36 @@ public class TurnBaseManager : MonoBehaviour
 		return Mathf.RoundToInt(PokemonDamage);
 	}
 
+	public void HurtTrigger()
+	{
+		Phan_anim.SetBool("Hurt", true);
+		Enemy.CurrentHealth -= CalculateDamage(Player.AttackDamage, Player.typeElement);
+		Enemyhealthbar.time = 0f;
+		Invoke("PlayerIdleAnim", 0.1f);
+		Invoke("EnemyIdleAnim", 0.8f);
+	}
+
 	private IEnumerator EnemyTurn()
 	{
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(10);
 
 		int random = 0;
 		random = Random.Range(1, 3);
 		Debug.Log("deze Randomizer is voor later " + random);
 		Attack1(Player);
 		Phan_anim.SetBool("Attack", true);
+	}
+
+	public IEnumerator CamTriggerPlayer()
+	{
+		CamAttackTrigger.GetComponent<CameraAnimationController>().TriggerAnimation();
+		yield return new WaitForSeconds(3f);
+
+		Attack1(Enemy);
+	}
+	public IEnumerator HurtDelay()
+	{
+		yield return new WaitForSeconds(2f);
+		HurtTrigger();
 	}
 }

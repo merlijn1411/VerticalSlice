@@ -5775,7 +5775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1565478154}
-  CamTR: {fileID: 0}
+  CamTR: {fileID: 963194228}
 --- !u!1 &1566157818
 GameObject:
   m_ObjectHideFlags: 0

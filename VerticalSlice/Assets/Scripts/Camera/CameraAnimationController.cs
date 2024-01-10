@@ -12,12 +12,8 @@ public class CameraAnimationController : MonoBehaviour
 		animator = GetComponent<Animator>();
 	}
 
-	// Update is called once per frame
-	void Update()
+	public void TriggerAnimation()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			animator.SetTrigger("StartAttack");
-		}
+		animator.SetTrigger("StartAttack");
 	}
 }
