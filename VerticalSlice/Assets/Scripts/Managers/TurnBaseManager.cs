@@ -64,6 +64,7 @@ public class TurnBaseManager : MonoBehaviour
 		}
 		else if (target == Player)
 		{
+			EAttackParticleTake.Play();
 			Reu_anim.SetBool("Hurt", true);
 			Player.CurrentHealth -= CalculateDamage(Enemy.AttackDamage, Enemy.typeElement);
 			Playerhealthbar.time = 0f;
@@ -144,7 +145,6 @@ public class TurnBaseManager : MonoBehaviour
 
 	public void HurtTrigger()
 	{
-		EAttackParticleTake.Play();
 		Phan_anim.SetBool("Hurt", true);
 		Enemy.CurrentHealth -= CalculateDamage(Player.AttackDamage, Player.typeElement);
 		Enemyhealthbar.time = 0f;
