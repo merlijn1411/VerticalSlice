@@ -197,6 +197,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 871415965}
+        m_TargetAssemblyTypeName: TextPanelAnimation, Assembly-CSharp
+        m_MethodName: PanelAnimate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &58574759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1066,6 +1078,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 871415965}
+        m_TargetAssemblyTypeName: TextPanelAnimation, Assembly-CSharp
+        m_MethodName: PanelAnimate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &234913364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1573,6 +1597,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1636323851}
         m_TargetAssemblyTypeName: TurnBaseManager, Assembly-CSharp
         m_MethodName: BtnAttack1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 871415965}
+        m_TargetAssemblyTypeName: TextPanelAnimation, Assembly-CSharp
+        m_MethodName: PanelAnimate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3432,6 +3468,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 871415965}
+        m_TargetAssemblyTypeName: TextPanelAnimation, Assembly-CSharp
+        m_MethodName: PanelAnimate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &821224776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3633,15 +3681,15 @@ RectTransform:
   m_GameObject: {fileID: 871415959}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 19.365969, y: 2.3944278, z: 12.031}
+  m_LocalScale: {x: 19.365969, y: 2.3944278, z: 12.031001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 807470784}
-  m_Father: {fileID: 1038341403}
+  m_Father: {fileID: 2091648356}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1925, y: -18.921387}
+  m_AnchoredPosition: {x: -1014.9999, y: -508.9214}
   m_SizeDelta: {x: 101.4469, y: 138.3028}
   m_Pivot: {x: 1, y: 0}
 --- !u!95 &871415961
@@ -4549,7 +4597,6 @@ RectTransform:
   - {fileID: 1840730675}
   - {fileID: 2091648356}
   - {fileID: 209841569}
-  - {fileID: 871415960}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9274,6 +9321,7 @@ RectTransform:
   - {fileID: 2023200127}
   - {fileID: 465705034}
   - {fileID: 1603037520}
+  - {fileID: 871415960}
   m_Father: {fileID: 1038341403}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
