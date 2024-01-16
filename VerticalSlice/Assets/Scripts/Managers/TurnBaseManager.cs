@@ -139,4 +139,15 @@ public class TurnBaseManager : MonoBehaviour
 		Attack1(Player);
 		Phan_anim.SetBool("Attack", true);
 	}
+
+
+	private void CalculateDamage(int damage, int atkDef)
+	{
+		EnemyStats stats = new EnemyStats();
+
+		atkDef = stats.AttackDamage / stats.Defends;
+		damage = (2 * 38 / 5 + 2) * Player.AttackDamage * atkDef / 50 + 2;
+		int realDamage = damage * Random.Range(81, 100);
+		Debug.Log($"{realDamage}");
+	}
 }
