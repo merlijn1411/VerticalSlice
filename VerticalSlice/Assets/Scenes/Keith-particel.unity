@@ -3746,7 +3746,7 @@ MonoBehaviour:
   lines:
   - fuck
   - die
-  Playing: {fileID: 0}
+  Playing: {fileID: 807470783}
 --- !u!1 &875119818
 GameObject:
   m_ObjectHideFlags: 0
@@ -8993,7 +8993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2023200127
 RectTransform:
   m_ObjectHideFlags: 0
