@@ -29,7 +29,13 @@ public class TurnBaseManager : MonoBehaviour
 
 	CameraAnimationController CamAttackTrigger;
 
-	float timer;
+	[Header("Player Particles")]
+	public ParticleSystem PAttackParticle;
+	public ParticleSystem PAttackParticleTake;
+
+	[Header("Enemy Particles")]
+	public ParticleSystem EAttackParticle;
+	public ParticleSystem EAttackParticleTake;
 
 	void Start()
 	{
@@ -53,6 +59,7 @@ public class TurnBaseManager : MonoBehaviour
 		if (target == Enemy)
 		{
 			Reu_anim.SetBool("Attack", true);
+			PAttackParticle.Play();
 			StartCoroutine(HurtDelay());
 		}
 		else if (target == Player)
@@ -137,6 +144,7 @@ public class TurnBaseManager : MonoBehaviour
 
 	public void HurtTrigger()
 	{
+		EAttackParticleTake.Play();
 		Phan_anim.SetBool("Hurt", true);
 		Enemy.CurrentHealth -= CalculateDamage(Player.AttackDamage, Player.typeElement);
 		Enemyhealthbar.time = 0f;
@@ -153,6 +161,7 @@ public class TurnBaseManager : MonoBehaviour
 		Debug.Log("deze Randomizer is voor later " + random);
 		Attack1(Player);
 		Phan_anim.SetBool("Attack", true);
+		EAttackParticle.Play();
 	}
 
 	public IEnumerator CamTriggerPlayer()
@@ -165,6 +174,7 @@ public class TurnBaseManager : MonoBehaviour
 	public IEnumerator HurtDelay()
 	{
 		yield return new WaitForSeconds(2f);
+		PAttackParticleTake.Play();
 		HurtTrigger();
 	}
 }
