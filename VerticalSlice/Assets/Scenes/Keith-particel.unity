@@ -3155,7 +3155,6 @@ GameObject:
   - component: {fileID: 807470784}
   - component: {fileID: 807470787}
   - component: {fileID: 807470786}
-  - component: {fileID: 807470785}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3182,23 +3181,6 @@ RectTransform:
   m_AnchoredPosition: {x: -30.181961, y: 5.2662964}
   m_SizeDelta: {x: 332.38733, y: 149.2906}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &807470785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807470783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ecd4df30a9304149ab7b05d67b98049, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 807470786}
-  lines:
-  - fuck
-  - die
-  Playing: {fileID: 0}
 --- !u!114 &807470786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3632,6 +3614,9 @@ GameObject:
   - component: {fileID: 871415963}
   - component: {fileID: 871415962}
   - component: {fileID: 871415961}
+  - component: {fileID: 871415966}
+  - component: {fileID: 871415965}
+  - component: {fileID: 871415964}
   m_Layer: 5
   m_Name: TextPanel(Image)
   m_TagString: Untagged
@@ -3719,6 +3704,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871415959}
   m_CullTransparentMesh: 1
+--- !u!114 &871415964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871415959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4b549827c76e24eb36d74f73a4768c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &871415965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871415959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1257f722284a12646842fd989d6160e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 871415966}
+  Play: {fileID: 871415961}
+--- !u!114 &871415966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871415959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ecd4df30a9304149ab7b05d67b98049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 807470786}
+  lines:
+  - fuck
+  - die
+  Playing: {fileID: 0}
 --- !u!1 &875119818
 GameObject:
   m_ObjectHideFlags: 0
