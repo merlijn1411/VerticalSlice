@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 474128}
   - component: {fileID: 474127}
   - component: {fileID: 474129}
+  - component: {fileID: 474130}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -185,6 +186,18 @@ MonoBehaviour:
   GrassPower: 1.25
   Playerhealthbar: {fileID: 841265576}
   Enemyhealthbar: {fileID: 2066387721}
+--- !u!114 &474130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96f7f58c1f62a342b992c152aa4d728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &24945279 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fd00faa491006c2409f4942d268e80d5, type: 3}
@@ -206,7 +219,9 @@ MonoBehaviour:
   CurrentHealth: 0
   MaxHealth: 100
   healthbar: {fileID: 2066387721}
-  AttackDamage: 15
+  Defends: 36
+  AttackDamage: 51
+  Speed: 0
   typeElement: 0
 --- !u!95 &24945282
 Animator:
@@ -7392,8 +7407,8 @@ MonoBehaviour:
   CurrentHealth: 0
   MaxHealth: 100
   healthbar: {fileID: 841265576}
-  Defends: 0
-  AttackDamage: 20
+  Defends: 45
+  AttackDamage: 90
   Speed: 50
   typeElement: 0
 --- !u!95 &1856190985
@@ -8239,6 +8254,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474126}
+        m_TargetAssemblyTypeName: TurnBaseManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

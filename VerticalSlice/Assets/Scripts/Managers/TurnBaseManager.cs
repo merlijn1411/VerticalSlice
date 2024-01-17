@@ -47,6 +47,7 @@ public class TurnBaseManager : MonoBehaviour
 		{
 			StopAllCoroutines();
 		}
+
 	}
 	private void Attack1(Component target)
 	{
@@ -155,6 +156,7 @@ public class TurnBaseManager : MonoBehaviour
 		Phan_anim.SetBool("Attack", true);
 	}
 
+
 	public IEnumerator CamTriggerPlayer()
 	{
 		CamAttackTrigger.GetComponent<CameraAnimationController>().TriggerAnimation();
@@ -167,4 +169,5 @@ public class TurnBaseManager : MonoBehaviour
 		yield return new WaitForSeconds(2f);
 		HurtTrigger();
 	}
+
 }
