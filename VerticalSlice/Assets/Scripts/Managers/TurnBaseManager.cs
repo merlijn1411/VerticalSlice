@@ -29,7 +29,13 @@ public class TurnBaseManager : MonoBehaviour
 
 	CameraAnimationController CamAttackTrigger;
 
-	float timer;
+	[Header("Player Particles")]
+	public ParticleSystem PAttackParticle;
+	public ParticleSystem PAttackParticleTake;
+
+	[Header("Enemy Particles")]
+	public ParticleSystem EAttackParticle;
+	public ParticleSystem EAttackParticleTake;
 
 	void Start()
 	{
@@ -54,10 +60,12 @@ public class TurnBaseManager : MonoBehaviour
 		if (target == Enemy)
 		{
 			Reu_anim.SetBool("Attack", true);
+			PAttackParticle.Play();
 			StartCoroutine(HurtDelay());
 		}
 		else if (target == Player)
 		{
+			EAttackParticleTake.Play();
 			Reu_anim.SetBool("Hurt", true);
 			Player.CurrentHealth -= CalculateDamage(Enemy.AttackDamage, Enemy.typeElement);
 			Playerhealthbar.time = 0f;
@@ -117,19 +125,25 @@ public class TurnBaseManager : MonoBehaviour
 		UICanvas.SetActive(true);
 	}/*/
 
-	public int CalculateDamage(int AttackDamage, ElementType elementType)
+	public int CalculateDamage(float damage, ElementType elementType)
 	{
-		float PokemonDamage = AttackDamage;
+		int atkDef = Enemy.AttackDamage / Enemy.Defends;
+		float randDmg = Random.Range(81f, 100f) / 100;
+		damage = ((2 * 38 / 5 + 2) * Player.AttackDamage * atkDef / 50 + 2) * 1f * 1.5f * randDmg * 1.5f;
+		float PokemonDamage = damage;
+
+
+		//Debug.Log(damage);
 		switch (elementType)
 		{
 			case ElementType.Physic:
-				PokemonDamage = AttackDamage * PhysicPower;
+				PokemonDamage = damage * PhysicPower;
 				break;
 			case ElementType.Ghost:
-				PokemonDamage = AttackDamage * GhostPower;
+				PokemonDamage = damage * GhostPower;
 				break;
 			case ElementType.Grass:
-				PokemonDamage = AttackDamage * GrassPower;
+				PokemonDamage = damage * GrassPower;
 				break;
 
 		}
@@ -154,6 +168,7 @@ public class TurnBaseManager : MonoBehaviour
 		Debug.Log("deze Randomizer is voor later " + random);
 		Attack1(Player);
 		Phan_anim.SetBool("Attack", true);
+		EAttackParticle.Play();
 	}
 
 
@@ -167,6 +182,7 @@ public class TurnBaseManager : MonoBehaviour
 	public IEnumerator HurtDelay()
 	{
 		yield return new WaitForSeconds(2f);
+		PAttackParticleTake.Play();
 		HurtTrigger();
 	}
 
