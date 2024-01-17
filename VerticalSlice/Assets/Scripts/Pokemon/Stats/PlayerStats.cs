@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class EnemyStats : MonoBehaviour
+public class PlayerStats : MonoBehaviour
 {
+	//public static event Action<int> onDied;
+
 	public static string Name;
 	public string PokeName;
 
@@ -9,30 +11,36 @@ public class EnemyStats : MonoBehaviour
 	public int MaxHealth;
 	public Healthbar healthbar;
 
+	public static int STCurrentH;
+	public static int STMaxH;
+
+	public int Defends;
 	public int AttackDamage;
+	public int Speed;
 
-	public TurnBaseManager.ElementType typeElement;
+	public ElementType.ElementTypes typeElement;
 
-	void Start()
+	public void Start()
 	{
 		Name = PokeName;
 
 		CurrentHealth = MaxHealth;
+		STMaxH = MaxHealth;
 		healthbar.SetMaxHealth(MaxHealth);
-	}
 
+	}
 	private void Update()
 	{
+		STCurrentH = CurrentHealth;
 		healthbar.GetComponent<Healthbar>().CurrentHealth(CurrentHealth, healthbar.slider.value);
+
 		if (CurrentHealth <= 0)
 		{
 			Invoke("Defeated", 3);
 		}
 	}
-
 	private void Defeated()
 	{
 		gameObject.SetActive(false);
 	}
-
 }

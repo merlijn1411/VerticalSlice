@@ -211,7 +211,7 @@ MonoBehaviour:
   MaxHealth: 100
   healthbar: {fileID: 2066387721}
   AttackDamage: 15
-  typeElement: 0
+  typeElement: 6
 --- !u!95 &24945282
 Animator:
   serializedVersion: 7
@@ -26763,7 +26763,7 @@ MonoBehaviour:
   Defends: 0
   AttackDamage: 20
   Speed: 50
-  typeElement: 0
+  typeElement: 1
 --- !u!95 &1856190985
 Animator:
   serializedVersion: 7

@@ -1,11 +1,10 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class TurnBaseManager : MonoBehaviour
 {
-	public enum ElementType { Physic, Ghost, Grass }
-
 	PlayerStats Player;
 	EnemyStats Enemy;
 
@@ -53,6 +52,7 @@ public class TurnBaseManager : MonoBehaviour
 		Reu_anim = GameObject.Find("Reuniclus").GetComponent<Animator>();
 
 		CamAttackTrigger = GameObject.Find("camera animation pivot").GetComponent<CameraAnimationController>();
+
 	}
 	private void Update()
 	{
@@ -136,21 +136,27 @@ public class TurnBaseManager : MonoBehaviour
 		UICanvas.SetActive(true);
 	}/*/
 
-	public int CalculateDamage(int AttackDamage, ElementType elementType)
+	public int CalculateDamage(int AttackDamage, ElementType.ElementTypes elementType)
 	{
 		float PokemonDamage = AttackDamage;
 		switch (elementType)
 		{
-			case ElementType.Physic:
+			case ElementType.ElementTypes.Physic:
 				PokemonDamage = AttackDamage * PhysicPower;
 				break;
-			case ElementType.Ghost:
+			case ElementType.ElementTypes.Ghost:
 				PokemonDamage = AttackDamage * GhostPower;
 				break;
-			case ElementType.Grass:
+			case ElementType.ElementTypes.Grass:
 				PokemonDamage = AttackDamage * GrassPower;
 				break;
+		}
 
+		switch (elementType | elementType)
+		{
+			case ElementType.ElementTypes.Ghost | ElementType.ElementTypes.Grass:
+				PokemonDamage = AttackDamage * GrassPower * GhostPower;
+				break;
 		}
 		return Mathf.RoundToInt(PokemonDamage);
 	}
