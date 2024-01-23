@@ -9,7 +9,9 @@ public class EnemyStats : MonoBehaviour
 	public int MaxHealth;
 	public Healthbar healthbar;
 
+	public int Defends;
 	public int AttackDamage;
+	public int Speed;
 
 	public TurnBaseManager.ElementType typeElement;
 
