@@ -210,8 +210,9 @@ MonoBehaviour:
   CurrentHealth: 0
   MaxHealth: 100
   healthbar: {fileID: 2066387721}
-  Defends: 45
-  AttackDamage: 51
+  level: 32
+  Defends: 35
+  AttackDamage: 48
   Speed: 0
   typeElement: 0
 --- !u!95 &24945282
@@ -26994,6 +26995,7 @@ MonoBehaviour:
   CurrentHealth: 0
   MaxHealth: 100
   healthbar: {fileID: 841265576}
+  level: 40
   Defends: 45
   AttackDamage: 90
   Speed: 50
