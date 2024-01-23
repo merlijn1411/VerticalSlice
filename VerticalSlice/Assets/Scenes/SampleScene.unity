@@ -28866,8 +28866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 6495655458042348517}
   lines:
-  - fuck
-  - die
+  - 
   Playing: {fileID: 4940200155623799447}
 --- !u!1001 &4807622976187195122
 PrefabInstance:
