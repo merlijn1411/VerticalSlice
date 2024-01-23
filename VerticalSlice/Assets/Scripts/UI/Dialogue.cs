@@ -2,11 +2,11 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
 	static public event Action OnFinishedDialogue;
-
 
 	public TextMeshProUGUI textComponent;
 	public string[] lines;
@@ -15,9 +15,9 @@ public class Dialogue : MonoBehaviour
 	private int index;
 	public GameObject Playing;
 
+	public Button Attackbtn1, Attackbtn2, Attackbtn3, Attackbtn4;
 
-	// Start is called before the first frame update
-	void Start()
+	public void Start()
 	{
 		Playing.SetActive(true);
 		textspeed = 2 * Time.deltaTime;
@@ -25,27 +25,30 @@ public class Dialogue : MonoBehaviour
 		StartDialogue();
 
 		EndPanelAnimation.OnPanelAnimationEndEvent += PlayText;
-	}
 
-	// Update is called once per frame
-	void Update()
-	{
-		PlayText();
+		Button btn1 = Attackbtn1.GetComponent<Button>();
+		btn1.onClick.AddListener(delegate { ButtonChooser(Attackbtn1); });
+
+		Button btn2 = Attackbtn2.GetComponent<Button>();
+		btn2.onClick.AddListener(delegate { ButtonChooser(Attackbtn2); });
+
+		Button btn3 = Attackbtn3.GetComponent<Button>();
+		btn3.onClick.AddListener(delegate { ButtonChooser(Attackbtn3); });
+
+		Button btn4 = Attackbtn4.GetComponent<Button>();
+		btn4.onClick.AddListener(delegate { ButtonChooser(Attackbtn4); });
 	}
 
 	public void PlayText()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (textComponent.text == lines[index])
 		{
-			if (textComponent.text == lines[index])
-			{
-				NextLine();
-			}
-			else
-			{
-				StopAllCoroutines();
-				textComponent.text = lines[index];
-			}
+			NextLine();
+		}
+		else
+		{
+			StopAllCoroutines();
+			textComponent.text = lines[index];
 		}
 	}
 
@@ -77,6 +80,27 @@ public class Dialogue : MonoBehaviour
 		{
 			OnFinishedDialogue?.Invoke();
 			index = 0;
+		}
+	}
+
+	public void ButtonChooser(Button btn)
+	{
+		if (btn == Attackbtn1)
+		{
+
+			Debug.Log("1");
+		}
+		if (btn == Attackbtn2)
+		{
+			Debug.Log("2");
+		}
+		if (btn == Attackbtn3)
+		{
+			Debug.Log("3");
+		}
+		if (btn == Attackbtn4)
+		{
+			Debug.Log("4");
 		}
 	}
 }
