@@ -78,6 +78,15 @@ public class TurnBaseManager : MonoBehaviour
 		ChangeTurn();
 	}
 
+	private void Attack2(Component target)
+	{
+		if (target == Player)
+		{
+			Phan_anim.SetBool("Attack", true);
+			StartCoroutine(HurtDelay(Player));
+		}
+	}
+
 	public void BtnAttack1()
 	{
 		IsInteractable();
@@ -146,18 +155,26 @@ public class TurnBaseManager : MonoBehaviour
 				break;
 			case ElementType.ElementTypes.Ghost:
 				PokemonDamage = AttackDamage * GhostPower;
+				Debug.Log(PokemonDamage + "Ghost");
 				break;
 			case ElementType.ElementTypes.Grass:
 				PokemonDamage = AttackDamage * GrassPower;
+				Debug.Log(PokemonDamage + "grass");
 				break;
 		}
+		return Mathf.RoundToInt(PokemonDamage);
+	}
 
+	public int CalculateDamageTE(int AttackDamage, ElementType.ElementTypes elementType)
+	{
+		float PokemonDamage = AttackDamage;
 		switch (elementType | elementType)
 		{
 			case ElementType.ElementTypes.Ghost | ElementType.ElementTypes.Grass:
-				PokemonDamage = AttackDamage * GrassPower * GhostPower;
+				PokemonDamage = AttackDamage * (GrassPower + GhostPower);
 				break;
 		}
+		Debug.Log(PokemonDamage);
 		return Mathf.RoundToInt(PokemonDamage);
 	}
 
@@ -165,11 +182,20 @@ public class TurnBaseManager : MonoBehaviour
 	{
 		yield return new WaitForSeconds(10);
 
-		int random = 0;
-		random = Random.Range(1, 3);
-		Debug.Log("deze Randomizer is voor later " + random);
+		int random;
+		random = Random.Range(1, 4);
+		Debug.Log(random);
 
-		Attack1(Player);
+		if (random <= 2)
+		{
+			Attack1(Player);
+			Debug.Log("attack1");
+		}
+		else if (random >= 3)
+		{
+			Attack2(Player);
+			Debug.Log("attack2");
+		}
 	}
 
 	public IEnumerator CamTriggerPlayer()
