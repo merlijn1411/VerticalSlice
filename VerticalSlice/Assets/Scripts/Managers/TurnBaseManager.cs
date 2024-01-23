@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 public class TurnBaseManager : MonoBehaviour
 {
@@ -66,25 +65,19 @@ public class TurnBaseManager : MonoBehaviour
 		if (target == Enemy)
 		{
 			Reu_anim.SetBool("Attack", true);
+			Invoke("PlayerIdleAnim", 0.1f);
 			PAttackParticle.Play();
 			StartCoroutine(HurtDelay(Enemy));
 		}
 		else if (target == Player)
 		{
 			Phan_anim.SetBool("Attack", true);
+			Invoke("EnemyIdleAnim", 0.1f);
 			EAttackParticle.Play();
 			StartCoroutine(HurtDelay(Player));
+
 		}
 		ChangeTurn();
-	}
-
-	private void Attack2(Component target)
-	{
-		if (target == Player)
-		{
-			Phan_anim.SetBool("Attack", true);
-			StartCoroutine(HurtDelay(Player));
-		}
 	}
 
 	public void BtnAttack1()
@@ -155,26 +148,11 @@ public class TurnBaseManager : MonoBehaviour
 				break;
 			case ElementType.ElementTypes.Ghost:
 				PokemonDamage = AttackDamage * GhostPower;
-				Debug.Log(PokemonDamage + "Ghost");
 				break;
 			case ElementType.ElementTypes.Grass:
 				PokemonDamage = AttackDamage * GrassPower;
-				Debug.Log(PokemonDamage + "grass");
 				break;
 		}
-		return Mathf.RoundToInt(PokemonDamage);
-	}
-
-	public int CalculateDamageTE(int AttackDamage, ElementType.ElementTypes elementType)
-	{
-		float PokemonDamage = AttackDamage;
-		switch (elementType | elementType)
-		{
-			case ElementType.ElementTypes.Ghost | ElementType.ElementTypes.Grass:
-				PokemonDamage = AttackDamage * (GrassPower + GhostPower);
-				break;
-		}
-		Debug.Log(PokemonDamage);
 		return Mathf.RoundToInt(PokemonDamage);
 	}
 
@@ -182,20 +160,7 @@ public class TurnBaseManager : MonoBehaviour
 	{
 		yield return new WaitForSeconds(10);
 
-		int random;
-		random = Random.Range(1, 4);
-		Debug.Log(random);
-
-		if (random <= 2)
-		{
-			Attack1(Player);
-			Debug.Log("attack1");
-		}
-		else if (random >= 3)
-		{
-			Attack2(Player);
-			Debug.Log("attack2");
-		}
+		Attack1(Player);
 	}
 
 	public IEnumerator CamTriggerPlayer()
@@ -226,17 +191,15 @@ public class TurnBaseManager : MonoBehaviour
 	public void HurtEnemyTrigger()
 	{
 		Phan_anim.SetBool("Hurt", true);
+		Invoke("EnemyIdleAnim", 0.8f);
 		Enemy.CurrentHealth -= CalculateDamage(Player.AttackDamage, Player.typeElement);
 		Enemyhealthbar.time = 0f;
-		Invoke("PlayerIdleAnim", 0.1f);
-		Invoke("EnemyIdleAnim", 0.8f);
 	}
 	public void HurtPlayerTrigger()
 	{
 		Reu_anim.SetBool("Hurt", true);
+		Invoke("PlayerIdleAnim", 0.8f);
 		Player.CurrentHealth -= CalculateDamage(Enemy.AttackDamage, Enemy.typeElement);
 		Playerhealthbar.time = 0f;
-		Invoke("EnemyIdleAnim", 0.1f);
-		Invoke("PlayerIdleAnim", 0.8f);
 	}
 }
