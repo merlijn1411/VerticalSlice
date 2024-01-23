@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 474128}
   - component: {fileID: 474127}
   - component: {fileID: 474129}
-  - component: {fileID: 474130}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -186,22 +185,6 @@ MonoBehaviour:
   GrassPower: 1.25
   Playerhealthbar: {fileID: 841265576}
   Enemyhealthbar: {fileID: 2066387721}
-  PAttackParticle: {fileID: 0}
-  PAttackParticleTake: {fileID: 0}
-  EAttackParticle: {fileID: 0}
-  EAttackParticleTake: {fileID: 0}
---- !u!114 &474130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d96f7f58c1f62a342b992c152aa4d728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   PAttackParticle: {fileID: 1638095360}
   PAttackParticleTake: {fileID: 560159424}
   EAttackParticle: {fileID: 582695881}
@@ -227,7 +210,7 @@ MonoBehaviour:
   CurrentHealth: 0
   MaxHealth: 100
   healthbar: {fileID: 2066387721}
-  Defends: 36
+  Defends: 45
   AttackDamage: 51
   Speed: 0
   typeElement: 0
@@ -27014,7 +26997,7 @@ MonoBehaviour:
   Defends: 45
   AttackDamage: 90
   Speed: 50
-  typeElement: 0
+  typeElement: 1
 --- !u!95 &1856190985
 Animator:
   serializedVersion: 7
