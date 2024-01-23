@@ -14,6 +14,7 @@ public class PlayerStats : MonoBehaviour
 	public static int STCurrentH;
 	public static int STMaxH;
 
+	public int level;
 	public int Defends;
 	public int AttackDamage;
 	public int Speed;

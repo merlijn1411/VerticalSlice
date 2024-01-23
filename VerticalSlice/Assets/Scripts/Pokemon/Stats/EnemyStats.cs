@@ -9,6 +9,7 @@ public class EnemyStats : MonoBehaviour
 	public int MaxHealth;
 	public Healthbar healthbar;
 
+	public int level;
 	public int Defends;
 	public int AttackDamage;
 	public int Speed;
@@ -36,5 +37,4 @@ public class EnemyStats : MonoBehaviour
 	{
 		gameObject.SetActive(false);
 	}
-
 }
