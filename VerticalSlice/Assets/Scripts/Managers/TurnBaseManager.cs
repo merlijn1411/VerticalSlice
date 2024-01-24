@@ -34,7 +34,7 @@ public class TurnBaseManager : MonoBehaviour
 	Animator Reu_anim;
 
 	CameraAnimationController CamAttackTrigger;
-	
+	private bool deadTrigger = true;
 
 	[Header("Player Particles")]
 	public ParticleSystem PAttackParticle;
@@ -61,12 +61,13 @@ public class TurnBaseManager : MonoBehaviour
 	{
 		if (Player.CurrentHealth <= 0 || Enemy.CurrentHealth <= 0)
 		{
-		
-				//might cause a problem because it will be constantly be triggered because it is constantly true
+			if(deadTrigger)
+			{
+				// bool is so that it wont be constantly true and keeps playing the animation
 				CamAttackTrigger.GetComponent<CameraAnimationController>().DeadAnimationTrigger();
 				StopAllCoroutines();
-				
-			
+				deadTrigger = false;
+			}
 
 
 
