@@ -28870,6 +28870,11 @@ MonoBehaviour:
   Attackbtn2: {fileID: 111421588}
   Attackbtn3: {fileID: 1566157820}
   Attackbtn4: {fileID: 2078492216}
+  AttackBtn:
+  - {fileID: 449904774}
+  - {fileID: 111421588}
+  - {fileID: 1566157820}
+  - {fileID: 2078492216}
   buttonTexts:
   - Reuniclus used Psychic
   - Reuniclus used Future Sight
