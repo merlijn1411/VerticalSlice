@@ -28140,7 +28140,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30.181961, y: 5.2662964}
+  m_AnchoredPosition: {x: -24.1, y: 17}
   m_SizeDelta: {x: 332.38733, y: 149.2906}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1038603343623442820
@@ -28866,17 +28866,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 6495655458042348517}
   Playing: {fileID: 4940200155623799447}
-  Attackbtn1: {fileID: 449904774}
-  Attackbtn2: {fileID: 111421588}
-  Attackbtn3: {fileID: 1566157820}
-  Attackbtn4: {fileID: 2078492216}
   AttackBtn:
   - {fileID: 449904774}
   - {fileID: 111421588}
   - {fileID: 1566157820}
   - {fileID: 2078492216}
   buttonTexts:
-  - Reuniclus used Psychic
+  - Reuniclus used Physic
   - Reuniclus used Future Sight
   - Reuniclus used Ally Switch
   - Reuniclus used Pain Split
@@ -29257,7 +29253,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -418.83667, w: 0}
+  m_margin: {x: 0, y: 0, z: -936.9365, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
