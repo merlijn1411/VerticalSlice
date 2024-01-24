@@ -51,13 +51,19 @@ public class TurnBaseManager : MonoBehaviour
 		Reu_anim = GameObject.Find("Reuniclus").GetComponent<Animator>();
 
 		CamAttackTrigger = GameObject.Find("camera animation pivot").GetComponent<CameraAnimationController>();
+		
+		
 
 	}
 	private void Update()
 	{
 		if (Player.CurrentHealth <= 0 || Enemy.CurrentHealth <= 0)
 		{
+			CamAttackTrigger.GetComponent<CameraAnimationController>().DeadAnimationTrigger();
 			StopAllCoroutines();
+			
+
+
 		}
 
 	}

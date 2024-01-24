@@ -16,4 +16,10 @@ public class CameraAnimationController : MonoBehaviour
 	{
 		animator.SetTrigger("StartAttack");
 	}
+	public void DeadAnimationTrigger()
+	{
+		animator.SetTrigger("Dead");
+	}
+
+
 }
