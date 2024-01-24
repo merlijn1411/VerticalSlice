@@ -9,7 +9,6 @@ public class Dialogue : MonoBehaviour
 	static public event Action OnFinishedDialogue;
 
 	public TextMeshProUGUI textComponent;
-	public string[] lines;
 	private float textspeed;
 
 	private int index;
@@ -17,63 +16,65 @@ public class Dialogue : MonoBehaviour
 
 	public Button Attackbtn1, Attackbtn2, Attackbtn3, Attackbtn4;
 
+	public string[] buttonTexts;
+
+	public TextPanelAnimation textPanel;
+
 	public void Start()
 	{
 		Playing.SetActive(true);
 		textspeed = 2 * Time.deltaTime;
-		textComponent.text = string.Empty;
-		StartDialogue();
 
 		EndPanelAnimation.OnPanelAnimationEndEvent += PlayText;
 
+
+		index = 0;
+
 		Button btn1 = Attackbtn1.GetComponent<Button>();
-		btn1.onClick.AddListener(delegate { ButtonChooser(Attackbtn1); });
+		btn1.onClick.AddListener(delegate { ButtonChooser(0); });
 
 		Button btn2 = Attackbtn2.GetComponent<Button>();
-		btn2.onClick.AddListener(delegate { ButtonChooser(Attackbtn2); });
+		btn2.onClick.AddListener(delegate { ButtonChooser(1); });
 
 		Button btn3 = Attackbtn3.GetComponent<Button>();
-		btn3.onClick.AddListener(delegate { ButtonChooser(Attackbtn3); });
+		btn3.onClick.AddListener(delegate { ButtonChooser(2); });
 
 		Button btn4 = Attackbtn4.GetComponent<Button>();
-		btn4.onClick.AddListener(delegate { ButtonChooser(Attackbtn4); });
+		btn4.onClick.AddListener(delegate { ButtonChooser(3); });
 	}
 
 	public void PlayText()
 	{
-		if (textComponent.text == lines[index])
+		if (textComponent.text == buttonTexts[index])
 		{
 			NextLine();
 		}
 		else
 		{
 			StopAllCoroutines();
-			textComponent.text = lines[index];
+			textComponent.text = buttonTexts[index];
 		}
-	}
-
-	void StartDialogue()
-	{
-		index = 0;
-		StartCoroutine(TypeLine());
 	}
 
 	IEnumerator TypeLine()
 	{
-		foreach (char C in lines[index].ToCharArray())
+
+		foreach (char C in buttonTexts[index].ToCharArray())
 		{
 			textComponent.text += C;
 			yield return new WaitForSeconds(textspeed);
 		}
+		yield return new WaitForSeconds(3f);
 
+		TextPanelAnimation textPanelAnimation = textPanel.GetComponent<TextPanelAnimation>();
+		textPanelAnimation.GetComponent<TextPanelAnimation>().PanelDissapear();
 	}
 
 	void NextLine()
 	{
-		if (index < lines.Length - 1)
+		if (index < buttonTexts.Length - 1)
 		{
 			index++;
-			textComponent.text = string.Empty;
 			StartCoroutine(TypeLine());
 		}
 		else
@@ -83,24 +84,19 @@ public class Dialogue : MonoBehaviour
 		}
 	}
 
-	public void ButtonChooser(Button btn)
+	public void ButtonChooser(int buttonIndex)
 	{
-		if (btn == Attackbtn1)
+		if (buttonIndex >= 0 && buttonIndex < buttonTexts.Length)
 		{
-
-			Debug.Log("1");
+			StopAllCoroutines();
+			textComponent.text = string.Empty;
+			index = buttonIndex;
+			PlayText();
 		}
-		if (btn == Attackbtn2)
+		else
 		{
-			Debug.Log("2");
-		}
-		if (btn == Attackbtn3)
-		{
-			Debug.Log("3");
-		}
-		if (btn == Attackbtn4)
-		{
-			Debug.Log("4");
+			Debug.LogError("Invalid button index or buttonTexts array length insufficient.");
 		}
 	}
 }
+
