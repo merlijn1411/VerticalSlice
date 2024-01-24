@@ -28,11 +28,13 @@ public class TurnBaseManager : MonoBehaviour
 
 	private bool isplayerTurn = true;
 	private bool IsInteractableButton = true;
+	
 
 	Animator Phan_anim;
 	Animator Reu_anim;
 
 	CameraAnimationController CamAttackTrigger;
+	
 
 	[Header("Player Particles")]
 	public ParticleSystem PAttackParticle;
@@ -59,9 +61,13 @@ public class TurnBaseManager : MonoBehaviour
 	{
 		if (Player.CurrentHealth <= 0 || Enemy.CurrentHealth <= 0)
 		{
-			CamAttackTrigger.GetComponent<CameraAnimationController>().DeadAnimationTrigger();
-			StopAllCoroutines();
+		
+				//might cause a problem because it will be constantly be triggered because it is constantly true
+				CamAttackTrigger.GetComponent<CameraAnimationController>().DeadAnimationTrigger();
+				StopAllCoroutines();
+				
 			
+
 
 
 		}
@@ -185,7 +191,7 @@ public class TurnBaseManager : MonoBehaviour
 
 	public IEnumerator CamTriggerPlayer()
 	{
-		CamAttackTrigger.GetComponent<CameraAnimationController>().TriggerAnimation();
+		CamAttackTrigger.GetComponent<CameraAnimationController>().TriggerAnimation(); //triggers the attack animation cycle
 		yield return new WaitForSeconds(3f);
 
 		Attack1(Enemy);
