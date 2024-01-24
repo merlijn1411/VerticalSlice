@@ -72,7 +72,6 @@ public class TurnBaseManager : MonoBehaviour
 
 
 		}
-
 	}
 	private void Attack1(Component target)
 	{
@@ -189,7 +188,6 @@ public class TurnBaseManager : MonoBehaviour
 		Attack1(Player);
 	}
 
-
 	public IEnumerator CamTriggerPlayer()
 	{
 		CamAttackTrigger.GetComponent<CameraAnimationController>().TriggerAnimation(); //triggers the attack animation cycle
@@ -229,5 +227,4 @@ public class TurnBaseManager : MonoBehaviour
 		Player.CurrentHealth -= CalculateDamage(Enemy.AttackDamage, Enemy.typeElement);
 		Playerhealthbar.time = 0f;
 	}
-
 }
