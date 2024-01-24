@@ -3,7 +3,6 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class Dialogue : MonoBehaviour
 {
 	static public event Action OnFinishedDialogue;
@@ -28,13 +27,14 @@ public class Dialogue : MonoBehaviour
 
 		EndPanelAnimation.OnPanelAnimationEndEvent += PlayText;
 
-		for (int i = 0; i < AttackBtn.Length; i++)
+		index = 0;
+
+		for (int i = index; i < AttackBtn.Length; i++)
 		{
 			int Buttonvalue = i;
 			AttackBtn[i].onClick.AddListener(() => ButtonChooser(Buttonvalue));
 		}
 
-		index = 0;
 	}
 
 	public void PlayText()
@@ -55,8 +55,9 @@ public class Dialogue : MonoBehaviour
 
 	IEnumerator TypeLine(int buttonIndex)
 	{
-		Debug.Log(buttonIndex + "xeddw");
-		foreach (char C in buttonTexts[index].ToCharArray())
+
+		Debug.Log(buttonIndex + " xeddw");
+		foreach (char C in buttonIndex[index].ToCharArray())
 		{
 			textComponent.text += C;
 			yield return new WaitForSeconds(textspeed);
@@ -85,6 +86,18 @@ public class Dialogue : MonoBehaviour
 	{
 
 		if (buttonIndex == 0)
+		{
+			StartCoroutine(TypeLine(buttonIndex));
+		}
+		if (buttonIndex == 1)
+		{
+			StartCoroutine(TypeLine(buttonIndex));
+		}
+		if (buttonIndex == 2)
+		{
+			StartCoroutine(TypeLine(buttonIndex));
+		}
+		if (buttonIndex == 3)
 		{
 			StartCoroutine(TypeLine(buttonIndex));
 		}
