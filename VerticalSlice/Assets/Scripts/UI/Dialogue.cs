@@ -1,82 +1,72 @@
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Dialogue : MonoBehaviour
 {
-	static public event Action OnFinishedDialogue;
-
-
 	public TextMeshProUGUI textComponent;
-	public string[] lines;
 	private float textspeed;
 
 	private int index;
 	public GameObject Playing;
 
+	public Button[] AttackBtn;
 
-	// Start is called before the first frame update
-	void Start()
+	public string[] buttonTexts;
+
+	public TextPanelAnimation textPanel;
+
+	public void Start()
 	{
 		Playing.SetActive(true);
 		textspeed = 2 * Time.deltaTime;
-		textComponent.text = string.Empty;
-		StartDialogue();
 
-		EndPanelAnimation.OnPanelAnimationEndEvent += PlayText;
-	}
 
-	// Update is called once per frame
-	void Update()
-	{
-		PlayText();
-	}
-
-	public void PlayText()
-	{
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			if (textComponent.text == lines[index])
-			{
-				NextLine();
-			}
-			else
-			{
-				StopAllCoroutines();
-				textComponent.text = lines[index];
-			}
-		}
-	}
-
-	void StartDialogue()
-	{
 		index = 0;
-		StartCoroutine(TypeLine());
+
+		for (int i = index; i < AttackBtn.Length; i++)
+		{
+			int Buttonvalue = i;
+			AttackBtn[i].onClick.AddListener(() => ButtonChooser(Buttonvalue));
+		}
+
 	}
 
-	IEnumerator TypeLine()
+	IEnumerator TypeLine(int buttonIndex)
 	{
-		foreach (char C in lines[index].ToCharArray())
+		yield return new WaitForSeconds(1.8f);
+		foreach (char C in buttonTexts[buttonIndex].ToCharArray())
 		{
 			textComponent.text += C;
 			yield return new WaitForSeconds(textspeed);
 		}
+		yield return new WaitForSeconds(6f);
 
+		textComponent.text = string.Empty;
+
+		TextPanelAnimation textPanelAnimation = textPanel.GetComponent<TextPanelAnimation>();
+		textPanelAnimation.GetComponent<TextPanelAnimation>().PanelDissapear();
 	}
 
-	void NextLine()
+	public void ButtonChooser(int buttonIndex)
 	{
-		if (index < lines.Length - 1)
+
+		if (buttonIndex == 0)
 		{
-			index++;
-			textComponent.text = string.Empty;
-			StartCoroutine(TypeLine());
+			StartCoroutine(TypeLine(buttonIndex));
 		}
-		else
+		if (buttonIndex == 1)
 		{
-			OnFinishedDialogue?.Invoke();
-			index = 0;
+			StartCoroutine(TypeLine(buttonIndex));
+		}
+		if (buttonIndex == 2)
+		{
+			StartCoroutine(TypeLine(buttonIndex));
+		}
+		if (buttonIndex == 3)
+		{
+			StartCoroutine(TypeLine(buttonIndex));
 		}
 	}
 }
+

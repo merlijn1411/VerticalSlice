@@ -8,10 +8,10 @@ public class TurnBaseManager : MonoBehaviour
 	EnemyStats Enemy;
 
 	[Header("Attack Buttons")]
-	[SerializeField] private Button AttackBtn1 = null;
-	[SerializeField] private Button AttackBtn2 = null;
-	[SerializeField] private Button AttackBtn3 = null;
-	[SerializeField] private Button AttackBtn4 = null;
+	public Button AttackBtn1 = null;
+	public Button AttackBtn2 = null;
+	public Button AttackBtn3 = null;
+	public Button AttackBtn4 = null;
 
 	//[SerializeField] private GameObject UICanvas = null;
 	//[SerializeField] private GameObject CanvasStart = null;
