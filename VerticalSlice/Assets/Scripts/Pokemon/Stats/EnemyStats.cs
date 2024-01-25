@@ -29,7 +29,7 @@ public class EnemyStats : MonoBehaviour
 		healthbar.GetComponent<Healthbar>().CurrentHealth(CurrentHealth, healthbar.slider.value);
 		if (CurrentHealth <= 0)
 		{
-			Invoke("Defeated", 3);
+			Invoke("Defeated", 4.5f); //change the float to alter the delay to make the enemey model dissapear
 		}
 	}
 

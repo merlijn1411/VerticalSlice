@@ -20,7 +20,6 @@ public class PPSystem : MonoBehaviour
 		{
 			attackButton.interactable = false;
 		}
-		Debug.Log(pp);
 		SetPP();
 	}
 
