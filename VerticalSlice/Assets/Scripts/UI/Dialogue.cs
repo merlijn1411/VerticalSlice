@@ -34,7 +34,7 @@ public class Dialogue : MonoBehaviour
 
 	IEnumerator TypeLine(int buttonIndex)
 	{
-		yield return new WaitForSeconds(1.2f);
+		yield return new WaitForSeconds(1.8f);
 		foreach (char C in buttonTexts[buttonIndex].ToCharArray())
 		{
 			textComponent.text += C;

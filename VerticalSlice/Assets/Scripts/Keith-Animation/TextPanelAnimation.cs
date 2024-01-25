@@ -19,7 +19,7 @@ public class TextPanelAnimation : MonoBehaviour
 
 	public IEnumerator PanelDissapear()
 	{
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(4f);
 		Play.SetTrigger("Disapear");
 	}
 }
