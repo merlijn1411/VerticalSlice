@@ -8,10 +8,10 @@ public class TurnBaseManager : MonoBehaviour
 	EnemyStats Enemy;
 
 	[Header("Attack Buttons")]
-	[SerializeField] private Button AttackBtn1 = null;
-	[SerializeField] private Button AttackBtn2 = null;
-	[SerializeField] private Button AttackBtn3 = null;
-	[SerializeField] private Button AttackBtn4 = null;
+	public Button AttackBtn1 = null;
+	public Button AttackBtn2 = null;
+	public Button AttackBtn3 = null;
+	public Button AttackBtn4 = null;
 
 	//[SerializeField] private GameObject UICanvas = null;
 	//[SerializeField] private GameObject CanvasStart = null;
@@ -28,11 +28,13 @@ public class TurnBaseManager : MonoBehaviour
 
 	private bool isplayerTurn = true;
 	private bool IsInteractableButton = true;
+	
 
 	Animator Phan_anim;
 	Animator Reu_anim;
 
 	CameraAnimationController CamAttackTrigger;
+	private bool deadTrigger = true;
 
 	[Header("Player Particles")]
 	public ParticleSystem PAttackParticle;
@@ -51,15 +53,25 @@ public class TurnBaseManager : MonoBehaviour
 		Reu_anim = GameObject.Find("Reuniclus").GetComponent<Animator>();
 
 		CamAttackTrigger = GameObject.Find("camera animation pivot").GetComponent<CameraAnimationController>();
+		
+		
 
 	}
 	private void Update()
 	{
 		if (Player.CurrentHealth <= 0 || Enemy.CurrentHealth <= 0)
 		{
-			StopAllCoroutines();
-		}
+			if(deadTrigger)
+			{
+				// bool is so that it wont be constantly true and keeps playing the animation
+				CamAttackTrigger.GetComponent<CameraAnimationController>().DeadAnimationTrigger();
+				StopAllCoroutines();
+				deadTrigger = false;
+			}
 
+
+
+		}
 	}
 	private void Attack1(Component target)
 	{
@@ -141,12 +153,18 @@ public class TurnBaseManager : MonoBehaviour
 
 	public int CalculateDamage(float damage, ElementType.ElementTypes elementType)
 	{
-		int atkDef = Enemy.AttackDamage / Enemy.Defends;
 		float randDmg = Random.Range(81f, 100f) / 100;
-
-		damage = ((2 * 38 / 5 + 2) * Player.AttackDamage * atkDef / 50 + 2) * 1f * 1.5f * randDmg * 1.5f;
+		if (!isplayerTurn)
+		{
+			int atkDef = Player.AttackDamage / Player.Defends;
+			damage = ((2 * Enemy.level / 5 + 2) * Enemy.AttackDamage * atkDef / 50 + 2) * 1f * 1.5f * randDmg * 1.5f;
+		}
+		else
+		{
+			int atkDef = Enemy.AttackDamage / Enemy.Defends;
+			damage = ((2 * Player.level / 5 + 2) * Player.AttackDamage * atkDef / 50 + 2) * 1f * 1.5f * randDmg * 1.5f;
+		}
 		float PokemonDamage = damage;
-
 
 		switch (elementType)
 		{
@@ -170,10 +188,9 @@ public class TurnBaseManager : MonoBehaviour
 		Attack1(Player);
 	}
 
-
 	public IEnumerator CamTriggerPlayer()
 	{
-		CamAttackTrigger.GetComponent<CameraAnimationController>().TriggerAnimation();
+		CamAttackTrigger.GetComponent<CameraAnimationController>().TriggerAnimation(); //triggers the attack animation cycle
 		yield return new WaitForSeconds(3f);
 
 		Attack1(Enemy);
@@ -210,5 +227,4 @@ public class TurnBaseManager : MonoBehaviour
 		Player.CurrentHealth -= CalculateDamage(Enemy.AttackDamage, Enemy.typeElement);
 		Playerhealthbar.time = 0f;
 	}
-
 }
