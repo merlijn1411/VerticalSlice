@@ -34,7 +34,6 @@ public class TurnBaseManager : MonoBehaviour
 	Animator Reu_anim;
 
 	CameraAnimationController CamAttackTrigger;
-	private bool deadTrigger = true;
 
 	[SerializeField] private Dialogue dialogueEnemy;
 	[SerializeField] private TextPanelAnimation textAppear;
@@ -62,16 +61,25 @@ public class TurnBaseManager : MonoBehaviour
 	}
 	private void Update()
 	{
-		if (Player.CurrentHealth <= 0 || Enemy.CurrentHealth <= 0)
+		if (Player.CurrentHealth <= 0)
 		{
-			if (deadTrigger)
-			{
-				// bool is so that it wont be constantly true and keeps playing the animation
-				CamAttackTrigger.GetComponent<CameraAnimationController>().DeadAnimationTrigger();
-				StopAllCoroutines();
-				deadTrigger = false;
-			}
+			Invoke("Playerdead", 3);
+			StopAllCoroutines();
 		}
+		else if (Enemy.CurrentHealth <= 0)
+		{
+			CamAttackTrigger.GetComponent<CameraAnimationController>().DeadAnimationTrigger();
+			Invoke("Enemydead", 3);
+			StopAllCoroutines();
+		}
+	}
+	public void Playerdead()
+	{
+		Reu_anim.SetTrigger("Die");
+	}
+	public void Enemydead()
+	{
+		Phan_anim.SetTrigger("Die");
 	}
 	public void BtnAttack1()
 	{
@@ -102,7 +110,6 @@ public class TurnBaseManager : MonoBehaviour
 			Phan_anim.SetTrigger("Attack");
 			EAttackParticle.Play();
 			StartCoroutine(HurtDelay(Player));
-
 		}
 		ChangeTurn();
 	}
@@ -111,9 +118,10 @@ public class TurnBaseManager : MonoBehaviour
 		if (target == Enemy)
 		{
 			Player.GetComponent<PlayerStats>().PlayPsyshockAnim();
+			Reu_anim.SetTrigger("Attack");
 			Enemy.GetComponent<EnemyStats>().PsyshockAnimtake();
 
-			StartCoroutine(ChangeHealthbar(Enemy));
+			HurtTrigger(Enemy);
 
 		}
 		ChangeTurn();
@@ -203,13 +211,13 @@ public class TurnBaseManager : MonoBehaviour
 
 	private IEnumerator EnemyTurn()
 	{
-		TextPanelAnimation textPanelAnimation = textAppear.GetComponent<TextPanelAnimation>();
-		textPanelAnimation.GetComponent<TextPanelAnimation>().PanelAnimate();
-
-		StartCoroutine(dialogueEnemy.GetComponent<Dialogue>().EnemyDialogueLine());
-
 		yield return new WaitForSeconds(10);
 
+		TextPanelAnimation textPanelAnimation = textAppear.GetComponent<TextPanelAnimation>();
+		textPanelAnimation.GetComponent<TextPanelAnimation>().PanelAnimate();
+		StartCoroutine(dialogueEnemy.GetComponent<Dialogue>().EnemyDialogueLine());
+
+		yield return new WaitForSeconds(4);
 		Attack1(Player);
 	}
 
@@ -226,8 +234,6 @@ public class TurnBaseManager : MonoBehaviour
 		{
 			PsyshockAttack(Enemy);
 		}
-
-
 	}
 	public IEnumerator HurtDelay(Component target)
 	{
@@ -274,6 +280,7 @@ public class TurnBaseManager : MonoBehaviour
 			Enemy.CurrentHealth -= CalculateDamage(Player.AttackDamage, Player.typeElement);
 			Enemyhealthbar.time = 0f;
 		}
+		yield return new WaitForSeconds(3f);
 	}
 
 }

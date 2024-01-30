@@ -1974,7 +1974,7 @@ Transform:
   m_GameObject: {fileID: 512970694}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000000072066593, y: 0.11780602, z: 0.000000004497287, w: 0.9930367}
-  m_LocalPosition: {x: -0.484, y: 2.34, z: -1.948}
+  m_LocalPosition: {x: -0.51, y: 2.34, z: -2.77}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22760,7 +22760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.58601093
+      value: -0.34
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23647,7 +23647,7 @@ MonoBehaviour:
   - Reuniclus used Psyshock!
   - Reuniclus used Recover!
   - Reuniclus used Pain Split!
-  EnemyText: Phantumb Used
+  EnemyText: Phantumb Used Tackle!
   textPanel: {fileID: 4019080037966505137}
 --- !u!1 &4940200155623799447
 GameObject:
@@ -23708,7 +23708,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4369386805927111445, guid: d307332b022696c46abc8341a3dc4103, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1
+      value: -0.441
       objectReference: {fileID: 0}
     - target: {fileID: 4369386805927111445, guid: d307332b022696c46abc8341a3dc4103, type: 3}
       propertyPath: m_LocalPosition.z

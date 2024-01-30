@@ -40,7 +40,6 @@ public class EnemyStats : MonoBehaviour
 	public void PsyshockAnimtake()
 	{
 		PlayPsyshockTake.SetTrigger("Spheres");
-
 	}
 
 	private void Defeated()
