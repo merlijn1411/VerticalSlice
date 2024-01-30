@@ -32,6 +32,11 @@ public class EnemyStats : MonoBehaviour
 	{
 		healthbar.GetComponent<Healthbar>().CurrentHealth(CurrentHealth, healthbar.slider.value);
 
+		if (Input.GetKeyUp(KeyCode.Space))
+		{
+			PsyshockAnimtake();
+		}
+
 		if (CurrentHealth <= 0)
 		{
 			Invoke("Defeated", 4.5f);
@@ -40,6 +45,7 @@ public class EnemyStats : MonoBehaviour
 	public void PsyshockAnimtake()
 	{
 		PlayPsyshockTake.SetTrigger("Spheres");
+
 	}
 
 	private void Defeated()
