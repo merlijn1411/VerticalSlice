@@ -36,6 +36,9 @@ public class TurnBaseManager : MonoBehaviour
 	CameraAnimationController CamAttackTrigger;
 	private bool deadTrigger = true;
 
+	[SerializeField] private Dialogue dialogueEnemy;
+	[SerializeField] private TextPanelAnimation textAppear;
+
 	[Header("Player Particles")]
 	public ParticleSystem PAttackParticle;
 	public ParticleSystem PAttackParticleTake;
@@ -54,7 +57,6 @@ public class TurnBaseManager : MonoBehaviour
 		Reu_anim = GameObject.Find("Reuniclus").GetComponent<Animator>();
 
 		CamAttackTrigger = GameObject.Find("camera animation pivot").GetComponent<CameraAnimationController>();
-
 
 
 	}
@@ -201,6 +203,11 @@ public class TurnBaseManager : MonoBehaviour
 
 	private IEnumerator EnemyTurn()
 	{
+		TextPanelAnimation textPanelAnimation = textAppear.GetComponent<TextPanelAnimation>();
+		textPanelAnimation.GetComponent<TextPanelAnimation>().PanelAnimate();
+
+		StartCoroutine(dialogueEnemy.GetComponent<Dialogue>().EnemyDialogueLine());
+
 		yield return new WaitForSeconds(10);
 
 		Attack1(Player);

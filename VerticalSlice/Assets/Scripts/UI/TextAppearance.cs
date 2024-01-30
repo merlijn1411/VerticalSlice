@@ -17,7 +17,7 @@ public class TextAppearance : MonoBehaviour
 
 	}
 
-	IEnumerator ShowText()
+	public IEnumerator ShowText()
 	{
 
 		for (int i = -0; i < FullText.Length; i++)

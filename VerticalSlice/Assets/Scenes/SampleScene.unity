@@ -185,6 +185,8 @@ MonoBehaviour:
   GrassPower: 1.25
   Playerhealthbar: {fileID: 841265576}
   Enemyhealthbar: {fileID: 2066387721}
+  dialogueEnemy: {fileID: 4730386615565497655}
+  textAppear: {fileID: 4019080037966505137}
   PAttackParticle: {fileID: 1638095360}
   PAttackParticleTake: {fileID: 560159424}
   RecoverParticles: {fileID: 1258887360}
@@ -23640,11 +23642,12 @@ MonoBehaviour:
   - {fileID: 111421588}
   - {fileID: 1566157820}
   - {fileID: 2078492216}
-  buttonTexts:
-  - Reuniclus used Physic
-  - Reuniclus used Psyshock
-  - Reuniclus used Recover
-  - Reuniclus used Pain Split
+  PlayerTexts:
+  - Reuniclus used Psyhic!
+  - Reuniclus used Psyshock!
+  - Reuniclus used Recover!
+  - Reuniclus used Pain Split!
+  EnemyText: Phantumb Used
   textPanel: {fileID: 4019080037966505137}
 --- !u!1 &4940200155623799447
 GameObject:
@@ -23738,6 +23741,10 @@ PrefabInstance:
     - target: {fileID: 4369386805927111445, guid: d307332b022696c46abc8341a3dc4103, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359793643057357142, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: PokeName
+      value: Phantump
       objectReference: {fileID: 0}
     - target: {fileID: 7359793643057357142, guid: d307332b022696c46abc8341a3dc4103, type: 3}
       propertyPath: healthbar
