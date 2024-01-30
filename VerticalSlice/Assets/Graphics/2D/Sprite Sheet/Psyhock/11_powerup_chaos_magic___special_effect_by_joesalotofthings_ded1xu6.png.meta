@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0083ed72878d749449856efeec06a515
+guid: 5b0e72a924b338b4398a9f0add804e15
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,28 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 002 HaloR1Purple _0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1152
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ccedd53974a5a04d8b3eaa1e7eb236e
-      internalID: -1532748886
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 002 HaloR1Purple _1
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_0
       rect:
         serializedVersion: 2
         x: 192
@@ -132,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adbf2342692bf5548ab8aadcfba3d8b5
-      internalID: -516498989
+      spriteID: 28d1bc24fac170c4eab69a9e27619750
+      internalID: -1981359135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_1
       rect:
         serializedVersion: 2
         x: 384
@@ -153,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59bf21a474ca1954ca603fa80ed758b7
-      internalID: 1472002474
+      spriteID: cba567dd7a83b9746874dbeed4612d86
+      internalID: -673255976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _3
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_2
       rect:
         serializedVersion: 2
         x: 576
@@ -174,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d6e609b686871f4c8a8052a531787f6
-      internalID: -161134869
+      spriteID: 1c024cd756bf8a4479240e0ce852ba68
+      internalID: 1374017309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _4
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_3
       rect:
         serializedVersion: 2
         x: 768
@@ -195,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71de50c98fd06854fa2107ef0fa487a3
-      internalID: 1534169800
+      spriteID: d0189785240d2dd459e2e3edb386a969
+      internalID: 742125833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _5
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_4
       rect:
         serializedVersion: 2
         x: 0
@@ -216,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca4ff5311ceea484a8d11d2c1e7dc88c
-      internalID: -826410154
+      spriteID: 6482a037dd1bca141a6e57859aee5aec
+      internalID: -627002441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _6
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_5
       rect:
         serializedVersion: 2
         x: 192
@@ -237,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c9a01dc7854ae14d86d16802b8abf46
-      internalID: -1745311338
+      spriteID: 6117456821627b841ad7d5c32f227a94
+      internalID: -240876949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _7
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_6
       rect:
         serializedVersion: 2
         x: 384
@@ -258,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e20ae6df47b049746838c9936d25a644
-      internalID: 513418970
+      spriteID: 1a7e1e3a737c8c1478e7300ff1336701
+      internalID: -1171869234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _8
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_7
       rect:
         serializedVersion: 2
         x: 576
@@ -279,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f469308af84a27e429830af2d5143936
-      internalID: -687226133
+      spriteID: 4f34840b6be4aee4faff42f459ac1e9e
+      internalID: 2021111892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _9
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_8
       rect:
         serializedVersion: 2
         x: 768
@@ -300,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8961b90ab9a165740b99063db4b2072d
-      internalID: -97580992
+      spriteID: 9532bb7a18069f048b8984d915a4a306
+      internalID: -863672883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _10
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_9
       rect:
         serializedVersion: 2
         x: 0
@@ -321,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e622ba9ae226f9646b28efed1917a5f6
-      internalID: 191870855
+      spriteID: f387f289fbccf6c4e97ae9525336f6d0
+      internalID: 1980265519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _11
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_10
       rect:
         serializedVersion: 2
         x: 192
@@ -342,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1e5eff08134ef74ebd19fdb4587266f
-      internalID: -218255860
+      spriteID: 9890ddf89de1c4a438e3544598fc503c
+      internalID: 1210679098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _12
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_11
       rect:
         serializedVersion: 2
         x: 384
@@ -363,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68a0ddf224d967248a63b5212fdf2da9
-      internalID: 1852195798
+      spriteID: 4a639b1b7b7ca1042a9a3f7f2d896afc
+      internalID: 819569971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _13
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_12
       rect:
         serializedVersion: 2
         x: 576
@@ -384,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70f31251ff8ae5c48b2e82541c0d3366
-      internalID: 1758075325
+      spriteID: dca8d5e598d8cf148a688528c5ed13db
+      internalID: 268204532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _14
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_13
       rect:
         serializedVersion: 2
         x: 768
@@ -405,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 735b356c9fae3134baa4d146bb100b93
-      internalID: -403994090
+      spriteID: e76421debf61bc147b9986e2d628cecf
+      internalID: 619636763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _15
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_14
       rect:
         serializedVersion: 2
         x: 0
@@ -426,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3517eec5c9129ce4494293692ad9f811
-      internalID: -699055907
+      spriteID: 650f73932c813e140b631788db987c4e
+      internalID: 268215057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _16
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_15
       rect:
         serializedVersion: 2
         x: 192
@@ -447,14 +426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3802fa908f817c849910f0293aa48300
-      internalID: -75192991
+      spriteID: 88c8755a13b23f849926a80820ce5e72
+      internalID: 1506094702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _17
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_16
       rect:
         serializedVersion: 2
         x: 384
@@ -468,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db592947789244244939bd06c7ca63db
-      internalID: 809757974
+      spriteID: 3e9311e9f0229ee4f8bd8345aceeacf5
+      internalID: 1892334833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _18
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_17
       rect:
         serializedVersion: 2
         x: 576
@@ -489,14 +468,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab0e45923879c2440a29fae0cb2cdc21
-      internalID: 333968453
+      spriteID: c8b4097b27539944eb9eb699727ce6b0
+      internalID: -1508653265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _19
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_18
       rect:
         serializedVersion: 2
         x: 768
@@ -510,14 +489,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63807a644d6624541a00045b58ed3500
-      internalID: 1721416162
+      spriteID: aab62db1766c583409c083057c0fb694
+      internalID: 1309381530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _20
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_19
       rect:
         serializedVersion: 2
         x: 0
@@ -531,14 +510,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 396b9a5b1d8b2bb46b8d0c1f708fd75b
-      internalID: -899449985
+      spriteID: 9d1b3d8a561de444d8e41741aa642ed8
+      internalID: -1395613149
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _21
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_20
       rect:
         serializedVersion: 2
         x: 192
@@ -552,14 +531,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f85e83b15c1681f4386c90ba632725be
-      internalID: 241352159
+      spriteID: 6b2f4a8756c350f45a86a1a4816c39f2
+      internalID: -974262422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _22
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_21
       rect:
         serializedVersion: 2
         x: 384
@@ -573,14 +552,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bdce229ec4e83b4e865f526c4209572
-      internalID: -1406128848
+      spriteID: 89ec02489167b0f4d90ee7c803efd9a6
+      internalID: -227590080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _23
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_22
       rect:
         serializedVersion: 2
         x: 576
@@ -594,14 +573,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3eb42f6c1c8fa74f948d3a21431df69
-      internalID: 673738568
+      spriteID: 05e703206c15a8649a2c2fb30d734376
+      internalID: 538144603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _24
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_23
       rect:
         serializedVersion: 2
         x: 768
@@ -615,14 +594,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d78a1a5be933fca49aea2d8ae4d783f0
-      internalID: 1270003524
+      spriteID: 9b89131e6e07fec468600648f56f8656
+      internalID: -637542030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _25
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_24
       rect:
         serializedVersion: 2
         x: 0
@@ -636,14 +615,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50e41b89cf1cbb440b94dacb88d4601e
-      internalID: -535114979
+      spriteID: a9a8ac18ee750b94a9b54baf5b6e3ee6
+      internalID: 1079732523
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _26
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_25
       rect:
         serializedVersion: 2
         x: 192
@@ -657,14 +636,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00179211e8b3c0b4786c1f931559ecc3
-      internalID: 1905826604
+      spriteID: 20b43242303616241987439e6cb435de
+      internalID: -155391358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _27
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_26
       rect:
         serializedVersion: 2
         x: 384
@@ -678,14 +657,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc4eb94d6e387fe4790da1f6b36f9d5c
-      internalID: -1741127419
+      spriteID: 736773b1f947bb14a94f0f2f62e14020
+      internalID: 16499424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _28
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_27
       rect:
         serializedVersion: 2
         x: 576
@@ -699,14 +678,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5c194b010727274f9ea7eb8fc436e4d
-      internalID: 657460234
+      spriteID: 62a44722eff2c5c4eb14e23ace6c5c1e
+      internalID: -627792262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _29
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_28
       rect:
         serializedVersion: 2
         x: 768
@@ -720,14 +699,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f6a2e654e9a9e4489efa2558188f8ea
-      internalID: 987407904
+      spriteID: bf4b164bb6676e44096c160fa9bd8c9e
+      internalID: -911350690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _30
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_29
       rect:
         serializedVersion: 2
         x: 0
@@ -741,14 +720,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bac4fdaa12fcc784d949af67ccb3e619
-      internalID: 1116418659
+      spriteID: 45ac95bf0ecdb6343a46f31f16aaae8f
+      internalID: -750648470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 002 HaloR1Purple _31
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_30
       rect:
         serializedVersion: 2
         x: 192
@@ -762,8 +741,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cbbfacfb82e7854cb09acff5b8b9204
-      internalID: -995251609
+      spriteID: 92961f7d1033c864eb5dddb0e01ae10c
+      internalID: -1665946628
       vertices: []
       indices: 
       edges: []
@@ -771,7 +750,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 19a9b26086199744fb4ce3230d0f4ca3
+    spriteID: 656083eb26fc51a468da0d719b6eb895
     internalID: 0
     vertices: []
     indices: 
@@ -779,38 +758,37 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      002 HaloR1Purple _0: -1532748886
-      002 HaloR1Purple _1: -516498989
-      002 HaloR1Purple _10: 191870855
-      002 HaloR1Purple _11: -218255860
-      002 HaloR1Purple _12: 1852195798
-      002 HaloR1Purple _13: 1758075325
-      002 HaloR1Purple _14: -403994090
-      002 HaloR1Purple _15: -699055907
-      002 HaloR1Purple _16: -75192991
-      002 HaloR1Purple _17: 809757974
-      002 HaloR1Purple _18: 333968453
-      002 HaloR1Purple _19: 1721416162
-      002 HaloR1Purple _2: 1472002474
-      002 HaloR1Purple _20: -899449985
-      002 HaloR1Purple _21: 241352159
-      002 HaloR1Purple _22: -1406128848
-      002 HaloR1Purple _23: 673738568
-      002 HaloR1Purple _24: 1270003524
-      002 HaloR1Purple _25: -535114979
-      002 HaloR1Purple _26: 1905826604
-      002 HaloR1Purple _27: -1741127419
-      002 HaloR1Purple _28: 657460234
-      002 HaloR1Purple _29: 987407904
-      002 HaloR1Purple _3: -161134869
-      002 HaloR1Purple _30: 1116418659
-      002 HaloR1Purple _31: -995251609
-      002 HaloR1Purple _4: 1534169800
-      002 HaloR1Purple _5: -826410154
-      002 HaloR1Purple _6: -1745311338
-      002 HaloR1Purple _7: 513418970
-      002 HaloR1Purple _8: -687226133
-      002 HaloR1Purple _9: -97580992
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_0: -1981359135
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_1: -673255976
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_10: 1210679098
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_11: 819569971
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_12: 268204532
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_13: 619636763
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_14: 268215057
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_15: 1506094702
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_16: 1892334833
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_17: -1508653265
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_18: 1309381530
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_19: -1395613149
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_2: 1374017309
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_20: -974262422
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_21: -227590080
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_22: 538144603
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_23: -637542030
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_24: 1079732523
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_25: -155391358
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_26: 16499424
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_27: -627792262
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_28: -911350690
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_29: -750648470
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_3: 742125833
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_30: -1665946628
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_4: -627002441
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_5: -240876949
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_6: -1171869234
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_7: 2021111892
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_8: -863672883
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_9: 1980265519
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

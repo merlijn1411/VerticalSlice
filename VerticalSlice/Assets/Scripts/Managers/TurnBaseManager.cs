@@ -28,7 +28,7 @@ public class TurnBaseManager : MonoBehaviour
 
 	private bool isplayerTurn = true;
 	private bool IsInteractableButton = true;
-	
+
 
 	Animator Phan_anim;
 	Animator Reu_anim;
@@ -39,6 +39,7 @@ public class TurnBaseManager : MonoBehaviour
 	[Header("Player Particles")]
 	public ParticleSystem PAttackParticle;
 	public ParticleSystem PAttackParticleTake;
+	public ParticleSystem RecoverParticles;
 
 	[Header("Enemy Particles")]
 	public ParticleSystem EAttackParticle;
@@ -53,25 +54,38 @@ public class TurnBaseManager : MonoBehaviour
 		Reu_anim = GameObject.Find("Reuniclus").GetComponent<Animator>();
 
 		CamAttackTrigger = GameObject.Find("camera animation pivot").GetComponent<CameraAnimationController>();
-		
-		
+
+
 
 	}
 	private void Update()
 	{
 		if (Player.CurrentHealth <= 0 || Enemy.CurrentHealth <= 0)
 		{
-			if(deadTrigger)
+			if (deadTrigger)
 			{
 				// bool is so that it wont be constantly true and keeps playing the animation
 				CamAttackTrigger.GetComponent<CameraAnimationController>().DeadAnimationTrigger();
 				StopAllCoroutines();
 				deadTrigger = false;
 			}
-
-
-
 		}
+	}
+	public void BtnAttack1()
+	{
+		IsInteractable();
+		StartCoroutine(CamTriggerPlayer(AttackBtn1));
+	}
+	public void BtnAttack2()
+	{
+		IsInteractable();
+		StartCoroutine(CamTriggerPlayer(AttackBtn2));
+	}
+	public void BtnAttack3()
+	{
+		IsInteractable();
+		StartCoroutine(Recover(AttackBtn3));
+		ChangeTurn();
 	}
 	private void Attack1(Component target)
 	{
@@ -92,17 +106,43 @@ public class TurnBaseManager : MonoBehaviour
 		}
 		ChangeTurn();
 	}
-
-	public void BtnAttack1()
+	private void PsyshockAttack(Component target)
 	{
-		IsInteractable();
-		StartCoroutine(CamTriggerPlayer());
+		if (target == Enemy)
+		{
+			Player.GetComponent<PlayerStats>().PlayPsyshockAnim();
+			Enemy.GetComponent<EnemyStats>().PsyshockAnimtake();
+
+			Invoke("EnemyHurtAnim", 2);
+			Invoke("EnemyIdleAnim", 3);
+
+			StartCoroutine(ChangeHealthbar(Enemy));
+
+		}
+		ChangeTurn();
 	}
+	private IEnumerator Recover(Button ChooseButton)
+	{
+		yield return new WaitForSeconds(3);
+		if (ChooseButton == AttackBtn3)
+		{
+			RecoverParticles.Play();
+			yield return new WaitForSeconds(2.4f);
+			Player.CurrentHealth += (Player.CurrentHealth / 2) + 20;
+			Playerhealthbar.time = 0f;
+		}
+	}
+
+
 
 	void PlayerIdleAnim()
 	{
 		Reu_anim.SetBool("Attack", false);
 		Reu_anim.SetBool("Hurt", false);
+	}
+	void EnemyHurtAnim()
+	{
+		Phan_anim.SetBool("Hurt", true);
 	}
 	void EnemyIdleAnim()
 	{
@@ -188,12 +228,21 @@ public class TurnBaseManager : MonoBehaviour
 		Attack1(Player);
 	}
 
-	public IEnumerator CamTriggerPlayer()
+	public IEnumerator CamTriggerPlayer(Button Buttonchoose)
 	{
 		CamAttackTrigger.GetComponent<CameraAnimationController>().TriggerAnimation(); //triggers the attack animation cycle
 		yield return new WaitForSeconds(3f);
 
-		Attack1(Enemy);
+		if (Buttonchoose == AttackBtn1)
+		{
+			Attack1(Enemy);
+		}
+		if (Buttonchoose == AttackBtn2)
+		{
+			PsyshockAttack(Enemy);
+		}
+
+
 	}
 	public IEnumerator HurtDelay(Component target)
 	{
@@ -202,29 +251,46 @@ public class TurnBaseManager : MonoBehaviour
 		if (target == Enemy)
 		{
 			PAttackParticleTake.Play();
-			HurtEnemyTrigger();
+			HurtTrigger(Enemy);
 		}
 		else if (target == Player)
 		{
 			EAttackParticleTake.Play();
-			HurtPlayerTrigger();
+			HurtTrigger(Player);
 
 			IsInteractable();
 		}
 	}
 
-	public void HurtEnemyTrigger()
+	public void HurtTrigger(Component target)
 	{
-		Phan_anim.SetBool("Hurt", true);
-		Invoke("EnemyIdleAnim", 0.8f);
-		Enemy.CurrentHealth -= CalculateDamage(Player.AttackDamage, Player.typeElement);
-		Enemyhealthbar.time = 0f;
+		if (target == Player)
+		{
+			Reu_anim.SetBool("Hurt", true);
+			Invoke("PlayerIdleAnim", 0.8f);
+			StartCoroutine(ChangeHealthbar(Player));
+		}
+		else if (target == Enemy)
+		{
+			Phan_anim.SetBool("Hurt", true);
+			Invoke("EnemyIdleAnim", 0.8f);
+			StartCoroutine(ChangeHealthbar(Enemy));
+		}
 	}
-	public void HurtPlayerTrigger()
+	public IEnumerator ChangeHealthbar(Component target)
 	{
-		Reu_anim.SetBool("Hurt", true);
-		Invoke("PlayerIdleAnim", 0.8f);
-		Player.CurrentHealth -= CalculateDamage(Enemy.AttackDamage, Enemy.typeElement);
-		Playerhealthbar.time = 0f;
+		yield return new WaitForSeconds(1.75f);
+
+		if (target == Player)
+		{
+			Player.CurrentHealth -= CalculateDamage(Enemy.AttackDamage, Enemy.typeElement);
+			Playerhealthbar.time = 0f;
+		}
+		else if (target == Enemy)
+		{
+			Enemy.CurrentHealth -= CalculateDamage(Player.AttackDamage, Player.typeElement);
+			Enemyhealthbar.time = 0f;
+		}
 	}
+
 }
