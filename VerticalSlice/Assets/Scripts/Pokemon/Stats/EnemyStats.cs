@@ -16,21 +16,36 @@ public class EnemyStats : MonoBehaviour
 
 	public ElementType.ElementTypes typeElement;
 
+	[HideInInspector] public Animator PlayPsyshockTake;
+
 	void Start()
 	{
 		Name = PokeName;
 
 		CurrentHealth = MaxHealth;
 		healthbar.SetMaxHealth(MaxHealth);
+
+		PlayPsyshockTake = GameObject.Find("PsyshockP2").GetComponentInChildren<Animator>();
 	}
 
 	private void Update()
 	{
 		healthbar.GetComponent<Healthbar>().CurrentHealth(CurrentHealth, healthbar.slider.value);
+
+		if (Input.GetKeyUp(KeyCode.Space))
+		{
+			PsyshockAnimtake();
+		}
+
 		if (CurrentHealth <= 0)
 		{
-			Invoke("Defeated", 4.5f); //change the float to alter the delay to make the enemey model dissapear
+			Invoke("Defeated", 4.5f);
 		}
+	}
+	public void PsyshockAnimtake()
+	{
+		PlayPsyshockTake.SetTrigger("Spheres");
+
 	}
 
 	private void Defeated()

@@ -21,6 +21,9 @@ public class PlayerStats : MonoBehaviour
 
 	public ElementType.ElementTypes typeElement;
 
+	[HideInInspector] public Animator PlayPsyshock;
+	[HideInInspector] public Animator[] PlayPsyshockchildrenhalos;
+
 	public void Start()
 	{
 		Name = PokeName;
@@ -29,16 +32,36 @@ public class PlayerStats : MonoBehaviour
 		STMaxH = MaxHealth;
 		healthbar.SetMaxHealth(MaxHealth);
 
+		PlayPsyshock = GameObject.Find("Psyshock").GetComponent<Animator>();
+		PlayPsyshockchildrenhalos = GameObject.Find("Psyshock").GetComponentsInChildren<Animator>();
 	}
 	private void Update()
 	{
 		STCurrentH = CurrentHealth;
 		healthbar.GetComponent<Healthbar>().CurrentHealth(CurrentHealth, healthbar.slider.value);
 
+		if (Input.GetKeyUp(KeyCode.Space))
+		{
+			PlayPsyshockAnim();
+		}
+
 		if (CurrentHealth <= 0)
 		{
 			Invoke("Defeated", 3);
 		}
+	}
+	public void PlayPsyshockAnim()
+	{
+		PlayPsyshock.SetTrigger("Psyshock");
+
+		PlayPsyshockchildrenhalos[1].SetTrigger("Halos");
+		PlayPsyshockchildrenhalos[2].SetTrigger("Halos");
+		PlayPsyshockchildrenhalos[3].SetTrigger("Halos");
+		PlayPsyshockchildrenhalos[4].SetTrigger("Halos");
+		PlayPsyshockchildrenhalos[5].SetTrigger("Halos");
+		PlayPsyshockchildrenhalos[6].SetTrigger("Halos");
+		PlayPsyshockchildrenhalos[7].SetTrigger("Halos");
+		PlayPsyshockchildrenhalos[8].SetTrigger("Halos");
 	}
 	private void Defeated()
 	{
