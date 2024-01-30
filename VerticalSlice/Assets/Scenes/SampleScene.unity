@@ -180,6 +180,9 @@ MonoBehaviour:
   AttackBtn2: {fileID: 1566157820}
   AttackBtn3: {fileID: 111421588}
   AttackBtn4: {fileID: 449904774}
+  UICanvas: {fileID: 787840891}
+  CanvasStart: {fileID: 2024868002}
+  CanvasAttack: {fileID: 1449897990}
   PhysicPower: 1.25
   GhostPower: 1.3
   GrassPower: 1.25
