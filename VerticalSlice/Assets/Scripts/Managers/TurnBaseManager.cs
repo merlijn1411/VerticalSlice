@@ -39,6 +39,7 @@ public class TurnBaseManager : MonoBehaviour
 	[Header("Player Particles")]
 	public ParticleSystem PAttackParticle;
 	public ParticleSystem PAttackParticleTake;
+	public ParticleSystem RecoverParticles;
 
 	[Header("Enemy Particles")]
 	public ParticleSystem EAttackParticle;
@@ -84,6 +85,7 @@ public class TurnBaseManager : MonoBehaviour
 	{
 		IsInteractable();
 		StartCoroutine(Recover(AttackBtn3));
+		ChangeTurn();
 	}
 	private void Attack1(Component target)
 	{
@@ -124,10 +126,11 @@ public class TurnBaseManager : MonoBehaviour
 		yield return new WaitForSeconds(3);
 		if (ChooseButton == AttackBtn3)
 		{
-			Player.CurrentHealth += (Player.CurrentHealth / 2) + 15;
+			RecoverParticles.Play();
+			yield return new WaitForSeconds(2.4f);
+			Player.CurrentHealth += (Player.CurrentHealth / 2) + 20;
 			Playerhealthbar.time = 0f;
 		}
-		ChangeTurn();
 	}
 
 

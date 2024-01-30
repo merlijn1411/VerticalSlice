@@ -187,6 +187,7 @@ MonoBehaviour:
   Enemyhealthbar: {fileID: 2066387721}
   PAttackParticle: {fileID: 1638095360}
   PAttackParticleTake: {fileID: 560159424}
+  RecoverParticles: {fileID: 1258887360}
   EAttackParticle: {fileID: 582695881}
   EAttackParticleTake: {fileID: 122905436}
 --- !u!1001 &7749694
@@ -18975,7 +18976,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 150/150
+  m_text: '110/110
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20406,13 +20409,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258887357}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710677, y: -0.000000014901159, z: -0.000000029249163, w: 0.7071068}
-  m_LocalPosition: {x: -2.66, y: -0.6968506, z: 1.88}
+  m_LocalRotation: {x: -0.22710513, y: -0.6696442, z: -0.6696442, w: 0.22710513}
+  m_LocalPosition: {x: 0, y: -0.0193, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_Father: {fileID: 1856190990}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -142.532}
 --- !u!199 &1258887359
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -20506,7 +20509,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -20572,7 +20575,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1.75
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -20625,7 +20628,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.36
+      scalar: 1.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -21067,7 +21070,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -21121,7 +21124,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 22.04
+    angle: 13.52
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 0
@@ -25424,6 +25427,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 891b3c1d2450c1f4988b83cda869deed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 512970697}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 891b3c1d2450c1f4988b83cda869deed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1258887358}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 891b3c1d2450c1f4988b83cda869deed, type: 3}
       insertIndex: -1
@@ -33136,7 +33142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PokeName: Reuniclus
   CurrentHealth: 0
-  MaxHealth: 100
+  MaxHealth: 110
   healthbar: {fileID: 841265576}
   level: 40
   Defends: 45
@@ -36328,7 +36334,6 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 1791685199}
   - {fileID: 339455569}
-  - {fileID: 1258887358}
   - {fileID: 1268307144}
   - {fileID: 3126621625651863076}
   - {fileID: 212133128}
