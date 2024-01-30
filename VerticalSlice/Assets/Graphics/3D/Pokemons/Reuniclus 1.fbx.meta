@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: 4f0cf2c36f572044da34945d7af48ff9
+guid: 312a3fd7fcc88f940b49ee36c8b431e9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: 04bcd7cdff368bf4a89f011dff1ebfb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face
+    second: {fileID: 2100000, guid: 31e8821ab0bf7d240b887aff883e860e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Slime
+    second: {fileID: 2100000, guid: f556dc210a32a0e48968205e39e8e07b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -31,11 +46,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Phan_Idle
+      name: Reu_Idle
       takeName: Armature|Armature|Armature|ArmatureAction
       internalID: 6065333994261340666
       firstFrame: 0
-      lastFrame: 40
+      lastFrame: 160
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -60,11 +75,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Phan_Attack
+      name: Reu_Attack
       takeName: Armature|Armature|Armature|ArmatureAction
       internalID: -5075894107677747073
-      firstFrame: 120
-      lastFrame: 180
+      firstFrame: 200
+      lastFrame: 240
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -89,11 +104,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Phan_Hit
+      name: Reu_Hit
       takeName: Armature|Armature|Armature|ArmatureAction
       internalID: -7353464688087182907
-      firstFrame: 180
-      lastFrame: 210
+      firstFrame: 280
+      lastFrame: 320
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -118,11 +133,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Phan_Die
+      name: Reu_Die
       takeName: Armature|Armature|Armature|ArmatureAction
       internalID: -2341177667169493629
-      firstFrame: 240
-      lastFrame: 280
+      firstFrame: 360
+      lastFrame: 390
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
