@@ -139,7 +139,7 @@ public class TurnBaseManager : MonoBehaviour
 		}
 		else
 		{
-			Invoke("ResetCanvas", 1);
+			Invoke("ResetCanvas", 0);
 		}
 	}
 	public void IsInteractable()
