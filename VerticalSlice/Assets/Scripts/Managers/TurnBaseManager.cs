@@ -174,13 +174,13 @@ public class TurnBaseManager : MonoBehaviour
 		float randDmg = Random.Range(81f, 100f) / 100;
 		if (!isplayerTurn)
 		{
-			int atkDef = Player.AttackDamage / Player.Defends;
-			damage = ((2 * Enemy.level / 5 + 2) * Enemy.AttackDamage * atkDef / 50 + 2) * 1f * 1.5f * randDmg * 1.5f;
+			int atkDef = Enemy.AttackDamage / Enemy.Defends;
+			damage = ((2 * Player.level / 5 + 2) * Player.AttackDamage * atkDef / 50 + 2) * 1f * 1.5f * randDmg * 1.5f;
 		}
 		else
 		{
-			int atkDef = Enemy.AttackDamage / Enemy.Defends;
-			damage = ((2 * Player.level / 5 + 2) * Player.AttackDamage * atkDef / 50 + 2) * 1f * 1.5f * randDmg * 1.5f;
+			int atkDef = Player.AttackDamage / Player.Defends;
+			damage = ((2 * Enemy.level / 5 + 2) * Enemy.AttackDamage * atkDef / 50 + 2) * 1f * 1.5f * randDmg * 1.5f;
 		}
 		float PokemonDamage = damage;
 

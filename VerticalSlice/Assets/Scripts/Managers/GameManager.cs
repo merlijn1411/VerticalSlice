@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,21 +16,25 @@ public class GameManager : MonoBehaviour
 	{
 		if (Player.CurrentHealth <= 0)
 		{
-			PlayerDied();
+			StartCoroutine(PlayerDied());
 		}
 
 		if (Enemy.CurrentHealth <= 0)
 		{
-			EnemyDied();
+			StartCoroutine(EnemyDied());
 		}
 	}
-	private void PlayerDied()
+	private IEnumerator PlayerDied()
 	{
 		Debug.Log("You Lose!");
+		yield return new WaitForSeconds(5.5f);
+		SceneManager.LoadScene("YouLose");
 	}
 
-	public void EnemyDied()
+	public IEnumerator EnemyDied()
 	{
 		Debug.Log("You Win!");
+		yield return new WaitForSeconds(5.5f);
+		SceneManager.LoadScene("YouWin");
 	}
 }
