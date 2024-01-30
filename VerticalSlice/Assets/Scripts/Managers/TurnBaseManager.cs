@@ -13,9 +13,9 @@ public class TurnBaseManager : MonoBehaviour
 	public Button AttackBtn3 = null;
 	public Button AttackBtn4 = null;
 
-	//[SerializeField] private GameObject UICanvas = null;
-	//[SerializeField] private GameObject CanvasStart = null;
-	//[SerializeField] private GameObject CanvasAttack = null;
+	[SerializeField] private GameObject UICanvas = null;
+	[SerializeField] private GameObject CanvasStart = null;
+	[SerializeField] private GameObject CanvasAttack = null;
 
 	[Header("Elemental Power")]
 	[SerializeField] private float PhysicPower;
@@ -134,12 +134,12 @@ public class TurnBaseManager : MonoBehaviour
 
 		if (!isplayerTurn)
 		{
-			//UICanvas.SetActive(false);
+			UICanvas.SetActive(false);
 			StartCoroutine(EnemyTurn());
 		}
 		else
 		{
-			//Invoke("ResetCanvas", 1);
+			Invoke("ResetCanvas", 0);
 		}
 	}
 	public void IsInteractable()
@@ -162,12 +162,12 @@ public class TurnBaseManager : MonoBehaviour
 		}
 	}
 
-	/*/public void ResetCanvas()
+	public void ResetCanvas()
 	{
 		CanvasStart.SetActive(true);
 		CanvasAttack.SetActive(false);
 		UICanvas.SetActive(true);
-	}/*/
+	}
 
 	public int CalculateDamage(float damage, ElementType.ElementTypes elementType)
 	{
