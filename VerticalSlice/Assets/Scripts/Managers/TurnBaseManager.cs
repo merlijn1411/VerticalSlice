@@ -70,6 +70,21 @@ public class TurnBaseManager : MonoBehaviour
 			}
 		}
 	}
+	public void BtnAttack1()
+	{
+		IsInteractable();
+		StartCoroutine(CamTriggerPlayer(AttackBtn1));
+	}
+	public void BtnAttack2()
+	{
+		IsInteractable();
+		StartCoroutine(CamTriggerPlayer(AttackBtn2));
+	}
+	public void BtnAttack3()
+	{
+		IsInteractable();
+		StartCoroutine(Recover(AttackBtn3));
+	}
 	private void Attack1(Component target)
 	{
 		if (target == Enemy)
@@ -104,17 +119,18 @@ public class TurnBaseManager : MonoBehaviour
 		}
 		ChangeTurn();
 	}
+	private IEnumerator Recover(Button ChooseButton)
+	{
+		yield return new WaitForSeconds(3);
+		if (ChooseButton == AttackBtn3)
+		{
+			Player.CurrentHealth += (Player.CurrentHealth / 2) + 15;
+			Playerhealthbar.time = 0f;
+		}
+		ChangeTurn();
+	}
 
-	public void BtnAttack1()
-	{
-		IsInteractable();
-		StartCoroutine(CamTriggerPlayer(AttackBtn1));
-	}
-	public void BtnAttack2()
-	{
-		IsInteractable();
-		StartCoroutine(CamTriggerPlayer(AttackBtn2));
-	}
+
 
 	void PlayerIdleAnim()
 	{
