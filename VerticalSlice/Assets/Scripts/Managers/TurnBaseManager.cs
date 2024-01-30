@@ -28,7 +28,7 @@ public class TurnBaseManager : MonoBehaviour
 
 	private bool isplayerTurn = true;
 	private bool IsInteractableButton = true;
-	
+
 
 	Animator Phan_anim;
 	Animator Reu_anim;
@@ -53,15 +53,15 @@ public class TurnBaseManager : MonoBehaviour
 		Reu_anim = GameObject.Find("Reuniclus").GetComponent<Animator>();
 
 		CamAttackTrigger = GameObject.Find("camera animation pivot").GetComponent<CameraAnimationController>();
-		
-		
+
+
 
 	}
 	private void Update()
 	{
 		if (Player.CurrentHealth <= 0 || Enemy.CurrentHealth <= 0)
 		{
-			if(deadTrigger)
+			if (deadTrigger)
 			{
 				// bool is so that it wont be constantly true and keeps playing the animation
 				CamAttackTrigger.GetComponent<CameraAnimationController>().DeadAnimationTrigger();
