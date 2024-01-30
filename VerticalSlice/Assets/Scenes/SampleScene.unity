@@ -242,7 +242,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fd00faa491006c2409f4942d268e80d5, type: 3}
   m_PrefabInstance: {fileID: 339455569}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
 --- !u!1 &44055136 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8033aae6fffaf52468fd4209b68f70d2, type: 3}
@@ -6548,7 +6547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fd00faa491006c2409f4942d268e80d5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5515114334009184632, guid: fd00faa491006c2409f4942d268e80d5, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -6816,6 +6815,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8033aae6fffaf52468fd4209b68f70d2, type: 3}
       propertyPath: m_Name
       value: Phantumb_Finished_Result
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8033aae6fffaf52468fd4209b68f70d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32338,4 +32341,4 @@ SceneRoots:
   - {fileID: 2112975494}
   - {fileID: 405622664}
   - {fileID: 78563907}
-
+  - {fileID: 395644756}

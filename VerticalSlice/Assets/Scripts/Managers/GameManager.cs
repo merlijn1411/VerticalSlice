@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-	private PlayerStats Player = null;
-	private EnemyStats Enemy = null;
+	private PlayerStats Player;
+	private EnemyStats Enemy;
 
 	void Start()
 	{
