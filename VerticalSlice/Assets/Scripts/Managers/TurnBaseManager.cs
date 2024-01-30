@@ -91,15 +91,13 @@ public class TurnBaseManager : MonoBehaviour
 	{
 		if (target == Enemy)
 		{
-			Reu_anim.SetBool("Attack", true);
-			Invoke("PlayerIdleAnim", 0.1f);
+			Reu_anim.SetTrigger("Attack");
 			PAttackParticle.Play();
 			StartCoroutine(HurtDelay(Enemy));
 		}
 		else if (target == Player)
 		{
-			Phan_anim.SetBool("Attack", true);
-			Invoke("EnemyIdleAnim", 0.1f);
+			Phan_anim.SetTrigger("Attack");
 			EAttackParticle.Play();
 			StartCoroutine(HurtDelay(Player));
 
@@ -112,9 +110,6 @@ public class TurnBaseManager : MonoBehaviour
 		{
 			Player.GetComponent<PlayerStats>().PlayPsyshockAnim();
 			Enemy.GetComponent<EnemyStats>().PsyshockAnimtake();
-
-			Invoke("EnemyHurtAnim", 2);
-			Invoke("EnemyIdleAnim", 3);
 
 			StartCoroutine(ChangeHealthbar(Enemy));
 
@@ -131,23 +126,6 @@ public class TurnBaseManager : MonoBehaviour
 			Player.CurrentHealth += (Player.CurrentHealth / 2) + 20;
 			Playerhealthbar.time = 0f;
 		}
-	}
-
-
-
-	void PlayerIdleAnim()
-	{
-		Reu_anim.SetBool("Attack", false);
-		Reu_anim.SetBool("Hurt", false);
-	}
-	void EnemyHurtAnim()
-	{
-		Phan_anim.SetBool("Hurt", true);
-	}
-	void EnemyIdleAnim()
-	{
-		Phan_anim.SetBool("Attack", false);
-		Phan_anim.SetBool("Hurt", false);
 	}
 
 	private void ChangeTurn()
@@ -266,14 +244,12 @@ public class TurnBaseManager : MonoBehaviour
 	{
 		if (target == Player)
 		{
-			Reu_anim.SetBool("Hurt", true);
-			Invoke("PlayerIdleAnim", 0.8f);
+			Reu_anim.SetTrigger("Hurt");
 			StartCoroutine(ChangeHealthbar(Player));
 		}
 		else if (target == Enemy)
 		{
-			Phan_anim.SetBool("Hurt", true);
-			Invoke("EnemyIdleAnim", 0.8f);
+			Phan_anim.SetTrigger("Hurt");
 			StartCoroutine(ChangeHealthbar(Enemy));
 		}
 	}
