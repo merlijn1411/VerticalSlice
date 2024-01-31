@@ -56,7 +56,7 @@ public class Dialogue : MonoBehaviour
 			textComponent.text += E;
 			yield return new WaitForSeconds(textspeed);
 		}
-		yield return new WaitForSeconds(6f);
+		yield return new WaitForSeconds(5f);
 
 		textComponent.text = string.Empty;
 
