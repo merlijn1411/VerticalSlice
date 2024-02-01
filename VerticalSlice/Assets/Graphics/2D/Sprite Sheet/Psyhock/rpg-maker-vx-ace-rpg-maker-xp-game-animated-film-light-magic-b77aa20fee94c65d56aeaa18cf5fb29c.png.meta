@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: 4d1797bc8f0092f4b9f21cb4754e4497
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9acf1c06799430046a3dc2d1993b2e67
+      internalID: -1932054635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d643feb61c46a154081761fb2e846055
+      internalID: 1130839658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f5a218a1d0f7046a35fe628d8644d2
+      internalID: 1571909219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40146b58368b37f4da66ebd094c8255a
+      internalID: 1738829767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf68b67794ddc34894eac4672c36592
+      internalID: -920329826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496f56c9cc03c834c895a7dc3a0b1d16
+      internalID: 638491255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f8d0c6000e64b4e9f8ee1909a94774
+      internalID: 1015749580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3988747d0f19dd44918107c8e6251cb
+      internalID: -1436942792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a0b3041330c084ea19f3bf29e0920e
+      internalID: 46793340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_9
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727e264769319e74f92d1e49125a3b60
+      internalID: 756947519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f057250495ad54b85817a960aea5f5
+      internalID: 1125032128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9300031ecf96d024fa458862d8b0c1c7
+      internalID: -496166033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebbebc84087fb804782ce8b31bc41d87
+      internalID: -1193907100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_13
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009c92672c9975440923f909477eb7cc
+      internalID: -1435442250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f3593a5aeb13c4da6043b47b6f9014
+      internalID: 1515062171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: dd8d127f09c49e94a84ba29fde88a858
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_0: -1932054635
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_1: 1130839658
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_10: 1125032128
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_11: -496166033
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_12: -1193907100
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_13: -1435442250
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_14: 1515062171
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_2: 1571909219
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_3: 1738829767
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_4: -920329826
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_5: 638491255
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_6: 1015749580
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_7: -1436942792
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_8: 46793340
+      rpg-maker-vx-ace-rpg-maker-xp-game-animated-film-light-magic-b77aa20fee94c65d56aeaa18cf5fb29c_9: 756947519
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

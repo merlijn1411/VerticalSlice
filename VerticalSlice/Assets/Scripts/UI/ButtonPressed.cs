@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class ButtonPressed : MonoBehaviour
 {
 	public Button button;
+
 	public void Start()
 	{
 		button.onClick.AddListener(ScaleButton);
@@ -19,5 +20,6 @@ public class ButtonPressed : MonoBehaviour
 	public void ScaleToNormal()
 	{
 		button.transform.localScale = new Vector3(2f, 2.9f, 0f);
+
 	}
 }

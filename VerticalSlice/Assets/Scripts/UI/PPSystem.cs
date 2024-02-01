@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class PPSystem : MonoBehaviour
 {
-	public int pp = 5;
+	[SerializeField] private int pp = 5;
+	[SerializeField] private int ppTotal = 5;
 	[SerializeField] private Button attackButton;
 	[SerializeField] private TextMeshProUGUI ppText;
 
@@ -16,16 +17,15 @@ public class PPSystem : MonoBehaviour
 	public void DecreasePP()
 	{
 		pp -= 1;
-		if (pp <= 0)
+		if (pp == 0)
 		{
 			attackButton.interactable = false;
 		}
-		Debug.Log(pp);
 		SetPP();
 	}
 
 	public void SetPP()
 	{
-		ppText.text = pp + " / 15";
+		ppText.text = pp + " / " + ppTotal;
 	}
 }
