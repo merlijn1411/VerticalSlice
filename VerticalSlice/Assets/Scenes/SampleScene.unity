@@ -176,10 +176,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16a2cdfd1105d77429b34dd9b820202e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackBtn1: {fileID: 2078492216}
-  AttackBtn2: {fileID: 1566157820}
-  AttackBtn3: {fileID: 111421588}
-  AttackBtn4: {fileID: 449904774}
+  AttackButtons:
+  - {fileID: 449904774}
+  - {fileID: 111421588}
+  - {fileID: 1566157820}
+  - {fileID: 2078492216}
   UICanvas: {fileID: 787840891}
   CanvasStart: {fileID: 2024868002}
   CanvasAttack: {fileID: 1449897990}
@@ -691,7 +692,7 @@ GameObject:
   - component: {fileID: 111421592}
   - component: {fileID: 111421593}
   m_Layer: 5
-  m_Name: Button Attack (2)
+  m_Name: Button Attack (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2756,7 +2757,7 @@ GameObject:
   - component: {fileID: 449904778}
   - component: {fileID: 449904779}
   m_Layer: 5
-  m_Name: Button Attack (1)
+  m_Name: Button Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19021,11 +19022,11 @@ RectTransform:
   m_LocalScale: {x: 1.1485, y: 1.1485, z: 1.1485}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1191036249}
   - {fileID: 449904773}
   - {fileID: 111421587}
   - {fileID: 1566157819}
   - {fileID: 2078492215}
+  - {fileID: 1191036249}
   m_Father: {fileID: 787840892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -19543,7 +19544,7 @@ GameObject:
   - component: {fileID: 1566157824}
   - component: {fileID: 1566157825}
   m_Layer: 5
-  m_Name: Button Attack (3)
+  m_Name: Button Attack (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27880,7 +27881,7 @@ GameObject:
   - component: {fileID: 2078492220}
   - component: {fileID: 2078492221}
   m_Layer: 5
-  m_Name: Button Attack (4)
+  m_Name: Button Attack (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -8,10 +8,8 @@ public class TurnBaseManager : MonoBehaviour
 	EnemyStats Enemy;
 
 	[Header("Attack Buttons")]
-	public Button AttackBtn1 = null;
-	public Button AttackBtn2 = null;
-	public Button AttackBtn3 = null;
-	public Button AttackBtn4 = null;
+	private Button[] AttackButtons;
+	private int AttackButtonsIndex = 4;
 
 	[SerializeField] private GameObject UICanvas = null;
 	[SerializeField] private GameObject CanvasStart = null;
@@ -27,8 +25,6 @@ public class TurnBaseManager : MonoBehaviour
 	[SerializeField] private Healthbar Enemyhealthbar;
 
 	private bool isplayerTurn = true;
-	private bool IsInteractableButton = true;
-
 
 	Animator Phan_anim;
 	Animator Reu_anim;
@@ -47,7 +43,23 @@ public class TurnBaseManager : MonoBehaviour
 	public ParticleSystem EAttackParticle;
 	public ParticleSystem EAttackParticleTake;
 
-	void Start()
+	private void Awake()
+	{
+		AttackButtons = new Button[AttackButtonsIndex];
+
+
+		for (var i = 0; i <= AttackButtonsIndex; i++)
+		{
+			Canvas AttackCanvas = Canvas.FindAnyObjectByType<Canvas>();
+			Button _AttackButtons = AttackCanvas.GetComponentInParent<Button>();
+
+
+			Debug.Log(AttackButtons);
+			AttackButtons[i] = _AttackButtons;
+		}
+	}
+
+	private void Start()
 	{
 		Player = GameObject.Find("Reuniclus").GetComponent<PlayerStats>();
 		Enemy = GameObject.Find("Phantump").GetComponent<EnemyStats>();
@@ -56,8 +68,6 @@ public class TurnBaseManager : MonoBehaviour
 		Reu_anim = GameObject.Find("Reuniclus").GetComponent<Animator>();
 
 		CamAttackTrigger = GameObject.Find("camera animation pivot").GetComponent<CameraAnimationController>();
-
-
 	}
 	private void Update()
 	{
@@ -83,18 +93,15 @@ public class TurnBaseManager : MonoBehaviour
 	}
 	public void BtnAttack1()
 	{
-		IsInteractable();
-		StartCoroutine(CamTriggerPlayer(AttackBtn1));
+		StartCoroutine(CamTriggerPlayer(AttackButtons[1]));
 	}
 	public void BtnAttack2()
 	{
-		IsInteractable();
-		StartCoroutine(CamTriggerPlayer(AttackBtn2));
+		StartCoroutine(CamTriggerPlayer(AttackButtons[2]));
 	}
 	public void BtnAttack3()
 	{
-		IsInteractable();
-		StartCoroutine(Recover(AttackBtn3));
+		StartCoroutine(Recover(AttackButtons[3]));
 		ChangeTurn();
 	}
 	private void Attack1(Component target)
@@ -129,7 +136,7 @@ public class TurnBaseManager : MonoBehaviour
 	private IEnumerator Recover(Button ChooseButton)
 	{
 		yield return new WaitForSeconds(3);
-		if (ChooseButton == AttackBtn3)
+		if (ChooseButton == AttackButtons[3])
 		{
 			RecoverParticles.Play();
 			yield return new WaitForSeconds(2.4f);
@@ -150,25 +157,6 @@ public class TurnBaseManager : MonoBehaviour
 		else
 		{
 			Invoke("ResetCanvas", 1);
-		}
-	}
-	public void IsInteractable()
-	{
-		IsInteractableButton = !IsInteractableButton;
-
-		if (!IsInteractableButton)
-		{
-			AttackBtn1.interactable = false;
-			AttackBtn2.interactable = false;
-			AttackBtn3.interactable = false;
-			AttackBtn4.interactable = false;
-		}
-		else
-		{
-			AttackBtn1.interactable = true;
-			AttackBtn2.interactable = true;
-			AttackBtn3.interactable = true;
-			AttackBtn4.interactable = true;
 		}
 	}
 
@@ -226,11 +214,11 @@ public class TurnBaseManager : MonoBehaviour
 		CamAttackTrigger.GetComponent<CameraAnimationController>().TriggerAnimation(); //triggers the attack animation cycle
 		yield return new WaitForSeconds(3f);
 
-		if (Buttonchoose == AttackBtn1)
+		if (Buttonchoose == AttackButtons[1])
 		{
 			Attack1(Enemy);
 		}
-		if (Buttonchoose == AttackBtn2)
+		if (Buttonchoose == AttackButtons[2])
 		{
 			PsyshockAttack(Enemy);
 		}
@@ -249,7 +237,6 @@ public class TurnBaseManager : MonoBehaviour
 			EAttackParticleTake.Play();
 			HurtTrigger(Player);
 
-			IsInteractable();
 		}
 	}
 
