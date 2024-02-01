@@ -1,0 +1,796 @@
+fileFormatVersion: 2
+guid: 5b0e72a924b338b4398a9f0add804e15
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_0
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d1bc24fac170c4eab69a9e27619750
+      internalID: -1981359135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba567dd7a83b9746874dbeed4612d86
+      internalID: -673255976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_2
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c024cd756bf8a4479240e0ce852ba68
+      internalID: 1374017309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0189785240d2dd459e2e3edb386a969
+      internalID: 742125833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6482a037dd1bca141a6e57859aee5aec
+      internalID: -627002441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6117456821627b841ad7d5c32f227a94
+      internalID: -240876949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7e1e3a737c8c1478e7300ff1336701
+      internalID: -1171869234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_7
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f34840b6be4aee4faff42f459ac1e9e
+      internalID: 2021111892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9532bb7a18069f048b8984d915a4a306
+      internalID: -863672883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f387f289fbccf6c4e97ae9525336f6d0
+      internalID: 1980265519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9890ddf89de1c4a438e3544598fc503c
+      internalID: 1210679098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a639b1b7b7ca1042a9a3f7f2d896afc
+      internalID: 819569971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_12
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca8d5e598d8cf148a688528c5ed13db
+      internalID: 268204532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_13
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76421debf61bc147b9986e2d628cecf
+      internalID: 619636763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650f73932c813e140b631788db987c4e
+      internalID: 268215057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c8755a13b23f849926a80820ce5e72
+      internalID: 1506094702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_16
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9311e9f0229ee4f8bd8345aceeacf5
+      internalID: 1892334833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_17
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b4097b27539944eb9eb699727ce6b0
+      internalID: -1508653265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_18
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab62db1766c583409c083057c0fb694
+      internalID: 1309381530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1b3d8a561de444d8e41741aa642ed8
+      internalID: -1395613149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2f4a8756c350f45a86a1a4816c39f2
+      internalID: -974262422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_21
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ec02489167b0f4d90ee7c803efd9a6
+      internalID: -227590080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_22
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e703206c15a8649a2c2fb30d734376
+      internalID: 538144603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_23
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b89131e6e07fec468600648f56f8656
+      internalID: -637542030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a8ac18ee750b94a9b54baf5b6e3ee6
+      internalID: 1079732523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b43242303616241987439e6cb435de
+      internalID: -155391358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_26
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736773b1f947bb14a94f0f2f62e14020
+      internalID: 16499424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_27
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a44722eff2c5c4eb14e23ace6c5c1e
+      internalID: -627792262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_28
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4b164bb6676e44096c160fa9bd8c9e
+      internalID: -911350690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ac95bf0ecdb6343a46f31f16aaae8f
+      internalID: -750648470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92961f7d1033c864eb5dddb0e01ae10c
+      internalID: -1665946628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 656083eb26fc51a468da0d719b6eb895
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_0: -1981359135
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_1: -673255976
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_10: 1210679098
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_11: 819569971
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_12: 268204532
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_13: 619636763
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_14: 268215057
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_15: 1506094702
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_16: 1892334833
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_17: -1508653265
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_18: 1309381530
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_19: -1395613149
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_2: 1374017309
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_20: -974262422
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_21: -227590080
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_22: 538144603
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_23: -637542030
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_24: 1079732523
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_25: -155391358
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_26: 16499424
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_27: -627792262
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_28: -911350690
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_29: -750648470
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_3: 742125833
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_30: -1665946628
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_4: -627002441
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_5: -240876949
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_6: -1171869234
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_7: 2021111892
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_8: -863672883
+      11_powerup_chaos_magic___special_effect_by_joesalotofthings_ded1xu6_9: 1980265519
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
