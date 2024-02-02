@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -22,7 +23,7 @@ public class PlayerStats : MonoBehaviour
 	public ElementType.ElementTypes typeElement;
 
 	[HideInInspector] public Animator PlayPsyshock;
-	[HideInInspector] public Animator[] PlayPsyshockchildrenhalos;
+	[HideInInspector] public Animator[] halos;
 
 	public void Start()
 	{
@@ -33,7 +34,11 @@ public class PlayerStats : MonoBehaviour
 		healthbar.SetMaxHealth(MaxHealth);
 
 		PlayPsyshock = GameObject.Find("Psyshock").GetComponent<Animator>();
-		PlayPsyshockchildrenhalos = GameObject.Find("Psyshock").GetComponentsInChildren<Animator>();
+		halos = GameObject.Find("Psyshock").GetComponentsInChildren<Animator>();
+
+		List<Animator> halosList = new List<Animator>(halos);
+		halosList.RemoveAt(0);
+		halos = halosList.ToArray();
 	}
 	private void Update()
 	{
@@ -47,16 +52,13 @@ public class PlayerStats : MonoBehaviour
 	}
 	public void PlayPsyshockAnim()
 	{
+
 		PlayPsyshock.SetTrigger("Psyshock");
 
-		PlayPsyshockchildrenhalos[1].SetTrigger("Halos");
-		PlayPsyshockchildrenhalos[2].SetTrigger("Halos");
-		PlayPsyshockchildrenhalos[3].SetTrigger("Halos");
-		PlayPsyshockchildrenhalos[4].SetTrigger("Halos");
-		PlayPsyshockchildrenhalos[5].SetTrigger("Halos");
-		PlayPsyshockchildrenhalos[6].SetTrigger("Halos");
-		PlayPsyshockchildrenhalos[7].SetTrigger("Halos");
-		PlayPsyshockchildrenhalos[8].SetTrigger("Halos");
+		for (int i = 0; i < halos.Length; i++)
+		{
+			halos[i].SetTrigger("Halos");
+		}
 	}
 	private void Defeated()
 	{

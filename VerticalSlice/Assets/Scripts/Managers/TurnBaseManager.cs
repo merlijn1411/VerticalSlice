@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TurnBaseManager : MonoBehaviour
+public class TurnBaseManager : ButtonFinder
 {
 	PlayerStats Player;
 	EnemyStats Enemy;
@@ -45,18 +45,7 @@ public class TurnBaseManager : MonoBehaviour
 
 	private void Awake()
 	{
-		AttackButtons = new Button[AttackButtonsIndex];
-
-
-		for (var i = 0; i <= AttackButtonsIndex; i++)
-		{
-			Canvas AttackCanvas = Canvas.FindAnyObjectByType<Canvas>();
-			Button _AttackButtons = AttackCanvas.GetComponentInParent<Button>();
-
-
-			Debug.Log(AttackButtons);
-			AttackButtons[i] = _AttackButtons;
-		}
+		AttackButtons = ButtonFinder.FindButtons("Canvas", "Buttons", "Canvas(Attacks)", "Button Attack", AttackButtonsIndex);
 	}
 
 	private void Start()
@@ -68,6 +57,12 @@ public class TurnBaseManager : MonoBehaviour
 		Reu_anim = GameObject.Find("Reuniclus").GetComponent<Animator>();
 
 		CamAttackTrigger = GameObject.Find("camera animation pivot").GetComponent<CameraAnimationController>();
+
+		for (int i = 0; i < AttackButtons.Length; i++)
+		{
+			int buttonIndex = i;
+			AttackButtons[i].onClick.AddListener(() => CamTriggerPlayer(AttackButtons[buttonIndex]));
+		}
 	}
 	private void Update()
 	{
@@ -91,17 +86,13 @@ public class TurnBaseManager : MonoBehaviour
 	{
 		Phan_anim.SetTrigger("Die");
 	}
-	public void BtnAttack1()
+	public void BtnAttack(int buttonIndex)
 	{
-		StartCoroutine(CamTriggerPlayer(AttackButtons[1]));
+		StartCoroutine(CamTriggerPlayer(AttackButtons[buttonIndex]));
 	}
-	public void BtnAttack2()
+	public void BtnRecover(int buttonIndex)
 	{
-		StartCoroutine(CamTriggerPlayer(AttackButtons[2]));
-	}
-	public void BtnAttack3()
-	{
-		StartCoroutine(Recover(AttackButtons[3]));
+		StartCoroutine(Recover(AttackButtons[buttonIndex]));
 		ChangeTurn();
 	}
 	private void Attack1(Component target)
@@ -211,7 +202,7 @@ public class TurnBaseManager : MonoBehaviour
 
 	public IEnumerator CamTriggerPlayer(Button Buttonchoose)
 	{
-		CamAttackTrigger.GetComponent<CameraAnimationController>().TriggerAnimation(); //triggers the attack animation cycle
+		CamAttackTrigger.GetComponent<CameraAnimationController>().TriggerAnimation();
 		yield return new WaitForSeconds(3f);
 
 		if (Buttonchoose == AttackButtons[1])
