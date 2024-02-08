@@ -31,17 +31,18 @@ public class TurnBaseManager : ButtonFinder
 
 	CameraAnimationController CamAttackTrigger;
 
+	[Header("Dialogue Attributes")]
 	[SerializeField] private Dialogue dialogueEnemy;
 	[SerializeField] private TextPanelAnimation textAppear;
 
 	[Header("Player Particles")]
-	public ParticleSystem PAttackParticle;
-	public ParticleSystem PAttackParticleTake;
-	public ParticleSystem RecoverParticles;
+	[SerializeField] private ParticleSystem PAttackParticle;
+	[SerializeField] private ParticleSystem PAttackParticleTake;
+	[SerializeField] private ParticleSystem RecoverParticles;
 
 	[Header("Enemy Particles")]
-	public ParticleSystem EAttackParticle;
-	public ParticleSystem EAttackParticleTake;
+	[SerializeField] private ParticleSystem EAttackParticle;
+	[SerializeField] private ParticleSystem EAttackParticleTake;
 
 	private void Awake()
 	{
@@ -58,11 +59,6 @@ public class TurnBaseManager : ButtonFinder
 
 		CamAttackTrigger = GameObject.Find("camera animation pivot").GetComponent<CameraAnimationController>();
 
-		for (int i = 0; i < AttackButtons.Length; i++)
-		{
-			int buttonIndex = i;
-			AttackButtons[i].onClick.AddListener(() => CamTriggerPlayer(AttackButtons[buttonIndex]));
-		}
 	}
 	private void Update()
 	{
@@ -88,11 +84,11 @@ public class TurnBaseManager : ButtonFinder
 	}
 	public void BtnAttack(int buttonIndex)
 	{
-		StartCoroutine(CamTriggerPlayer(AttackButtons[buttonIndex]));
+		StartCoroutine(CamTriggerPlayer(buttonIndex));
 	}
 	public void BtnRecover(int buttonIndex)
 	{
-		StartCoroutine(Recover(AttackButtons[buttonIndex]));
+		StartCoroutine(Recover(buttonIndex));
 		ChangeTurn();
 	}
 	private void Attack1(Component target)
@@ -124,16 +120,32 @@ public class TurnBaseManager : ButtonFinder
 		}
 		ChangeTurn();
 	}
-	private IEnumerator Recover(Button ChooseButton)
+	private IEnumerator Recover(int ButtonIndex)
 	{
+		yield return new WaitForSeconds(0.2f);
+		UICanvas.SetActive(false);
+
 		yield return new WaitForSeconds(3);
-		if (ChooseButton == AttackButtons[3])
+
+		if (ButtonIndex == 2)
 		{
-			RecoverParticles.Play();
-			yield return new WaitForSeconds(2.4f);
-			Player.CurrentHealth += (Player.CurrentHealth / 2) + 20;
-			Playerhealthbar.time = 0f;
+			if (Player.CurrentHealth <= Player.MaxHealth)
+			{
+				Debug.Log("het is niet genoeg");
+				RecoverParticles.Play();
+				yield return new WaitForSeconds(2.4f);
+
+				Player.CurrentHealth += (Player.CurrentHealth / 2) + 20;
+
+				Playerhealthbar.time = 0f;
+			}
+			else if (Player.CurrentHealth >= Player.MaxHealth)
+			{
+				Debug.Log("het is meer dan genoeg");
+				Player.CurrentHealth = Player.MaxHealth;
+			}
 		}
+
 	}
 
 	private void ChangeTurn()
@@ -142,12 +154,11 @@ public class TurnBaseManager : ButtonFinder
 
 		if (!isplayerTurn)
 		{
-			UICanvas.SetActive(false);
 			StartCoroutine(EnemyTurn());
 		}
 		else
 		{
-			Invoke("ResetCanvas", 1);
+			Invoke("ResetCanvas", 1.5f);
 		}
 	}
 
@@ -200,16 +211,19 @@ public class TurnBaseManager : ButtonFinder
 		Attack1(Player);
 	}
 
-	public IEnumerator CamTriggerPlayer(Button Buttonchoose)
+	public IEnumerator CamTriggerPlayer(int buttonIndex)
 	{
+		yield return new WaitForSeconds(0.2f);
+		UICanvas.SetActive(false);
+
 		CamAttackTrigger.GetComponent<CameraAnimationController>().TriggerAnimation();
 		yield return new WaitForSeconds(3f);
 
-		if (Buttonchoose == AttackButtons[1])
+		if (buttonIndex == 0)
 		{
 			Attack1(Enemy);
 		}
-		if (Buttonchoose == AttackButtons[2])
+		else if (buttonIndex == 1)
 		{
 			PsyshockAttack(Enemy);
 		}

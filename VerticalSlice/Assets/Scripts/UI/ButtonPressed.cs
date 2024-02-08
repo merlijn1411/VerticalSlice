@@ -1,25 +1,63 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ButtonPressed : MonoBehaviour
 {
-	public Button button;
+	PlayerStats Player;
+
+	public Button[] buttons;
+
+	[SerializeField] private GameObject CanvasStart = null;
+	[SerializeField] private GameObject CanvasAttack = null;
 
 	public void Start()
 	{
-		button.onClick.AddListener(ScaleButton);
+		Player = GameObject.Find("Reuniclus").GetComponent<PlayerStats>();
+
+		int index = 0;
+		for (int i = index; i < buttons.Length; i++)
+		{
+			int buttonValue = i;
+			buttons[i].onClick.AddListener(() => { ScaleButton(buttonValue); });
+		}
+
+	}
+	private void Update()
+	{
+		if (Player.CurrentHealth == Player.MaxHealth)
+		{
+			buttons[2].interactable = false;
+		}
+		else if (Player.CurrentHealth != Player.MaxHealth)
+		{
+			buttons[2].interactable = true;
+		}
+	}
+	public void ButtonFight()
+	{
+		StartCoroutine(BattleIn());
 	}
 
-	public void ScaleButton()
+	public IEnumerator BattleIn()
 	{
-		button.transform.localScale = new Vector3(1.75f, 2.35f, 0f);
-
-		Invoke("ScaleToNormal", 0.1f);
+		yield return new WaitForSeconds(0.2f);
+		CanvasStart.SetActive(false);
+		CanvasAttack.SetActive(true);
 	}
 
-	public void ScaleToNormal()
+	public void ScaleButton(int buttonindex)
 	{
-		button.transform.localScale = new Vector3(2f, 2.9f, 0f);
+		buttons[buttonindex].transform.localScale = new Vector3(1.75f, 2.35f, 0f);
+
+		StartCoroutine(ScaleToNormal(buttonindex));
+	}
+
+	public IEnumerator ScaleToNormal(int buttonindex)
+	{
+		yield return new WaitForSeconds(0.1f);
+
+		buttons[buttonindex].transform.localScale = new Vector3(2f, 2.9f, 0f);
 
 	}
 }
