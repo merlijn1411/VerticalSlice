@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerStats : MonoBehaviour
+public class PlayerStats : Healthbar
 {
 	//public static event Action<int> onDied;
 

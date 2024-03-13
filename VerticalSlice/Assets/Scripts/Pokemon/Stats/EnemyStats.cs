@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyStats : MonoBehaviour
+public class EnemyStats : Healthbar
 {
 	public static string Name;
 	public string PokeName;
