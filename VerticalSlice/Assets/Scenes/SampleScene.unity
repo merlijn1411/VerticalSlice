@@ -188,6 +188,8 @@ MonoBehaviour:
   GrassPower: 1.25
   Playerhealthbar: {fileID: 841265576}
   Enemyhealthbar: {fileID: 2066387721}
+  dialogueEnemy: {fileID: 4730386615565497655}
+  textAppear: {fileID: 4019080037966505137}
   PAttackParticle: {fileID: 1638095360}
   PAttackParticleTake: {fileID: 560159424}
   RecoverParticles: {fileID: 1258887360}
@@ -552,9 +554,9 @@ RectTransform:
   - {fileID: 840615147}
   - {fileID: 365640035}
   - {fileID: 787840892}
-  - {fileID: 1560633472}
   - {fileID: 1621523032}
   - {fileID: 7161120411776161136}
+  - {fileID: 1560633472}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3339,7 +3341,7 @@ Transform:
   m_GameObject: {fileID: 512970694}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000000072066593, y: 0.11780602, z: 0.000000004497287, w: 0.9930367}
-  m_LocalPosition: {x: -0.484, y: 2.34, z: -1.948}
+  m_LocalPosition: {x: -0.51, y: 2.34, z: -2.77}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18249,8 +18251,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbc47567ded263141ac0d7197f16b1fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1310249070}
   m_SourcePrefab: {fileID: 100100000, guid: cbc47567ded263141ac0d7197f16b1fc, type: 3}
+--- !u!1 &1310249069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cbc47567ded263141ac0d7197f16b1fc, type: 3}
+  m_PrefabInstance: {fileID: 1310249068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1310249070
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310249069}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a33bc94b5f6994c4290e4cc7b9cf357b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1321951739
 GameObject:
   m_ObjectHideFlags: 0
@@ -28147,7 +28179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.58601093
+      value: -0.34
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28768,7 +28800,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1924.9999, y: -508.9214}
+  m_AnchoredPosition: {x: -1014.9999, y: -508.9214}
   m_SizeDelta: {x: 101.4469, y: 138.3028}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &2752762784871349093
@@ -29067,11 +29099,12 @@ MonoBehaviour:
   - {fileID: 111421588}
   - {fileID: 1566157820}
   - {fileID: 2078492216}
-  buttonTexts:
-  - Reuniclus used Physic
-  - Reuniclus used Psyshock
-  - Reuniclus used Recover
-  - Reuniclus used Pain Split
+  PlayerTexts:
+  - Reuniclus used Psyhic!
+  - Reuniclus used Psyshock!
+  - Reuniclus used Recover!
+  - Reuniclus used Pain Split!
+  EnemyText: Phantump Used Tackle!
   textPanel: {fileID: 4019080037966505137}
 --- !u!1 &4940200155623799447
 GameObject:
@@ -29132,7 +29165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4369386805927111445, guid: d307332b022696c46abc8341a3dc4103, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1
+      value: -0.441
       objectReference: {fileID: 0}
     - target: {fileID: 4369386805927111445, guid: d307332b022696c46abc8341a3dc4103, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29165,6 +29198,10 @@ PrefabInstance:
     - target: {fileID: 4369386805927111445, guid: d307332b022696c46abc8341a3dc4103, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359793643057357142, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: PokeName
+      value: Phantump
       objectReference: {fileID: 0}
     - target: {fileID: 7359793643057357142, guid: d307332b022696c46abc8341a3dc4103, type: 3}
       propertyPath: healthbar

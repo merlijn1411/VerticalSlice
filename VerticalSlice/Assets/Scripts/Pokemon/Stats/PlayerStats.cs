@@ -40,11 +40,6 @@ public class PlayerStats : Healthbar
 		STCurrentH = CurrentHealth;
 		healthbar.GetComponent<Healthbar>().CurrentHealth(CurrentHealth, healthbar.slider.value);
 
-		if (Input.GetKeyUp(KeyCode.Space))
-		{
-			PlayPsyshockAnim();
-		}
-
 		if (CurrentHealth <= 0)
 		{
 			Invoke("Defeated", 3);
