@@ -4,22 +4,17 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-	private PlayerStats Player;
-	private EnemyStats Enemy;
-
-	void Start()
-	{
-		Player = GameObject.Find("Reuniclus").GetComponent<PlayerStats>();
-		Enemy = GameObject.Find("Phantump").GetComponent<EnemyStats>();
-	}
+	[SerializeField] private PokemonStats Pokemon;
+	[SerializeField] private PokemonStats Enemy;
+	
 	public void Update()
 	{
-		if (Player.CurrentHealth <= 0)
+		if (Pokemon.currentHealth <= 0)
 		{
 			StartCoroutine(PlayerDied());
 		}
 
-		if (Enemy.CurrentHealth <= 0)
+		if (Enemy.currentHealth <= 0)
 		{
 			StartCoroutine(EnemyDied());
 		}

@@ -4,16 +4,16 @@ using UnityEngine.UI;
 
 public class ButtonPressed : MonoBehaviour
 {
-	PlayerStats Player;
+	PokemonStats Player;
 
 	public Button[] buttons;
 
-	[SerializeField] private GameObject CanvasStart = null;
-	[SerializeField] private GameObject CanvasAttack = null;
+	[SerializeField] private GameObject CanvasStart;
+	[SerializeField] private GameObject CanvasAttack;
 
 	public void Start()
 	{
-		Player = GameObject.Find("Reuniclus").GetComponent<PlayerStats>();
+		Player = GameObject.Find("Reuniclus").GetComponent<PokemonStats>();
 
 		int index = 0;
 		for (int i = index; i < buttons.Length; i++)
@@ -25,11 +25,11 @@ public class ButtonPressed : MonoBehaviour
 	}
 	private void Update()
 	{
-		if (Player.CurrentHealth == Player.MaxHealth)
+		if (Player.currentHealth == Player.maxHealth)
 		{
 			buttons[2].interactable = false;
 		}
-		else if (Player.CurrentHealth != Player.MaxHealth)
+		else if (Player.currentHealth != Player.maxHealth)
 		{
 			buttons[2].interactable = true;
 		}
@@ -57,7 +57,7 @@ public class ButtonPressed : MonoBehaviour
 	{
 		yield return new WaitForSeconds(0.1f);
 
-		buttons[buttonindex].transform.localScale = new Vector3(2f, 2.9f, 0f);
+		buttons[buttonindex].transform.localScale = new Vector3(2.1f, 2.9f, 0f);
 
 	}
 }
