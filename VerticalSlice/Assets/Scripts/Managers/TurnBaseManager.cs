@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class TurnBaseManager : MonoBehaviour
@@ -45,11 +46,11 @@ public class TurnBaseManager : MonoBehaviour
 	
 	[Header("PlayerEvents")]
 	public UnityEvent onMovePlayerChosen;
-	public UnityEvent playerHasBeenHit;
+	public UnityEvent playerGetsHit;
 	
 	[Header("EnemyEvents")]
 	public UnityEvent onMoveEnemyChosen;
-	public UnityEvent enemyHasBeenHit;
+	public UnityEvent enemyGetsHit;
 
 	private void Awake()
 	{
@@ -208,30 +209,15 @@ public class TurnBaseManager : MonoBehaviour
 	{
 		if (target == player)
 		{
-			playerHasBeenHit.Invoke();
-			StartCoroutine(ChangeHealthbar(player));
+			playerGetsHit.Invoke();
+			//StartCoroutine(ChangeHealthbar(player));
 		}
 		else if (target == enemy)
 		{
-			enemyHasBeenHit.Invoke();
-			StartCoroutine(ChangeHealthbar(enemy));
+			enemyGetsHit.Invoke();
+			//StartCoroutine(ChangeHealthbar(enemy));
 		}
 	}
-	public IEnumerator ChangeHealthbar(Component target)
-	{
-		yield return new WaitForSeconds(1.75f);
-
-		if (target == player)
-		{
-			player.currentHealth -= damageFormula.CalculateDamage(enemy.attackDamage, enemy.typeElement);
-			Playerhealthbar.time = 0f;
-		}
-		else if (target == enemy)
-		{
-			enemy.currentHealth -= damageFormula.CalculateDamage(player.attackDamage, player.typeElement);
-			Enemyhealthbar.time = 0f;
-		}
-		yield return new WaitForSeconds(3f);
-	}
+	
 
 }

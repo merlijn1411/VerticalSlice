@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 474131}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,12 +240,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  playerHasBeenHit:
+  playerGetsHit:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 981816207717870320}
+        m_TargetAssemblyTypeName: PokemonAttacks, Assembly-CSharp
+        m_MethodName: StartAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 474130}
         m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
-        m_MethodName: PlayerHasBeenHit
+        m_MethodName: PlayerGetsHit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -270,12 +282,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  enemyHasBeenHit:
+  enemyGetsHit:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5333331655508512915}
+        m_TargetAssemblyTypeName: PokemonAttacks, Assembly-CSharp
+        m_MethodName: StartAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 474130}
         m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
-        m_MethodName: EnemmyHasBenHit
+        m_MethodName: EnemyGetsHit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7548,7 +7572,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
   m_PrefabInstance: {fileID: 5333331655508512911}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5333331655508512914}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1da8fd4fa488bbb44bfc5d3ee640b292, type: 3}
@@ -12750,7 +12774,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
   m_PrefabInstance: {fileID: 981816207717870317}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 981816207717870319}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1da8fd4fa488bbb44bfc5d3ee640b292, type: 3}
@@ -12761,7 +12785,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3516596005069368401, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
   m_PrefabInstance: {fileID: 981816207717870317}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 981816207717870319}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e53e70fb3e6b4d5489cd3030d0c73237, type: 3}
@@ -12927,13 +12951,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 981816207717870320}
   m_SourcePrefab: {fileID: 100100000, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
 --- !u!95 &981816207717870318 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4123528186607991612, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
   m_PrefabInstance: {fileID: 981816207717870317}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &981816207717870319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+  m_PrefabInstance: {fileID: 981816207717870317}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &981816207717870320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981816207717870319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf60593fe784d443b5bb7cf11173157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemonStats: {fileID: 2115795136}
+  target: {fileID: 1251565710}
+  targetHealthbar: {fileID: 2066387721}
 --- !u!1 &1038603343623442820
 GameObject:
   m_ObjectHideFlags: 0
@@ -13730,7 +13777,10 @@ PrefabInstance:
     - {fileID: 7359793643057357142, guid: d307332b022696c46abc8341a3dc4103, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2874592467319233290, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5333331655508512915}
   m_SourcePrefab: {fileID: 100100000, guid: d307332b022696c46abc8341a3dc4103, type: 3}
 --- !u!95 &5333331655508512912 stripped
 Animator:
@@ -13742,6 +13792,26 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 8485107224275352411, guid: d307332b022696c46abc8341a3dc4103, type: 3}
   m_PrefabInstance: {fileID: 5333331655508512911}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5333331655508512914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2874592467319233290, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+  m_PrefabInstance: {fileID: 5333331655508512911}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5333331655508512915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333331655508512914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf60593fe784d443b5bb7cf11173157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemonStats: {fileID: 1251565710}
+  target: {fileID: 2115795136}
+  targetHealthbar: {fileID: 841265576}
 --- !u!224 &5407787575770445906
 RectTransform:
   m_ObjectHideFlags: 0

@@ -14,16 +14,25 @@ public class ButtonPressed : MonoBehaviour
 	public void Start()
 	{
 		Player = GameObject.Find("Reuniclus").GetComponent<PokemonStats>();
+		
+	}
 
+	private void InitializeButtons()
+	{
 		int index = 0;
 		for (int i = index; i < buttons.Length; i++)
 		{
 			int buttonValue = i;
 			buttons[i].onClick.AddListener(() => { ScaleButton(buttonValue); });
 		}
-
-	}
+	} 
+		 
 	private void Update()
+	{
+		IsHealthFull();
+	}
+
+	private void IsHealthFull()
 	{
 		if (Player.currentHealth == Player.maxHealth)
 		{

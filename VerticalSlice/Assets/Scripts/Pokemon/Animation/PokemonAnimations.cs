@@ -16,12 +16,12 @@ public class PokemonAnimations : MonoBehaviour
 		phanAnim.SetTrigger("Attack");
 	}
 	
-	public void PlayerHasBeenHit()
+	public void PlayerGetsHit()
 	{
 		reuAnim.SetTrigger("Hurt");
 	}
 	
-	public void EnemmyHasBenHit()
+	public void EnemyGetsHit()
 	{
 		phanAnim.SetTrigger("Hurt");
 	}
