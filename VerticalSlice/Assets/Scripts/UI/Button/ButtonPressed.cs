@@ -14,7 +14,7 @@ public class ButtonPressed : MonoBehaviour
 	public void Start()
 	{
 		Player = GameObject.Find("Reuniclus").GetComponent<PokemonStats>();
-		
+		InitializeButtons();
 	}
 
 	private void InitializeButtons()
