@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PsyshockActivor : MonoBehaviour
+public class PsyshockRenderer : MonoBehaviour
 {
 	[SerializeField] private Animator playPsyshock;
 	[SerializeField] private Animator playPsyshockTake;
@@ -39,6 +39,7 @@ public class PsyshockActivor : MonoBehaviour
 		    halos[i].SetTrigger("Halos");
 	    }
     }
+    
     public void PsyshockAnimtake()
     {
 	    playPsyshockTake.SetTrigger("Spheres");

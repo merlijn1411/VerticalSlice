@@ -182,25 +182,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2115795136}
   enemy: {fileID: 1251565710}
-  UICanvas: {fileID: 787840891}
-  CanvasStart: {fileID: 2024868002}
-  CanvasAttack: {fileID: 1449897990}
   Playerhealthbar: {fileID: 841265576}
   Enemyhealthbar: {fileID: 2066387721}
   isplayerTurn: 1
-  dialogueEnemy: {fileID: 4730386615565497655}
-  textAppear: {fileID: 4019080037966505137}
-  PAttackParticle: {fileID: 1638095360}
-  PAttackParticleTake: {fileID: 560159424}
-  RecoverParticles: {fileID: 1258887360}
-  EAttackParticle: {fileID: 8666051685634201875}
-  EAttackParticleTake: {fileID: 3581625902047623780}
-  psyshockActivate:
+  onEnemyMove:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2115795138}
-        m_TargetAssemblyTypeName: PsyshockActivor, Assembly-CSharp
-        m_MethodName: PlayPsyshockAnim
+      - m_Target: {fileID: 4730386615565497655}
+        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+        m_MethodName: StartEnemyDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -210,12 +200,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  psyshocTake:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2115795138}
-        m_TargetAssemblyTypeName: PsyshockActivor, Assembly-CSharp
-        m_MethodName: PsyshockAnimtake
+      - m_Target: {fileID: 4019080037966505137}
+        m_TargetAssemblyTypeName: TextPanelAnimation, Assembly-CSharp
+        m_MethodName: PanelAnimate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -225,12 +212,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onMovePlayerChosen:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 474130}
-        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
-        m_MethodName: PlayerAttack
+      - m_Target: {fileID: 5333331655508512915}
+        m_TargetAssemblyTypeName: DefaultAttack, Assembly-CSharp
+        m_MethodName: StartTackle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -240,12 +224,57 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  playerGetsHit:
+  onPlayerRecover:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 981816207717870322}
+        m_TargetAssemblyTypeName: PokemonRecover, Assembly-CSharp
+        m_MethodName: StartRecover
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPlayerMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1565478156}
+        m_TargetAssemblyTypeName: CameraAnimationController, Assembly-CSharp
+        m_MethodName: TriggerAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPlayerTurn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 51659959}
+        m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
+        m_MethodName: ResetCS
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDefaultChosen:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 981816207717870320}
-        m_TargetAssemblyTypeName: PokemonAttacks, Assembly-CSharp
-        m_MethodName: StartAttack
+        m_TargetAssemblyTypeName: DefaultAttack, Assembly-CSharp
+        m_MethodName: StartTackle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -255,60 +284,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 474130}
-        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
-        m_MethodName: PlayerGetsHit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onMoveEnemyChosen:
+  onPsyshockChosen:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 474130}
-        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
-        m_MethodName: EnemyAttack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  enemyGetsHit:
+      m_Calls: []
+  onRecoverChosen:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5333331655508512915}
-        m_TargetAssemblyTypeName: PokemonAttacks, Assembly-CSharp
-        m_MethodName: StartAttack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 474130}
-        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
-        m_MethodName: EnemyGetsHit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  onPainSplitChosen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &474130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,6 +490,7 @@ GameObject:
   - component: {fileID: 51659953}
   - component: {fileID: 51659957}
   - component: {fileID: 51659958}
+  - component: {fileID: 51659959}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -588,7 +573,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7161120411776161136}
   - {fileID: 958557861}
   - {fileID: 942033635}
   - {fileID: 532546999}
@@ -629,6 +613,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 1164740782987057878}
+--- !u!114 &51659959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51659952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5957f77d8775cfd418f5131774a08dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NonDiegetic: {fileID: 958557860}
+  CanvasStart: {fileID: 2024868002}
+  CanvasAttack: {fileID: 1449897990}
 --- !u!4 &84339358 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7146726245798377339, guid: aaa99818f9883e04c9da3b270f85d381, type: 3}
@@ -799,18 +798,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 474129}
-        m_TargetAssemblyTypeName: TurnBaseManager, Assembly-CSharp
-        m_MethodName: BtnAttack
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 51659958}
         m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
         m_MethodName: ButtonNois
@@ -838,6 +825,18 @@ MonoBehaviour:
       - m_Target: {fileID: 111421593}
         m_TargetAssemblyTypeName: PPSystem, Assembly-CSharp
         m_MethodName: DecreasePP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 981816207717870324}
+        m_TargetAssemblyTypeName: PsyshockAttack, Assembly-CSharp
+        m_MethodName: Psyshock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2832,18 +2831,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 474129}
-        m_TargetAssemblyTypeName: TurnBaseManager, Assembly-CSharp
-        m_MethodName: BtnAttack
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 449904779}
         m_TargetAssemblyTypeName: PPSystem, Assembly-CSharp
         m_MethodName: DecreasePP
@@ -2871,6 +2858,30 @@ MonoBehaviour:
       - m_Target: {fileID: 4019080037966505137}
         m_TargetAssemblyTypeName: TextPanelAnimation, Assembly-CSharp
         m_MethodName: PanelAnimate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 51659959}
+        m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
+        m_MethodName: StartOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474129}
+        m_TargetAssemblyTypeName: TurnBaseManager, Assembly-CSharp
+        m_MethodName: DefaultMove
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9312,8 +9323,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 474129}
         m_TargetAssemblyTypeName: TurnBaseManager, Assembly-CSharp
-        m_MethodName: BtnRecover
-        m_Mode: 3
+        m_MethodName: RecoverMove
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12583,12 +12594,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 474129}
         m_TargetAssemblyTypeName: TurnBaseManager, Assembly-CSharp
-        m_MethodName: BtnAttack
-        m_Mode: 3
+        m_MethodName: DefaultMove
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12948,6 +12959,34 @@ PrefabInstance:
       propertyPath: attackDamage
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 474130}
+    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Playerdie
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PokemonAnimations, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12955,6 +12994,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 981816207717870320}
+    - targetCorrespondingSourceObject: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 981816207717870322}
+    - targetCorrespondingSourceObject: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 981816207717870324}
+    - targetCorrespondingSourceObject: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 981816207717870326}
   m_SourcePrefab: {fileID: 100100000, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
 --- !u!95 &981816207717870318 stripped
 Animator:
@@ -12981,6 +13029,112 @@ MonoBehaviour:
   pokemonStats: {fileID: 2115795136}
   target: {fileID: 1251565710}
   targetHealthbar: {fileID: 2066387721}
+  Attack: {fileID: 1638095360}
+  TakeAttack: {fileID: 560159424}
+  onMovePlayerChosen:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 474130}
+        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
+        m_MethodName: PlayerAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &981816207717870322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981816207717870319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf51ddd453dce73448ad145c5d179d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2115795136}
+  playerhealthbar: {fileID: 841265576}
+  recoverParticles: {fileID: 1258887360}
+--- !u!114 &981816207717870324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981816207717870319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b91de5716f2a5c489edab49135e60f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  psyshockActivate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2115795138}
+        m_TargetAssemblyTypeName: PsyshockRenderer, Assembly-CSharp
+        m_MethodName: PlayPsyshockAnim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  psyshocTake:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2115795138}
+        m_TargetAssemblyTypeName: PsyshockRenderer, Assembly-CSharp
+        m_MethodName: PsyshockAnimtake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMovePlayerChosen:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 474130}
+        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
+        m_MethodName: PlayerAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &981816207717870326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981816207717870319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386c4f6ec2bfb9e449289c88578f1224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemonStats: {fileID: 2115795136}
+  healthbar: {fileID: 841265576}
+  isHealthZero:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1038603343623442820
 GameObject:
   m_ObjectHideFlags: 0
@@ -13757,6 +13911,34 @@ PrefabInstance:
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 2066387721}
+    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 474130}
+    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Enemydie
+      objectReference: {fileID: 0}
+    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PokemonAnimations, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7359793643057357142, guid: d307332b022696c46abc8341a3dc4103, type: 3}
       propertyPath: PokeName
       value: Phantump
@@ -13781,6 +13963,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2874592467319233290, guid: d307332b022696c46abc8341a3dc4103, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5333331655508512915}
+    - targetCorrespondingSourceObject: {fileID: 2874592467319233290, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5333331655508512917}
   m_SourcePrefab: {fileID: 100100000, guid: d307332b022696c46abc8341a3dc4103, type: 3}
 --- !u!95 &5333331655508512912 stripped
 Animator:
@@ -13812,6 +13997,40 @@ MonoBehaviour:
   pokemonStats: {fileID: 1251565710}
   target: {fileID: 2115795136}
   targetHealthbar: {fileID: 841265576}
+  Attack: {fileID: 8666051685634201875}
+  TakeAttack: {fileID: 3581625902047623780}
+  onMovePlayerChosen:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 474130}
+        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
+        m_MethodName: EnemyAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5333331655508512917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333331655508512914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386c4f6ec2bfb9e449289c88578f1224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemonStats: {fileID: 1251565710}
+  healthbar: {fileID: 2066387721}
+  isHealthZero:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!224 &5407787575770445906
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14161,18 +14380,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038603343623442820}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5010643989753439498}
   - {fileID: 3115466739327191567}
-  m_Father: {fileID: 51659956}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 960, y: 540}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7391983039212118452
@@ -14409,3 +14628,4 @@ SceneRoots:
   - {fileID: 981816207717870317}
   - {fileID: 1234713293}
   - {fileID: 1310249068}
+  - {fileID: 7161120411776161136}

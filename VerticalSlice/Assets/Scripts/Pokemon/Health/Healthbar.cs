@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,4 +28,5 @@ public class Healthbar : MonoBehaviour
 		slider.value = Mathf.Lerp(startHealth, targetHealth, time);
 
 	}
+	
 }

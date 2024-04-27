@@ -1,29 +1,39 @@
-using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class PokemonAttacks : MonoBehaviour
+public class DefaultAttack : MonoBehaviour
 {
 	[SerializeField] private PokemonStats pokemonStats;
 	[SerializeField] private PokemonStats target;
 	
 	[SerializeField] private Healthbar targetHealthbar;
-
+	
 	private DamageFormula Formula;
+	
+	[Header("Player Particles")]
+	[SerializeField] private ParticleSystem Attack;
+	[SerializeField] private ParticleSystem TakeAttack;
+	
+	public UnityEvent onMovePlayerChosen;
+	
 
 	private void Start()
 	{
 		Formula = GameObject.FindWithTag("Manager").GetComponent<DamageFormula>();
 	}
 
-	public void StartAttack()
+	public void StartTackle()
 	{
-		StartCoroutine(AttackMove());
+		StartCoroutine(DoTackle());
 	}
 	
-	public IEnumerator AttackMove()
+	public IEnumerator DoTackle()
 	{
-		yield return new WaitForSeconds(1.75f);
+		yield return new WaitForSeconds(3.5f);
+		onMovePlayerChosen.Invoke();
+		Attack.Play();
+		yield return new WaitForSeconds(2f);
 		
 		target.currentHealth -= Formula.CalculateDamage(pokemonStats.attackDamage, pokemonStats.typeElement);
 		targetHealthbar.time = 0f;
