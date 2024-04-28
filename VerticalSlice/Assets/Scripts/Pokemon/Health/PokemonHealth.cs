@@ -3,39 +3,42 @@ using UnityEngine.Events;
 
 public class PokemonHealth : MonoBehaviour
 {
-	[SerializeField] private PokemonStats pokemonStats;
+	private PokemonStats pokemonStats;
 	[SerializeField] private Healthbar healthbar;
 	
 	public UnityEvent isHealthZero;
 	private void Start()
 	{
+		pokemonStats = GetComponent<PokemonStats>();
+		
 		pokemonStats.currentHealth = pokemonStats.maxHealth;
 		healthbar.SetMaxHealth(pokemonStats.maxHealth);
 	}
 	
 	private void Update()
 	{
-		Initializehealth();
-
+		InitializeHealth();
 		HealthChecker();
+		MinAndMaxValue();
 	}
 	
 	private void HealthChecker()
 	{
 		if (pokemonStats.currentHealth <= 0)
+		{
 			isHealthZero.Invoke();
-		
+		}
+			
 	}
 
-	private void Initializehealth()
+	private void InitializeHealth()
 	{
-		healthbar.GetComponent<Healthbar>().CurrentHealth(pokemonStats.currentHealth, healthbar.slider.value);
+		healthbar.CurrentHealth(pokemonStats.currentHealth, healthbar.slider.value);
 	}
-	
-	private void OnValidate()
+
+	private void MinAndMaxValue()
 	{
-		if (pokemonStats.currentHealth <= 0)
-			pokemonStats.currentHealth = 0;
+		pokemonStats.currentHealth = Mathf.Clamp(pokemonStats.currentHealth, 0, pokemonStats.maxHealth);
 	}
    
 }

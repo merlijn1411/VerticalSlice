@@ -13,7 +13,6 @@ public class TurnBaseManager : MonoBehaviour
 	public UnityEvent onEnemyMove;
 	
 	[Header("PlayerEvents")] 
-	public UnityEvent onPlayerRecover;
 	public UnityEvent onPlayerMove;
 	public UnityEvent onPlayerTurn;
 
@@ -39,7 +38,6 @@ public class TurnBaseManager : MonoBehaviour
 	
 	public void RecoverMove()
 	{
-		onPlayerRecover.Invoke();
 		onRecoverChosen.Invoke();
 		ChangeTurn();
 	}
@@ -74,6 +72,11 @@ public class TurnBaseManager : MonoBehaviour
 
 		ChangeTurn();
 
+	}
+
+	public void StopBattle()
+	{
+		StopAllCoroutines();
 	}
 	
 }

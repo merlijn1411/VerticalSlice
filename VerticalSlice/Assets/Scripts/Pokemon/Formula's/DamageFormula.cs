@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -13,16 +12,16 @@ public class DamageFormula : MonoBehaviour
 		pokemon = GetComponent<PokemonStats>();
 	}
 
-	public int CalculateDamage(float PokemonDamage, ElementType.ElementTypes elementType)
+	public int CalculateDamage(float pokemonDamage, ElementType.ElementTypes elementType)
 	{
 		float randDmg = Random.Range(81f, 100f) / 100;
 		
 		int atkDef = target.attackDamage / target.defends;
-		PokemonDamage = ((2 * pokemon.level / 5 + 2) * pokemon.attackDamage * atkDef / 50 + 2) * 1f * 1.5f * randDmg * 1.5f;
+		pokemonDamage = ((2 * pokemon.level / 5 + 2) * pokemon.attackDamage * atkDef / 50 + 2) * 1f * 1.5f * randDmg * 1.5f;
 		
-		AddElement(elementType, PokemonDamage);
+		AddElement(elementType, pokemonDamage);
 
-		return Mathf.RoundToInt(PokemonDamage);
+		return Mathf.RoundToInt(pokemonDamage);
 	}
 
 	private void AddElement(ElementType.ElementTypes elementTypes, float pokemonDamage)
@@ -30,13 +29,13 @@ public class DamageFormula : MonoBehaviour
 		switch (elementTypes)
 		{
 			case ElementType.ElementTypes.Physic:
-				pokemonDamage = pokemonDamage * ElementType.physicPower;
+				pokemonDamage *= ElementType.physicPower;
 				break;
 			case ElementType.ElementTypes.Ghost:
-				pokemonDamage = pokemonDamage * ElementType.ghostPower;
+				pokemonDamage *= ElementType.ghostPower;
 				break;
 			case ElementType.ElementTypes.Grass:
-				pokemonDamage = pokemonDamage * ElementType.grassPower;
+				pokemonDamage *= ElementType.grassPower;
 				break;
 		}
 	}

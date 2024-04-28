@@ -374,8 +374,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4369386805927111445}
-  - component: {fileID: 5343677218028888133}
+  - component: {fileID: 1158226851064104029}
   - component: {fileID: 8485107224275352411}
+  - component: {fileID: 3964496913855674004}
+  - component: {fileID: 3576573843213548720}
+  - component: {fileID: 8026426972095650016}
+  - component: {fileID: 193878927256150209}
   m_Layer: 0
   m_Name: Phantumb
   m_TagString: Untagged
@@ -403,7 +407,7 @@ Transform:
   - {fileID: 1146286343018110735}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -40.304, z: 0}
---- !u!114 &5343677218028888133
+--- !u!114 &1158226851064104029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -412,20 +416,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2874592467319233290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1da8fd4fa488bbb44bfc5d3ee640b292, type: 3}
+  m_Script: {fileID: 11500000, guid: 84e35ba5f6b791b418677e8ccf265ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PokeName: Phantump
-  healthbar: {fileID: 0}
-  maxHealth: 110
+  maxHealth: 100
   currentHealth: 0
-  level: 32
-  defends: 28
-  attackDamage: 42
+  level: 28
+  defends: 30
+  attackDamage: 40
   typeElement: 2
-  isHealthZero:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!95 &8485107224275352411
 Animator:
   serializedVersion: 7
@@ -448,6 +448,117 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3964496913855674004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2874592467319233290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf60593fe784d443b5bb7cf11173157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetHealthbar: {fileID: 0}
+  Attack: {fileID: 2177675575312009814}
+  AttackGiven: {fileID: 5776406296089452678}
+  onMovePlayerChosen:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 193878927256150209}
+        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onAttackGiven:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
+        m_MethodName: GetsHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3576573843213548720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2874592467319233290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386c4f6ec2bfb9e449289c88578f1224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthbar: {fileID: 0}
+  isHealthZero:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 193878927256150209}
+        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
+        m_MethodName: StartDie
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TurnBaseManager, Assembly-CSharp
+        m_MethodName: StopBattle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8026426972095650016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2874592467319233290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187f3f930c894b6479b815fc6978a9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+--- !u!114 &193878927256150209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2874592467319233290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7a5a9073cc8434981db17b668dcad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3347041869653775953
 GameObject:
   m_ObjectHideFlags: 0

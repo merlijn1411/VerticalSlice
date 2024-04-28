@@ -15560,6 +15560,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
       propertyPath: m_Name
       value: Reuniclus
@@ -15588,20 +15592,38 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8526102980977619430}
+      addedObject: {fileID: 8758346245879221908}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4123528186607991612}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3516596005069368401}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7350455398603534128}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4403665290234325606}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 60534059188966498}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3220893470107813665}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8192686904270420293}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1606997672389898745}
   m_SourcePrefab: {fileID: 100100000, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
 --- !u!1 &7052982591647010813 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}
   m_PrefabInstance: {fileID: 7863376885750657708}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8526102980977619430
+--- !u!114 &8758346245879221908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15610,20 +15632,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7052982591647010813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1da8fd4fa488bbb44bfc5d3ee640b292, type: 3}
+  m_Script: {fileID: 11500000, guid: b0f37ea85a3ae5c43876e4ec860f0dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PokeName: Reuniclus
-  healthbar: {fileID: 0}
   maxHealth: 110
   currentHealth: 0
-  level: 40
-  defends: 32
+  level: 38
+  defends: 50
   attackDamage: 50
   typeElement: 1
-  isHealthZero:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!95 &4123528186607991612
 Animator:
   serializedVersion: 7
@@ -15660,6 +15678,202 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playPsyshock: {fileID: 1804104828093418208}
   playPsyshockTake: {fileID: 0}
+--- !u!114 &7350455398603534128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7052982591647010813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf60593fe784d443b5bb7cf11173157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetHealthbar: {fileID: 0}
+  Attack: {fileID: 6826323887502134594}
+  AttackGiven: {fileID: 107040566202856928}
+  onMovePlayerChosen:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1606997672389898745}
+        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onAttackGiven:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
+        m_MethodName: GetsHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4403665290234325606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7052982591647010813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf51ddd453dce73448ad145c5d179d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerhealthbar: {fileID: 0}
+  recoverParticles: {fileID: 2171394802549968081}
+--- !u!114 &60534059188966498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7052982591647010813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b91de5716f2a5c489edab49135e60f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetHealthbar: {fileID: 0}
+  psyshockActivate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3516596005069368401}
+        m_TargetAssemblyTypeName: PsyshockRenderer, Assembly-CSharp
+        m_MethodName: PlayPsyshockAnim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1606997672389898745}
+        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  psyshocTake:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3516596005069368401}
+        m_TargetAssemblyTypeName: PsyshockRenderer, Assembly-CSharp
+        m_MethodName: PsyshockAnimtake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onAttackGiven:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
+        m_MethodName: GetsHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3220893470107813665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7052982591647010813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386c4f6ec2bfb9e449289c88578f1224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthbar: {fileID: 0}
+  isHealthZero:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1606997672389898745}
+        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
+        m_MethodName: StartDie
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TurnBaseManager, Assembly-CSharp
+        m_MethodName: StopBattle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8192686904270420293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7052982591647010813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187f3f930c894b6479b815fc6978a9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+--- !u!114 &1606997672389898745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7052982591647010813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7a5a9073cc8434981db17b668dcad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7686213965689525575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 312a3fd7fcc88f940b49ee36c8b431e9, type: 3}

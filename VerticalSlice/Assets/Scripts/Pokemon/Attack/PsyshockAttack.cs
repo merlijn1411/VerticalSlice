@@ -5,18 +5,20 @@ using UnityEngine.Events;
 public class PsyshockAttack : MonoBehaviour
 {
 	[Header("Attributes")]
-	[SerializeField] private PokemonStats pokemonStats;
 	[SerializeField] private PokemonStats target;
 	[SerializeField] private Healthbar targetHealthbar;
 	
+	private PokemonStats pokemonStats;
 	private DamageFormula Formula;
 	
 	[Header("PshyshockParticles")]
 	public UnityEvent psyshockActivate,psyshocTake;
-	public UnityEvent onMovePlayerChosen;
+
+	public UnityEvent onAttackGiven;
 	
 	private void Start()
 	{
+		pokemonStats = GetComponent<PokemonStats>();
 		Formula = GetComponent<DamageFormula>();
 	}
 	
@@ -24,20 +26,21 @@ public class PsyshockAttack : MonoBehaviour
 	{
 		StartCoroutine(DoPsyshock());
 	}
-	public IEnumerator DoPsyshock()
-    	{
-    		yield return new WaitForSeconds(2.5f);
-		    
-    		onMovePlayerChosen.Invoke();
-		    psyshockActivate.Invoke();
-    		yield return new WaitForSeconds(1.5f);
-		    
-		    psyshocTake.Invoke();
+	private IEnumerator DoPsyshock()
+    {
+    	yield return new WaitForSeconds(2.5f);
+	    
+	    psyshockActivate.Invoke();
+    	yield return new WaitForSeconds(1f);
+	    
+	    psyshocTake.Invoke();
 
-		    yield return new WaitForSeconds(2f);
-    		target.currentHealth -= Formula.CalculateDamage(pokemonStats.attackDamage, pokemonStats.typeElement);
-    		targetHealthbar.time = 0f;
-    		
-    		yield return new WaitForSeconds(3f);
-    	}
+	    yield return new WaitForSeconds(2f);
+	    
+	    onAttackGiven.Invoke();
+    	target.currentHealth -= Formula.CalculateDamage(pokemonStats.attackDamage, pokemonStats.typeElement);
+    	targetHealthbar.time = 0f;
+    	
+    	yield return new WaitForSeconds(3f);
+    }
 }

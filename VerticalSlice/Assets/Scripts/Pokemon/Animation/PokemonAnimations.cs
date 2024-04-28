@@ -1,37 +1,34 @@
-using System;
+using System.Collections;
 using UnityEngine;
 
 public class PokemonAnimations : MonoBehaviour
 {
-	[SerializeField] private Animator phanAnim;
-	[SerializeField] private Animator reuAnim;
-	
-	public void PlayerAttack()
+	private Animator PokemonAnimator;
+
+	private void Start()
 	{
-		reuAnim.SetTrigger("Attack");
+		PokemonAnimator = GetComponent<Animator>();
+	}
+
+	public void Attack()
+	{
+		PokemonAnimator.SetTrigger("Attack");
 	}
 	
-	public void EnemyAttack()
+	public void GetsHit()
 	{
-		phanAnim.SetTrigger("Attack");
+		PokemonAnimator.SetTrigger("Hurt");
 	}
 	
-	public void PlayerGetsHit()
+	public void StartDie()
 	{
-		reuAnim.SetTrigger("Hurt");
+		StartCoroutine(Die());
+	}
+
+	private IEnumerator Die()
+	{
+		yield return new WaitForSeconds(4f);
+		PokemonAnimator.SetTrigger("Die");
 	}
 	
-	public void EnemyGetsHit()
-	{
-		phanAnim.SetTrigger("Hurt");
-	}
-	
-	public void Playerdie()
-	{
-		reuAnim.SetTrigger("Die");
-	}
-	public void Enemydie()
-	{
-		phanAnim.SetTrigger("Die");
-	}
 }

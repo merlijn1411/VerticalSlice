@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 474128}
   - component: {fileID: 474127}
   - component: {fileID: 474129}
-  - component: {fileID: 474130}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Manager
@@ -145,13 +144,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474126}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9198f8c063a50bf4da607960bc7cf5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pokemon: {fileID: 2115795136}
-  Enemy: {fileID: 1251565710}
+  Pokemon: {fileID: 0}
+  Enemy: {fileID: 0}
 --- !u!4 &474128
 Transform:
   m_ObjectHideFlags: 0
@@ -207,24 +206,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5333331655508512915}
+      - m_Target: {fileID: 5333331655508512920}
         m_TargetAssemblyTypeName: DefaultAttack, Assembly-CSharp
         m_MethodName: StartTackle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onPlayerRecover:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 981816207717870322}
-        m_TargetAssemblyTypeName: PokemonRecover, Assembly-CSharp
-        m_MethodName: StartRecover
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -267,7 +251,7 @@ MonoBehaviour:
   onDefaultChosen:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 981816207717870320}
+      - m_Target: {fileID: 981816207717870324}
         m_TargetAssemblyTypeName: DefaultAttack, Assembly-CSharp
         m_MethodName: StartTackle
         m_Mode: 1
@@ -282,7 +266,7 @@ MonoBehaviour:
   onPsyshockChosen:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 981816207717870324}
+      - m_Target: {fileID: 981816207717870322}
         m_TargetAssemblyTypeName: PsyshockAttack, Assembly-CSharp
         m_MethodName: StartPsyshock
         m_Mode: 1
@@ -296,24 +280,22 @@ MonoBehaviour:
         m_CallState: 2
   onRecoverChosen:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 981816207717870323}
+        m_TargetAssemblyTypeName: PokemonRecover, Assembly-CSharp
+        m_MethodName: StartRecover
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPainSplitChosen:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &474130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af7a5a9073cc8434981db17b668dcad6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  phanAnim: {fileID: 5333331655508512913}
-  reuAnim: {fileID: 981816207717870318}
 --- !u!1001 &23288622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -584,8 +566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3edba12940db9ba44acf0d427901892c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2115795136}
-  enemy: {fileID: 1251565710}
+  player: {fileID: 981816207717870326}
+  enemy: {fileID: 5333331655508512913}
   playerNameText: {fileID: 1109986509}
   enemyNameText: {fileID: 711096393}
   playerHealthText: {fileID: 932602405}
@@ -2856,9 +2838,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4019080037966505137}
-        m_TargetAssemblyTypeName: TextPanelAnimation, Assembly-CSharp
-        m_MethodName: PanelAnimate
+      - m_Target: {fileID: 51659959}
+        m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
+        m_MethodName: StartOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2868,9 +2850,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 51659959}
-        m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
-        m_MethodName: StartOff
+      - m_Target: {fileID: 4019080037966505137}
+        m_TargetAssemblyTypeName: TextPanelAnimation, Assembly-CSharp
+        m_MethodName: PanelAnimate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3536,11 +3518,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5057670748575835072, guid: 92d7adc7142e78e4b9158144138feeb7, type: 3}
   m_PrefabInstance: {fileID: 1436972707}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &560159424 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 107040566202856928, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-  m_PrefabInstance: {fileID: 981816207717870317}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &565251953
 GameObject:
@@ -7579,22 +7556,6 @@ Transform:
   - {fileID: 320340536}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1251565710 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-  m_PrefabInstance: {fileID: 5333331655508512911}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5333331655508512914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1da8fd4fa488bbb44bfc5d3ee640b292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!198 &1258887360 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2171394802549968081, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-  m_PrefabInstance: {fileID: 981816207717870317}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1261225493
 GameObject:
   m_ObjectHideFlags: 0
@@ -9322,14 +9283,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 474129}
-        m_TargetAssemblyTypeName: TurnBaseManager, Assembly-CSharp
-        m_MethodName: RecoverMove
+      - m_Target: {fileID: 1566157825}
+        m_TargetAssemblyTypeName: PPSystem, Assembly-CSharp
+        m_MethodName: DecreasePP
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -9346,6 +9307,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 51659959}
+        m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
+        m_MethodName: StartOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 4019080037966505137}
         m_TargetAssemblyTypeName: TextPanelAnimation, Assembly-CSharp
         m_MethodName: PanelAnimate
@@ -9358,9 +9331,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1566157825}
-        m_TargetAssemblyTypeName: PPSystem, Assembly-CSharp
-        m_MethodName: DecreasePP
+      - m_Target: {fileID: 474129}
+        m_TargetAssemblyTypeName: TurnBaseManager, Assembly-CSharp
+        m_MethodName: RecoverMove
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9433,7 +9406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5403a6862f820a4b8ea487b762a83b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pp: 15
+  pp: 5
   ppTotal: 5
   attackButton: {fileID: 1566157820}
   ppText: {fileID: 1378166908}
@@ -9777,11 +9750,6 @@ CanvasRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7146726245798377339, guid: aaa99818f9883e04c9da3b270f85d381, type: 3}
   m_PrefabInstance: {fileID: 932773592}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1638095360 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 6826323887502134594, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-  m_PrefabInstance: {fileID: 981816207717870317}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1640587484
 GameObject:
@@ -12704,8 +12672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5403a6862f820a4b8ea487b762a83b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pp: 20
-  ppTotal: 20
+  pp: 5
+  ppTotal: 5
   attackButton: {fileID: 2078492216}
   ppText: {fileID: 1923156649}
 --- !u!1001 &2109969691
@@ -12781,28 +12749,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bd339e5777e2cb43a0e684de0f3f959, type: 3}
---- !u!114 &2115795136 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-  m_PrefabInstance: {fileID: 981816207717870317}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981816207717870319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1da8fd4fa488bbb44bfc5d3ee640b292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2115795138 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3516596005069368401, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-  m_PrefabInstance: {fileID: 981816207717870317}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981816207717870319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e53e70fb3e6b4d5489cd3030d0c73237, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2146767876 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7146726245798377339, guid: aaa99818f9883e04c9da3b270f85d381, type: 3}
@@ -12904,14 +12850,74 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 60534059188966498, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 5333331655508512913}
+    - target: {fileID: 60534059188966498, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: targetHealthbar
+      value: 
+      objectReference: {fileID: 2066387721}
+    - target: {fileID: 60534059188966498, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: onAttackGiven.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5333331655508512914}
+    - target: {fileID: 3220893470107813665, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: healthbar
+      value: 
+      objectReference: {fileID: 841265576}
+    - target: {fileID: 3220893470107813665, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220893470107813665, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220893470107813665, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 474129}
+    - target: {fileID: 3220893470107813665, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220893470107813665, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StopBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220893470107813665, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TurnBaseManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220893470107813665, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3516596005069368401, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
       propertyPath: playPsyshockTake
       value: 
       objectReference: {fileID: 5333331655508512912}
+    - target: {fileID: 4403665290234325606, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: playerhealthbar
+      value: 
+      objectReference: {fileID: 841265576}
     - target: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
       propertyPath: m_Name
       value: Reuniclus
       objectReference: {fileID: 0}
+    - target: {fileID: 7350455398603534128, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 5333331655508512913}
+    - target: {fileID: 7350455398603534128, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: targetHealthbar
+      value: 
+      objectReference: {fileID: 2066387721}
+    - target: {fileID: 7350455398603534128, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: onAttackGiven.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5333331655508512914}
     - target: {fileID: 7686213965689525575, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.61
@@ -12952,209 +12958,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-      propertyPath: healthbar
+    - target: {fileID: 8192686904270420293, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      propertyPath: target
       value: 
-      objectReference: {fileID: 841265576}
-    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-      propertyPath: attackDamage
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 474130}
-    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Playerdie
-      objectReference: {fileID: 0}
-    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PokemonAnimations, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8526102980977619430, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5333331655508512913}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 981816207717870320}
-    - targetCorrespondingSourceObject: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 981816207717870322}
-    - targetCorrespondingSourceObject: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 981816207717870324}
-    - targetCorrespondingSourceObject: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 981816207717870326}
-    - targetCorrespondingSourceObject: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 981816207717870328}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
---- !u!95 &981816207717870318 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4123528186607991612, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+--- !u!114 &981816207717870318 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1606997672389898745, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
   m_PrefabInstance: {fileID: 981816207717870317}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &981816207717870319 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7a5a9073cc8434981db17b668dcad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &981816207717870322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 60534059188966498, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
   m_PrefabInstance: {fileID: 981816207717870317}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &981816207717870320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981816207717870319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adf60593fe784d443b5bb7cf11173157, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pokemonStats: {fileID: 2115795136}
-  target: {fileID: 1251565710}
-  targetHealthbar: {fileID: 2066387721}
-  Attack: {fileID: 1638095360}
-  TakeAttack: {fileID: 560159424}
-  onMovePlayerChosen:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 474130}
-        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
-        m_MethodName: PlayerAttack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &981816207717870322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981816207717870319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf51ddd453dce73448ad145c5d179d4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2115795136}
-  playerhealthbar: {fileID: 841265576}
-  recoverParticles: {fileID: 1258887360}
---- !u!114 &981816207717870324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981816207717870319}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b91de5716f2a5c489edab49135e60f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pokemonStats: {fileID: 2115795136}
-  target: {fileID: 1251565710}
-  targetHealthbar: {fileID: 2066387721}
-  psyshockActivate:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2115795138}
-        m_TargetAssemblyTypeName: PsyshockRenderer, Assembly-CSharp
-        m_MethodName: PlayPsyshockAnim
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  psyshocTake:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2115795138}
-        m_TargetAssemblyTypeName: PsyshockRenderer, Assembly-CSharp
-        m_MethodName: PsyshockAnimtake
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onMovePlayerChosen:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 474130}
-        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
-        m_MethodName: PlayerAttack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &981816207717870326
+--- !u!114 &981816207717870323 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4403665290234325606, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+  m_PrefabInstance: {fileID: 981816207717870317}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981816207717870319}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 386c4f6ec2bfb9e449289c88578f1224, type: 3}
+  m_Script: {fileID: 11500000, guid: cf51ddd453dce73448ad145c5d179d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pokemonStats: {fileID: 2115795136}
-  healthbar: {fileID: 841265576}
-  isHealthZero:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &981816207717870328
+--- !u!114 &981816207717870324 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7350455398603534128, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+  m_PrefabInstance: {fileID: 981816207717870317}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981816207717870319}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 187f3f930c894b6479b815fc6978a9eb, type: 3}
+  m_Script: {fileID: 11500000, guid: adf60593fe784d443b5bb7cf11173157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1251565710}
+--- !u!114 &981816207717870326 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8758346245879221908, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+  m_PrefabInstance: {fileID: 981816207717870317}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f37ea85a3ae5c43876e4ec860f0dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1038603343623442820
 GameObject:
   m_ObjectHideFlags: 0
@@ -13668,11 +13535,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!198 &3581625902047623780 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5776406296089452678, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-  m_PrefabInstance: {fileID: 5333331655508512911}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4019080037966505137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13821,18 +13683,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 6495655458042348517}
-  Playing: {fileID: 4940200155623799447}
+  Playing: {fileID: 1560633471}
   AttackBtn:
   - {fileID: 449904774}
   - {fileID: 111421588}
   - {fileID: 1566157820}
   - {fileID: 2078492216}
   PlayerTexts:
-  - Reuniclus used Psyhic!
-  - Reuniclus used Psyshock!
-  - Reuniclus used Recover!
-  - Reuniclus used Pain Split!
-  EnemyText: Phantump Used Tackle!
+  - Reniclus used Psycic!
+  - Reniclus used Psyshock!
+  - Reniclus used Recover!
+  - Reniclus used Pain Split!
+  EnemyText: Phantumb used tackle!
   textPanel: {fileID: 4019080037966505137}
 --- !u!1 &4940200155623799447
 GameObject:
@@ -13883,6 +13745,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: Phantump
       objectReference: {fileID: 0}
+    - target: {fileID: 3576573843213548720, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: healthbar
+      value: 
+      objectReference: {fileID: 2066387721}
+    - target: {fileID: 3576573843213548720, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3576573843213548720, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3576573843213548720, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 474129}
+    - target: {fileID: 3576573843213548720, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3576573843213548720, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StopBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3576573843213548720, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TurnBaseManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3576573843213548720, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964496913855674004, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 981816207717870326}
+    - target: {fileID: 3964496913855674004, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: targetHealthbar
+      value: 
+      objectReference: {fileID: 841265576}
+    - target: {fileID: 3964496913855674004, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: onAttackGiven.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 981816207717870318}
     - target: {fileID: 4369386805927111445, guid: d307332b022696c46abc8341a3dc4103, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.82
@@ -13923,150 +13829,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      propertyPath: MaxHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      propertyPath: healthbar
+    - target: {fileID: 8026426972095650016, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      propertyPath: target
       value: 
-      objectReference: {fileID: 2066387721}
-    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 474130}
-    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Enemydie
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PokemonAnimations, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343677218028888133, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      propertyPath: isHealthZero.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359793643057357142, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      propertyPath: PokeName
-      value: Phantump
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359793643057357142, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      propertyPath: healthbar
-      value: 
-      objectReference: {fileID: 2066387721}
-    - target: {fileID: 7359793643057357142, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359793643057357142, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      propertyPath: AttackDamage
-      value: 38
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7359793643057357142, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      objectReference: {fileID: 981816207717870326}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2874592467319233290, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5333331655508512915}
-    - targetCorrespondingSourceObject: {fileID: 2874592467319233290, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5333331655508512917}
-    - targetCorrespondingSourceObject: {fileID: 2874592467319233290, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5333331655508512919}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d307332b022696c46abc8341a3dc4103, type: 3}
 --- !u!95 &5333331655508512912 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7720570443345944856, guid: d307332b022696c46abc8341a3dc4103, type: 3}
   m_PrefabInstance: {fileID: 5333331655508512911}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &5333331655508512913 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8485107224275352411, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-  m_PrefabInstance: {fileID: 5333331655508512911}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5333331655508512914 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2874592467319233290, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-  m_PrefabInstance: {fileID: 5333331655508512911}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5333331655508512915
+--- !u!114 &5333331655508512913 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1158226851064104029, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+  m_PrefabInstance: {fileID: 5333331655508512911}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5333331655508512914}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e35ba5f6b791b418677e8ccf265ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5333331655508512914 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 193878927256150209, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+  m_PrefabInstance: {fileID: 5333331655508512911}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7a5a9073cc8434981db17b668dcad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5333331655508512920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3964496913855674004, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+  m_PrefabInstance: {fileID: 5333331655508512911}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adf60593fe784d443b5bb7cf11173157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pokemonStats: {fileID: 1251565710}
-  target: {fileID: 2115795136}
-  targetHealthbar: {fileID: 841265576}
-  Attack: {fileID: 8666051685634201875}
-  TakeAttack: {fileID: 3581625902047623780}
-  onMovePlayerChosen:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 474130}
-        m_TargetAssemblyTypeName: PokemonAnimations, Assembly-CSharp
-        m_MethodName: EnemyAttack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &5333331655508512917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5333331655508512914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 386c4f6ec2bfb9e449289c88578f1224, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pokemonStats: {fileID: 1251565710}
-  healthbar: {fileID: 2066387721}
-  isHealthZero:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &5333331655508512919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5333331655508512914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 187f3f930c894b6479b815fc6978a9eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 2115795136}
 --- !u!224 &5407787575770445906
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14615,11 +14424,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!198 &8666051685634201875 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2177675575312009814, guid: d307332b022696c46abc8341a3dc4103, type: 3}
-  m_PrefabInstance: {fileID: 5333331655508512911}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &9118550563933235804
 MonoBehaviour:
   m_ObjectHideFlags: 0
