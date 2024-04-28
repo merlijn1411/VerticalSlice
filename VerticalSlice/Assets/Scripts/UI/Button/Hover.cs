@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 public class Hover : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
 {
-	public GameObject hoverIMG;
+	[SerializeField] private GameObject hoverIMG;
 
 
 	public void OnPointerEnter(PointerEventData eventData)

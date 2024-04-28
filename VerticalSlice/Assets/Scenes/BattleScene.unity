@@ -1709,7 +1709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90c2ed5f057f1948a261d558a1f11f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoverIMG: {fileID: 104065091209621187}
+  hoverIMG: {fileID: 104065091209621187}
 --- !u!1001 &284560090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2410,7 +2410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90c2ed5f057f1948a261d558a1f11f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoverIMG: {fileID: 104065091736266903}
+  hoverIMG: {fileID: 104065091736266903}
 --- !u!4 &416783080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1686458294647445936, guid: 96619a80ce240b945913f28789d96622, type: 3}
@@ -2922,7 +2922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90c2ed5f057f1948a261d558a1f11f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoverIMG: {fileID: 1404044490556036012}
+  hoverIMG: {fileID: 1404044490556036012}
 --- !u!114 &449904779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9391,7 +9391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90c2ed5f057f1948a261d558a1f11f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoverIMG: {fileID: 5866063101878543610}
+  hoverIMG: {fileID: 5866063101878543610}
 --- !u!114 &1566157825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10524,7 +10524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90c2ed5f057f1948a261d558a1f11f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoverIMG: {fileID: 104065092613666985}
+  hoverIMG: {fileID: 104065092613666985}
 --- !u!1001 &1750270663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12657,7 +12657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90c2ed5f057f1948a261d558a1f11f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoverIMG: {fileID: 7623070015069858157}
+  hoverIMG: {fileID: 7623070015069858157}
 --- !u!114 &2078492221
 MonoBehaviour:
   m_ObjectHideFlags: 0
