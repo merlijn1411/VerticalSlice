@@ -4,6 +4,7 @@ using UnityEngine.Events;
 
 public class DefaultAttack : MonoBehaviour
 {
+	[Header("Attributes")]
 	[SerializeField] private PokemonStats pokemonStats;
 	[SerializeField] private PokemonStats target;
 	
@@ -20,7 +21,7 @@ public class DefaultAttack : MonoBehaviour
 
 	private void Start()
 	{
-		Formula = GameObject.FindWithTag("Manager").GetComponent<DamageFormula>();
+		Formula = GetComponent<DamageFormula>();
 	}
 
 	public void StartTackle()
@@ -30,7 +31,7 @@ public class DefaultAttack : MonoBehaviour
 	
 	public IEnumerator DoTackle()
 	{
-		yield return new WaitForSeconds(3.5f);
+		yield return new WaitForSeconds(3f);
 		onMovePlayerChosen.Invoke();
 		Attack.Play();
 		yield return new WaitForSeconds(2f);

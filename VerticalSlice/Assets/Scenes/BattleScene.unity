@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 474127}
   - component: {fileID: 474129}
   - component: {fileID: 474130}
-  - component: {fileID: 474131}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Manager
@@ -180,10 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16a2cdfd1105d77429b34dd9b820202e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2115795136}
-  enemy: {fileID: 1251565710}
-  Playerhealthbar: {fileID: 841265576}
-  Enemyhealthbar: {fileID: 2066387721}
   isplayerTurn: 1
   onEnemyMove:
     m_PersistentCalls:
@@ -286,7 +281,19 @@ MonoBehaviour:
         m_CallState: 2
   onPsyshockChosen:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 981816207717870324}
+        m_TargetAssemblyTypeName: PsyshockAttack, Assembly-CSharp
+        m_MethodName: StartPsyshock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onRecoverChosen:
     m_PersistentCalls:
       m_Calls: []
@@ -307,24 +314,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phanAnim: {fileID: 5333331655508512913}
   reuAnim: {fileID: 981816207717870318}
---- !u!114 &474131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 187f3f930c894b6479b815fc6978a9eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2115795136}
-  enemy: {fileID: 1251565710}
-  turnBaseManager: {fileID: 474129}
-  PhysicPower: 1.35
-  GhostPower: 1.25
-  GrassPower: 1.15
 --- !u!1001 &23288622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -798,9 +787,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 111421593}
+        m_TargetAssemblyTypeName: PPSystem, Assembly-CSharp
+        m_MethodName: DecreasePP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 51659958}
         m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
         m_MethodName: ButtonNois
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 51659959}
+        m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
+        m_MethodName: StartOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -822,21 +835,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 111421593}
-        m_TargetAssemblyTypeName: PPSystem, Assembly-CSharp
-        m_MethodName: DecreasePP
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 981816207717870324}
-        m_TargetAssemblyTypeName: PsyshockAttack, Assembly-CSharp
-        m_MethodName: Psyshock
+      - m_Target: {fileID: 474129}
+        m_TargetAssemblyTypeName: TurnBaseManager, Assembly-CSharp
+        m_MethodName: PsyshockMove
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13003,6 +13004,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 981816207717870326}
+    - targetCorrespondingSourceObject: {fileID: 7052982591647010813, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 981816207717870328}
   m_SourcePrefab: {fileID: 100100000, guid: 279bbf23bd9bf394aba5a15b3a6e18f0, type: 3}
 --- !u!95 &981816207717870318 stripped
 Animator:
@@ -13073,6 +13077,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b91de5716f2a5c489edab49135e60f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pokemonStats: {fileID: 2115795136}
+  target: {fileID: 1251565710}
+  targetHealthbar: {fileID: 2066387721}
   psyshockActivate:
     m_PersistentCalls:
       m_Calls:
@@ -13135,6 +13142,19 @@ MonoBehaviour:
   isHealthZero:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &981816207717870328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981816207717870319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187f3f930c894b6479b815fc6978a9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1251565710}
 --- !u!1 &1038603343623442820
 GameObject:
   m_ObjectHideFlags: 0
@@ -13966,6 +13986,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2874592467319233290, guid: d307332b022696c46abc8341a3dc4103, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5333331655508512917}
+    - targetCorrespondingSourceObject: {fileID: 2874592467319233290, guid: d307332b022696c46abc8341a3dc4103, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5333331655508512919}
   m_SourcePrefab: {fileID: 100100000, guid: d307332b022696c46abc8341a3dc4103, type: 3}
 --- !u!95 &5333331655508512912 stripped
 Animator:
@@ -14031,6 +14054,19 @@ MonoBehaviour:
   isHealthZero:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5333331655508512919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333331655508512914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187f3f930c894b6479b815fc6978a9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2115795136}
 --- !u!224 &5407787575770445906
 RectTransform:
   m_ObjectHideFlags: 0

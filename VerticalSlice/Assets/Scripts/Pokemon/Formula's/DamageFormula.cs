@@ -1,45 +1,43 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class DamageFormula : MonoBehaviour
 {
 	[Header("Attributes")]
-	[SerializeField] private PokemonStats player;
-	[SerializeField] private PokemonStats enemy;
+	private PokemonStats pokemon;
+	[SerializeField] private PokemonStats target;
 
-	[SerializeField] private TurnBaseManager turnBaseManager;
-	
-	[Header("Elemental Power")]
-	[SerializeField] private float PhysicPower;
-	[SerializeField] private float GhostPower;
-	[SerializeField] private float GrassPower;
-	
-	public int CalculateDamage(float damage, ElementType.ElementTypes elementType)
+	private void Start()
+	{
+		pokemon = GetComponent<PokemonStats>();
+	}
+
+	public int CalculateDamage(float PokemonDamage, ElementType.ElementTypes elementType)
 	{
 		float randDmg = Random.Range(81f, 100f) / 100;
-		if (turnBaseManager!.isplayerTurn)
-		{
-			int atkDef = enemy.attackDamage / enemy.defends;
-			damage = ((2 * player.level / 5 + 2) * player.attackDamage * atkDef / 50 + 2) * 1f * 1.5f * randDmg * 1.5f;
-		}
-		else
-		{
-			int atkDef = player.attackDamage / player.defends;
-			damage = ((2 * enemy.level / 5 + 2) * enemy.attackDamage * atkDef / 50 + 2) * 1f * 1.5f * randDmg * 1.5f;
-		}
-		float PokemonDamage = damage;
+		
+		int atkDef = target.attackDamage / target.defends;
+		PokemonDamage = ((2 * pokemon.level / 5 + 2) * pokemon.attackDamage * atkDef / 50 + 2) * 1f * 1.5f * randDmg * 1.5f;
+		
+		AddElement(elementType, PokemonDamage);
 
-		switch (elementType)
+		return Mathf.RoundToInt(PokemonDamage);
+	}
+
+	private void AddElement(ElementType.ElementTypes elementTypes, float pokemonDamage)
+	{
+		switch (elementTypes)
 		{
 			case ElementType.ElementTypes.Physic:
-				PokemonDamage = damage * PhysicPower;
+				pokemonDamage = pokemonDamage * ElementType.physicPower;
 				break;
 			case ElementType.ElementTypes.Ghost:
-				PokemonDamage = damage * GhostPower;
+				pokemonDamage = pokemonDamage * ElementType.ghostPower;
 				break;
 			case ElementType.ElementTypes.Grass:
-				PokemonDamage = damage * GrassPower;
+				pokemonDamage = pokemonDamage * ElementType.grassPower;
 				break;
 		}
-		return Mathf.RoundToInt(PokemonDamage);
 	}
 }

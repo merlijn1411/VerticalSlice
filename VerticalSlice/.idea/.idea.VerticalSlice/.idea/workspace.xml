@@ -6,23 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="cb48ad89-4cc6-4e0e-9032-a9f8ab085da3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Start.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraAnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraAnimationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TurnBaseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TurnBaseManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Attack/PokemonAttacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Attack/DefaultAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Attack/PokemonAttacks.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Attack/DefaultAttack.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Effects/PsyshockActivor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Effects/PsyshockRenderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Effects/PsyshockActivor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Effects/PsyshockRenderer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BattleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BattleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Attack/DefaultAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Attack/DefaultAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Attack/PsyshockAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Attack/PsyshockAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Elements/ElementType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Elements/ElementType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Formula's/DamageFormula.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Formula's/DamageFormula.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Health/Healthbar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Health/Healthbar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Stats/PokemonStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Stats/PokemonStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Dialogue/Dialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Dialogue/Dialogue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/WinLose.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/WinLose.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Trainer (3).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Trainer (3).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Health/PokemonHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Health/PokemonHealth.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +118,8 @@
       <workItem from="1713818663129" duration="2754000" />
       <workItem from="1714223001662" duration="5160000" />
       <workItem from="1714232062620" duration="6172000" />
-      <workItem from="1714255648301" duration="2297000" />
+      <workItem from="1714255648301" duration="2728000" />
+      <workItem from="1714305205672" duration="2547000" />
     </task>
     <servers />
   </component>
