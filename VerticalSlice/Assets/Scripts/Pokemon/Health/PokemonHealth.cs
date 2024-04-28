@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -27,6 +28,7 @@ public class PokemonHealth : MonoBehaviour
 		if (pokemonStats.currentHealth <= 0)
 		{
 			isHealthZero.Invoke();
+			StartCoroutine(IsDead());
 		}
 			
 	}
@@ -39,6 +41,12 @@ public class PokemonHealth : MonoBehaviour
 	private void MinAndMaxValue()
 	{
 		pokemonStats.currentHealth = Mathf.Clamp(pokemonStats.currentHealth, 0, pokemonStats.maxHealth);
+	}
+	
+	private IEnumerator IsDead()
+	{
+		yield return new WaitForSeconds(5.2f);
+		gameObject.SetActive(false);
 	}
    
 }

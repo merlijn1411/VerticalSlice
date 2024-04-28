@@ -7,8 +7,13 @@ public class ButtonFunctions : MonoBehaviour
 	{
 		SceneManager.LoadScene("BattleScene");
 	}
+
+	public void MainMenu()
+	{
+		SceneManager.LoadScene("Start");
+	}
 	
-	public void QuirGame()
+	public void QuitGame()
 	{
 		Application.Quit();
 	}

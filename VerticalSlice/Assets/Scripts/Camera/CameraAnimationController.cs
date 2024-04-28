@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
@@ -15,8 +16,15 @@ public class CameraAnimationController : MonoBehaviour
 	{
 		animator.SetTrigger("StartAttack");
 	}
-	public void DeadAnimationTrigger()
+	
+	public void StartDeadCam()
 	{
+		StartCoroutine(DoDeadCam());
+	}
+
+	private IEnumerator DoDeadCam()
+	{
+		yield return new WaitForSeconds(3.5f);
 		animator.SetTrigger("Dead");
 	}
 

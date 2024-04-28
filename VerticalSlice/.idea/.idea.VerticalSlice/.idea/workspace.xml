@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cb48ad89-4cc6-4e0e-9032-a9f8ab085da3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticalSlice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Animation/Phantumb/Phantump.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Animation/Phantumb/Phantump.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pokemons/Phantumb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pokemons/Phantumb.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pokemons/Reuniclus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pokemons/Reuniclus.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Recover/PokemonRecover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Recover/PokemonRecover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraAnimation/CameraPivit.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CameraAnimation/CameraPivit.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BattleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BattleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TurnBaseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TurnBaseManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Animation/PokemonAnimations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Animation/PokemonAnimations.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Attack/DefaultAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Attack/DefaultAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Attack/PsyshockAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Attack/PsyshockAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Formula's/DamageFormula.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Formula's/DamageFormula.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraAnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraAnimationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Health/PokemonHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pokemon/Health/PokemonHealth.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +119,7 @@
       <workItem from="1714232062620" duration="6172000" />
       <workItem from="1714255648301" duration="2728000" />
       <workItem from="1714305205672" duration="14514000" />
-      <workItem from="1714330246954" duration="1993000" />
+      <workItem from="1714330246954" duration="3797000" />
     </task>
     <servers />
   </component>

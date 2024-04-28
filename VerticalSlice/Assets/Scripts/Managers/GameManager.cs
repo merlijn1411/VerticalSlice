@@ -4,30 +4,26 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-	[SerializeField] private PokemonStats Pokemon;
-	[SerializeField] private PokemonStats Enemy;
+
+	public void PlayerDied()
+	{
+		StartCoroutine(YouLost());
+	}
+
+	public void EnemyDied()
+	{
+		StartCoroutine(YouWin());
+	}
 	
-	public void Update()
+	private IEnumerator YouLost()
 	{
-		if (Pokemon.currentHealth <= 0)
-		{
-			StartCoroutine(PlayerDied());
-		}
-
-		if (Enemy.currentHealth <= 0)
-		{
-			StartCoroutine(EnemyDied());
-		}
-	}
-	private IEnumerator PlayerDied()
-	{
-		yield return new WaitForSeconds(5.5f);
-		SceneManager.LoadScene("YouLose");
+		yield return new WaitForSeconds(5f);
+		SceneManager.LoadScene("YouLost");
 	}
 
-	public IEnumerator EnemyDied()
+	private IEnumerator YouWin()
 	{
-		yield return new WaitForSeconds(5.5f);
+		yield return new WaitForSeconds(6f);
 		SceneManager.LoadScene("YouWin");
 	}
 }
