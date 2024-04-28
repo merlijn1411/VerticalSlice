@@ -4,35 +4,26 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-	private PlayerStats Player;
-	private EnemyStats Enemy;
 
-	void Start()
+	public void PlayerDied()
 	{
-		Player = GameObject.Find("Reuniclus").GetComponent<PlayerStats>();
-		Enemy = GameObject.Find("Phantump").GetComponent<EnemyStats>();
-	}
-	public void Update()
-	{
-		if (Player.CurrentHealth <= 0)
-		{
-			StartCoroutine(PlayerDied());
-		}
-
-		if (Enemy.CurrentHealth <= 0)
-		{
-			StartCoroutine(EnemyDied());
-		}
-	}
-	private IEnumerator PlayerDied()
-	{
-		yield return new WaitForSeconds(5.5f);
-		SceneManager.LoadScene("YouLose");
+		StartCoroutine(YouLost());
 	}
 
-	public IEnumerator EnemyDied()
+	public void EnemyDied()
 	{
-		yield return new WaitForSeconds(5.5f);
+		StartCoroutine(YouWin());
+	}
+	
+	private IEnumerator YouLost()
+	{
+		yield return new WaitForSeconds(5f);
+		SceneManager.LoadScene("YouLost");
+	}
+
+	private IEnumerator YouWin()
+	{
+		yield return new WaitForSeconds(6f);
 		SceneManager.LoadScene("YouWin");
 	}
 }

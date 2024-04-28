@@ -17,8 +17,7 @@ public class Healthbar : MonoBehaviour
 
 		Fill.color = gradient.Evaluate(1f);
 	}
-
-	// targethealth is de currenthealth en de starthealth is de value van de slider 
+	
 	public void CurrentHealth(float targetHealth, float startHealth)
 	{
 		time += Time.deltaTime * lerpSpeed;
@@ -28,4 +27,5 @@ public class Healthbar : MonoBehaviour
 		slider.value = Mathf.Lerp(startHealth, targetHealth, time);
 
 	}
+	
 }
